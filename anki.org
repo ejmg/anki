@@ -1,0 +1,17 @@
+* PL Theory and Design                                                 :deck:
+** Declarative vs Imperative                                           :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521217938193
+   :END:
+*** Front
+    What is the difference between declarative and imperative languages?
+*** Back
+    Declarative vs Imperative is the topmost level of distinction between types
+    of PLs. 
+
+     - Imperative languages focus on /how/ a computer goes about its instructed
+       task.
+
+     - Declarative languages focus on /what/ the computer does.
+* physics                                                              :deck:
