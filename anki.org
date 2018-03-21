@@ -14,4 +14,217 @@
        task.
 
      - Declarative languages focus on /what/ the computer does.
+** Types of Declarative PLs                                            :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521236332948
+   :END:
+*** Front
+    What are the types of Declarative PLs?
+*** Back
+    1. Functional -> Lisp, ML, Haskell
+    2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
+    3. Dataflow -> Id, Val
+** Types of Imperative PLs                                             :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521236333159
+   :END:
+*** Front
+    What are the types of Imperative PLs?
+*** Back
+    1. von Neumann -> C, Ada, Fortran
+    2. OOP -> Smalltalk, Eiffel, Java
+    3. Scripting -> Perl, Python, PHP
+** General Compilation Process                                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521236333359
+   :END:
+*** Front
+    What are the steps of the compilation process?
+*** Back
+    1. scanner (lexical analysis)
+    2. parser (syntax analysis)
+    3. semantic analysis & intermediate code generation
+    4. machine independent code improvement (*optional*)
+    5. target code generation (assembler)
+    6. machine-specific code improvement (*optional*)
 * physics                                                              :deck:
+** v^2 kinematics eq                                                   :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658929429
+   :END:
+*** Front
+    $v(x)^2$, constant accel
+*** Back
+    $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
+** A_y component                                                       :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658929825
+   :END:
+*** Front
+    $A_y$ component
+*** Back
+    $A\sin(\theta)$
+** A_x component                                                       :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658993520
+   :END:
+*** Front
+    $A_x$ component
+*** Back
+    $A\cos\theta$
+** x_f kinematic eq, velocity                                          :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658929942
+   :END:
+*** Front
+    $x_f$ in terms of initial and final $v$, constant $a$
+*** Back
+    $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
+** x_f kinematic eq, time                                              :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930125
+   :END:
+*** Front
+    $x_f$ in terms of time, constant $a$
+*** Back
+    $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
+** x_f kinematic eq, const velocity                                    :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930238
+   :END:
+*** Front
+    $x_f$ in terms of constant $v(x)$
+*** Back
+    $x_f = x(t) = x_i + v_xt$
+** y_f kinematic eq, time                                              :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930371
+   :END:
+*** Front
+    $y_f$ in terms of $t$
+*** Back
+    $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
+    - constant acceleration
+    - final position
+** y_f kinematic eq, velocity                                          :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930501
+   :END:
+*** Front
+    $y_f$ in terms of $v_y$
+*** Back
+    $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
+    - no time component!
+** Ave Accel                                                           :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930680
+   :END:
+*** Front
+    Average Acceleration
+*** Back
+    $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
+** Ave Speed                                                           :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930804
+   :END:
+*** Front
+    Average Speed
+*** Back
+    $v_{avg}=\frac{d}{\Delta t}$
+** average velocity                                                    :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658930915
+   :END:
+*** Front
+    average velocity
+*** Back
+    $v_{x,avg}=\frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
+** cartesian to polar                                                  :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658931026
+   :END:
+*** Front
+    cartesian $(x,y)$ to polar coordinates $(r, \theta)$
+*** Back
+    $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
+    
+    $r = \sqrt{x^2 + y^2}$
+
+    Note:
+    - if (x,y) values are in QII or QIII, must add 180 to result of
+      $\theta^{-1}$
+    - if (x,y) values are in QIV, must add 360.
+** polar to cartesian                                                  :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658931230
+   :END:
+*** Front
+    convert polar $(r, \theta)$ to cartesian $(x,y)$
+*** Back
+    $x = r\cos(\theta)$
+
+    $y = r\sin(\theta)$
+** direction of a vector                                               :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658931354
+   :END:
+*** Front
+    direction of some vector, $\vec{A}$
+*** Back
+    $\theta = tan^{-1}(\frac{A_y}{A_x})$
+** instant velocity                                                    :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658931463
+   :END:
+*** Front
+    instantaneous velocity
+*** Back
+    $v_x = \frac{dx}{dt}$
+** magnitude of a vector                                               :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658931604
+   :END:
+*** Front
+    magnitude of a vector, $\vec{A}$
+*** Back
+    $A = \sqrt{A_{x}^{2} + A_y^2}$
+** position vector                                                     :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658933042
+   :END:
+*** Front
+    position vector, $\vec{r}$
+*** Back
+    $\vec{r} = x\hat{i} + y\hat{j}$
+    
+    [[file:position-vector.png][position vector]]
+
+** result vector                                                       :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1521658933152
+   :END:
+*** Front
+    result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
+*** Back
+    $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
