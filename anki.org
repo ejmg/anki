@@ -218,7 +218,6 @@
     $\vec{r} = x\hat{i} + y\hat{j}$
     
     [[file:position-vector.png][position vector]]
-
 ** result vector                                                       :note:
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
@@ -228,3 +227,244 @@
     result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
 *** Back
     $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
+** definition of constant work                                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999295313
+   :END:
+*** Front
+    Definition of work (constant $\vec{F}$)
+*** Back
+    $\mathbf{W} \equiv F \Delta r cos(\theta)$
+    - where $\vec{F}$ is the force on the system
+    - $\Delta \vec{r}$ is the resultant displacement vector of the object
+    - $F$ and $\Delta r$ are the respective magnitudes
+    - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
+** def of work by varying force                                        :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999897514
+   :END:
+*** Front
+    Definition of work with varying force
+*** Back
+    $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
+** spring force                                                        :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999897653
+   :END:
+*** Front
+    Definition of Spring Force, aka Hooke's Law
+*** Back
+    $F_{s} = -kx$
+    - note, spring force is *always* directed opposite of the displacement from
+      equilibrium, ergo negative sign
+** work done by a spring                                               :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999897763
+   :END:
+*** Front
+    Work done by a spring
+*** Back
+        $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
+        \frac{1}{2}kx_{f}^{2}$
+** work done by external force                                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002246724
+   :END:
+*** Front
+    Work done by external force on a system
+*** Back
+    $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
+    \frac{1}{2}kx_{i}^{2}$
+** kinetic energy                                                      :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999295454
+   :END:
+*** Front
+    Kinetic energy of a particle of mass $m$, velocity $v$
+*** Back
+    $K \equiv \frac{1}{2}mv^{2}}$
+** work by external force in terms of velocity                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002246919
+   :END:
+*** Front
+    Work of external force on system in terms of velocity
+*** Back
+    $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
+** Work of external force in terms of kinetic                          :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002247088
+   :END:
+*** Front
+    Work of external force on system in terms of kinetic energy
+*** Back
+    $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
+** Work-Kinetic Energy Theorem                                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002781522
+   :END:
+*** Front
+    Work-Kinetic Energy Theorem
+*** Back
+    When work is done on a system and the only change in the system is in its
+    speed, the net work done on the system equals the change in kinetic energy
+    of the system.
+
+    - furthermore
+
+      The work–kinetic energy theorem indicates that the speed of a system
+      increases if the net work done on it is positive because the final
+      kinetic energy is greater than the initial kinetic energy. The speed
+      decreases if the net work is negative because the final kinetic energy is
+      less than the initial kinetic energy.
+
+** Relationship between Work done inside a system and potential energy :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002247200
+   :END:
+*** Front
+    Potential energy of work done inside a system
+*** Back
+    $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
+** Def of Conservative Force                                           :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002781776
+   :END:
+*** Front
+    Definition of Conservative Force
+*** Back
+    A force is conservative if the work it does on a particle that is a member
+    of the system as the particle moves between two points is independent of
+    the path the particle takes between the two points. Furthermore, a force is
+    conservative if the work it does on a particle is zero when the particle
+    moves through an arbitrary closed path and returns to its initial position.
+    A force that does not meet these criteria is said to be nonconservative.
+** relation between potential energy and direction of F, dr            :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002781957
+   :END:
+*** Front
+    relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
+*** Back
+    $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
+** potential energy function of a conservative system                  :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002782089
+   :END:
+*** Front
+    Potential energy function of a conservative system
+*** Back
+    $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
+
+    - alternatively
+
+    $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
+
+** relation of force between members of a system and potential energy  :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1524002247312
+   :END:
+*** Front
+    relation of force between members of a system to the potential energy of
+    the system
+*** Back
+    $F_{x} = - \frack{dU}{dx}$
+** gravitational potential energy                                      :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999295564
+   :END:
+*** Front
+    Gravitational potential energy of a particle of mass $m$, distance $y$
+    above earth's surface
+*** Back
+    $U_{g} \equiv mgy$
+** elastic potential energy of a spring                                :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999295687
+   :END:
+*** Front
+    elastic potential energy of a spring with a force of constant $k$
+*** Back
+    $U_{s} \equiv \frac{1}{2}kx^{2}}$
+** conservation of energy                                              :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523997113818
+   :END:
+*** Front
+    conservation of energy equation
+*** Back
+    $\Delta E_{system} = \Sigma T$
+** relationship of kinetic and potential energy in isolated system     :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523997645577
+   :END:
+*** Front
+    How are Kinetic and Potential energy related in an isolated system?
+*** Back
+    $\Delta K + \Delta U = 0$
+** mechanical energy of a system                                       :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523997963582
+   :END:
+*** Front
+    Mechanical Energy of a System
+*** Back
+    $E_{mech} \equiv K + U$
+** mechanical energy in isolated system                                :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999296170
+   :END:
+*** Front
+    Mechanical Energy in Isolated System with no non-concurrent forces
+*** Back
+    $\Delta E_{mech} = 0$
+** conservation of mech energy                                         :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999296332
+   :END:
+*** Front
+    conservation of mechanical energy
+*** Back
+    $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
+    forces.
+** total energy of an isolated system                                  :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1523999296465
+   :END:
+*** Front
+    Total energy of an isolated system
+*** Back
+    $\Delta E_{system} = 0$
+    - most general statement of the energy version of the isolated system model
+* discrete math                                                        :deck:
+** logical equiv                                                       :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1522876490520
+   :END:
+*** Front
+    equivalence of implication
+*** Back
+    $p \implies q \equiv \neg p \vee q$
