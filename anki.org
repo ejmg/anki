@@ -51,413 +51,483 @@
     5. target code generation (assembler)
     6. machine-specific code improvement (*optional*)
 * physics                                                              :deck:
-** v^2 kinematics eq                                                   :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658929429
-   :END:
-*** Front
-    $v(x)^2$, constant accel
-*** Back
-    $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
-** A_y component                                                       :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658929825
-   :END:
-*** Front
-    $A_y$ component
-*** Back
-    $A\sin(\theta)$
-** A_x component                                                       :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658993520
-   :END:
-*** Front
-    $A_x$ component
-*** Back
-    $A\cos\theta$
-** x_f kinematic eq, velocity                                          :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658929942
-   :END:
-*** Front
-    $x_f$ in terms of initial and final $v$, constant $a$
-*** Back
-    $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
-** x_f kinematic eq, time                                              :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930125
-   :END:
-*** Front
-    $x_f$ in terms of time, constant $a$
-*** Back
-    $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
-** x_f kinematic eq, const velocity                                    :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930238
-   :END:
-*** Front
-    $x_f$ in terms of constant $v(x)$
-*** Back
-    $x_f = x(t) = x_i + v_xt$
-** y_f kinematic eq, time                                              :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930371
-   :END:
-*** Front
-    $y_f$ in terms of $t$
-*** Back
-    $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
-    - constant acceleration
-    - final position
-** y_f kinematic eq, velocity                                          :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930501
-   :END:
-*** Front
-    $y_f$ in terms of $v_y$
-*** Back
-    $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
-    - no time component!
-** Ave Accel                                                           :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930680
-   :END:
-*** Front
-    Average Acceleration
-*** Back
-    $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
-** Ave Speed                                                           :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930804
-   :END:
-*** Front
-    Average Speed
-*** Back
-    $v_{avg}=\frac{d}{\Delta t}$
-** average velocity                                                    :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658930915
-   :END:
-*** Front
-    average velocity
-*** Back
-    $v_{x,avg}=\frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
-** cartesian to polar                                                  :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658931026
-   :END:
-*** Front
-    cartesian $(x,y)$ to polar coordinates $(r, \theta)$
-*** Back
-    $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
+** CH 1-3: Kinematics, 1D Vectors, motion
+*** v^2 kinematics eq                                                  :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658929429
+    :END:
+**** Front
+     $v(x)^2$, constant accel
+**** Back
+     $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
+*** A_y component                                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658929825
+    :END:
+**** Front
+     $A_y$ component
+**** Back
+     $A\sin(\theta)$
+*** A_x component                                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658993520
+    :END:
+**** Front
+     $A_x$ component
+**** Back
+     $A\cos\theta$
+*** x_f kinematic eq, velocity                                         :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658929942
+    :END:
+**** Front
+     $x_f$ in terms of initial and final $v$, constant $a$
+**** Back
+     $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
+*** x_f kinematic eq, time                                             :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930125
+    :END:
+**** Front
+     $x_f$ in terms of time, constant $a$
+**** Back
+     $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
+*** x_f kinematic eq, const velocity                                   :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930238
+    :END:
+**** Front
+     $x_f$ in terms of constant $v(x)$
+**** Back
+     $x_f = x(t) = x_i + v_xt$
+*** y_f kinematic eq, time                                             :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930371
+    :END:
+**** Front
+     $y_f$ in terms of $t$
+**** Back
+     $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
+     - constant acceleration
+     - final position
+*** y_f kinematic eq, velocity                                         :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930501
+    :END:
+**** Front
+     $y_f$ in terms of $v_y$
+**** Back
+     $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
+     - no time component!
+*** Ave Accel                                                          :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930680
+    :END:
+**** Front
+     Average Acceleration
+**** Back
+     $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
+*** Ave Speed                                                          :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930804
+    :END:
+**** Front
+     Average Speed
+**** Back
+     $v_{avg}=\frac{d}{\Delta t}$
+*** average velocity                                                   :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930915
+    :END:
+**** Front
+     average velocity
+**** Back
+     $v_{x,avg}=\frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
+*** cartesian to polar                                                 :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658931026
+    :END:
+**** Front
+     cartesian $(x,y)$ to polar coordinates $(r, \theta)$
+**** Back
+     $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
     
-    $r = \sqrt{x^2 + y^2}$
+     $r = \sqrt{x^2 + y^2}$
 
-    Note:
-    - if (x,y) values are in QII or QIII, must add 180 to result of
-      $\theta^{-1}$
-    - if (x,y) values are in QIV, must add 360.
-** polar to cartesian                                                  :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658931230
-   :END:
-*** Front
-    convert polar $(r, \theta)$ to cartesian $(x,y)$
-*** Back
-    $x = r\cos(\theta)$
+     Note:
+     - if (x,y) values are in QII or QIII, must add 180 to result of
+       $\theta^{-1}$
+     - if (x,y) values are in QIV, must add 360.
+*** magnitude of a vector                                              :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658931604
+    :END:
+**** Front
+     magnitude of a vector, $\vec{A}$
+**** Back
+     $A = \sqrt{A_{x}^{2} + A_y^2}$
+*** polar to cartesian                                                 :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658931230
+    :END:
+**** Front
+     convert polar $(r, \theta)$ to cartesian $(x,y)$
+**** Back
+     $x = r\cos(\theta)$
 
-    $y = r\sin(\theta)$
-** direction of a vector                                               :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658931354
-   :END:
-*** Front
-    direction of some vector, $\vec{A}$
-*** Back
-    $\theta = tan^{-1}(\frac{A_y}{A_x})$
-** instant velocity                                                    :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658931463
-   :END:
-*** Front
-    instantaneous velocity
-*** Back
-    $v_x = \frac{dx}{dt}$
-** magnitude of a vector                                               :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658931604
-   :END:
-*** Front
-    magnitude of a vector, $\vec{A}$
-*** Back
-    $A = \sqrt{A_{x}^{2} + A_y^2}$
-** position vector                                                     :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658933042
-   :END:
-*** Front
-    position vector, $\vec{r}$
-*** Back
-    $\vec{r} = x\hat{i} + y\hat{j}$
+     $y = r\sin(\theta)$
+*** direction of a vector                                              :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658931354
+    :END:
+**** Front
+     direction of some vector, $\vec{A}$
+**** Back
+     $\theta = tan^{-1}(\frac{A_y}{A_x})$
+*** instant velocity                                                   :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658931463
+    :END:
+**** Front
+     instantaneous velocity
+**** Back
+     $v_x = \frac{dx}{dt}$
+*** result vector                                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658933152
+    :END:
+**** Front
+     result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
+**** Back
+     $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
+** CH4: 2D Motion, Vectors
+*** position vector                                                    :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658933042
+    :END:
+**** Front
+     position vector, $\vec{r}$
+**** Back
+     $\vec{r} = x\hat{i} + y\hat{j}$
     
-    [[file:position-vector.png][position vector]]
-** result vector                                                       :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521658933152
-   :END:
-*** Front
-    result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
-*** Back
-    $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
-** definition of constant work                                         :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999295313
-   :END:
-*** Front
-    Definition of work (constant $\vec{F}$)
-*** Back
-    $\mathbf{W} \equiv F \Delta r cos(\theta)$
-    - where $\vec{F}$ is the force on the system
-    - $\Delta \vec{r}$ is the resultant displacement vector of the object
-    - $F$ and $\Delta r$ are the respective magnitudes
-    - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
-** def of work by varying force                                        :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999897514
-   :END:
-*** Front
-    Definition of work with varying force
-*** Back
-    $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
-** spring force                                                        :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999897653
-   :END:
-*** Front
-    Definition of Spring Force, aka Hooke's Law
-*** Back
-    $F_{s} = -kx$
-    - note, spring force is *always* directed opposite of the displacement from
-      equilibrium, ergo negative sign
-** work done by a spring                                               :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999897763
-   :END:
-*** Front
-    Work done by a spring
-*** Back
-        $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
-        \frac{1}{2}kx_{f}^{2}$
-** work done by external force                                         :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002246724
-   :END:
-*** Front
-    Work done by external force on a system
-*** Back
-    $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
-    \frac{1}{2}kx_{i}^{2}$
-** kinetic energy                                                      :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999295454
-   :END:
-*** Front
-    Kinetic energy of a particle of mass $m$, velocity $v$
-*** Back
-    $K \equiv \frac{1}{2}mv^{2}}$
-** work by external force in terms of velocity                         :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002246919
-   :END:
-*** Front
-    Work of external force on system in terms of velocity
-*** Back
-    $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
-** Work of external force in terms of kinetic                          :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002247088
-   :END:
-*** Front
-    Work of external force on system in terms of kinetic energy
-*** Back
-    $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
-** Work-Kinetic Energy Theorem                                         :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002781522
-   :END:
-*** Front
-    Work-Kinetic Energy Theorem
-*** Back
-    When work is done on a system and the only change in the system is in its
-    speed, the net work done on the system equals the change in kinetic energy
-    of the system.
+     [[file:position-vector.png][position vector]]
 
-    - furthermore
+*** centripetal acceleration                                           :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524037733682
+    :END:
+**** Front
+     Centripetal Acceleration
+**** Back
+     the acceleration of a particle in uniform circular motion:
+     
+     $a_{c} = \frac{v^{2}}{r}$
 
-      The work–kinetic energy theorem indicates that the speed of a system
-      increases if the net work done on it is positive because the final
-      kinetic energy is greater than the initial kinetic energy. The speed
-      decreases if the net work is negative because the final kinetic energy is
-      less than the initial kinetic energy.
+     - is called centripetal because:
+       - $\vec{a_{c}}$ is directed towards the center of the circle$
+       - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
+         - if it wasn't, there would be a component of acceleration parallel to
+           velocity, and thus speed would be changing, motion non-uniform
+** CH5: Newton's Laws
+*** Newton's First Law                                                 :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524037733858
+    :END:
+**** Front
+     Newton's First Law
+**** Back
+     In the absence of external forces and when viewed from an inertial
+     reference frame, an object at rest remains at rest and an object in motion
+     continues in motion with a constant velocity (that is, with a constant speed in
+     a straight line).
 
-** Relationship between Work done inside a system and potential energy :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002247200
-   :END:
-*** Front
-    Potential energy of work done inside a system
-*** Back
-    $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
-** Def of Conservative Force                                           :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002781776
-   :END:
-*** Front
-    Definition of Conservative Force
-*** Back
-    A force is conservative if the work it does on a particle that is a member
-    of the system as the particle moves between two points is independent of
-    the path the particle takes between the two points. Furthermore, a force is
-    conservative if the work it does on a particle is zero when the particle
-    moves through an arbitrary closed path and returns to its initial position.
-    A force that does not meet these criteria is said to be nonconservative.
-** relation between potential energy and direction of F, dr            :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002781957
-   :END:
-*** Front
-    relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
-*** Back
-    $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
-** potential energy function of a conservative system                  :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002782089
-   :END:
-*** Front
-    Potential energy function of a conservative system
-*** Back
-    $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
+     - In other words, when no force acts on an object, the acceleration of the
+       object is zero.
+     -  The tendency of an object to resist any attempt to change its velocity
+       is called inertia.
+*** def of mass                                                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524037733978
+    :END:
+**** Front
+     Definition of Mass
+**** Back
+      Mass is that property of an object that specifies how much resistance an
+      object exhibits to changes in its velocity
 
-    - alternatively
+      - larger the mass, the greater the resistance to acceleration with the
+        same amount of force
+*** Ratio of Two Masses                                                :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524037734112
+    :END:
+**** Front
+     Ratio of two masses
+**** Back
+     The inverse ratio of the magnitudes of acceleration produced by the same force
+     on the two masses:
+     
+     $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
+** CH6: Circular Motion
+*** Centripetal Force                                                  :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524037738204
+    :END:
+**** Front
+     Centripetal Force
+**** Back
+     $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
 
-    $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
+     [[file:centripetal-force.png][centripetal force diagram]]
 
-** relation of force between members of a system and potential energy  :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1524002247312
-   :END:
-*** Front
-    relation of force between members of a system to the potential energy of
-    the system
-*** Back
-    $F_{x} = - \frack{dU}{dx}$
-** gravitational potential energy                                      :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999295564
-   :END:
-*** Front
-    Gravitational potential energy of a particle of mass $m$, distance $y$
-    above earth's surface
-*** Back
-    $U_{g} \equiv mgy$
-** elastic potential energy of a spring                                :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999295687
-   :END:
-*** Front
-    elastic potential energy of a spring with a force of constant $k$
-*** Back
-    $U_{s} \equiv \frac{1}{2}kx^{2}}$
-** conservation of energy                                              :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523997113818
-   :END:
-*** Front
-    conservation of energy equation
-*** Back
-    $\Delta E_{system} = \Sigma T$
-** relationship of kinetic and potential energy in isolated system     :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523997645577
-   :END:
-*** Front
-    How are Kinetic and Potential energy related in an isolated system?
-*** Back
-    $\Delta K + \Delta U = 0$
-** mechanical energy of a system                                       :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523997963582
-   :END:
-*** Front
-    Mechanical Energy of a System
-*** Back
-    $E_{mech} \equiv K + U$
-** mechanical energy in isolated system                                :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999296170
-   :END:
-*** Front
-    Mechanical Energy in Isolated System with no non-concurrent forces
-*** Back
-    $\Delta E_{mech} = 0$
-** conservation of mech energy                                         :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999296332
-   :END:
-*** Front
-    conservation of mechanical energy
-*** Back
-    $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
-    forces.
-** total energy of an isolated system                                  :note:
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1523999296465
-   :END:
-*** Front
-    Total energy of an isolated system
-*** Back
-    $\Delta E_{system} = 0$
-    - most general statement of the energy version of the isolated system model
+** CH7: Energy of a System
+*** definition of constant work                                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999295313
+    :END:
+**** Front
+     Definition of work (constant $\vec{F}$)
+**** Back
+     $\mathbf{W} \equiv F \Delta r cos(\theta)$
+     - where $\vec{F}$ is the force on the system
+     - $\Delta \vec{r}$ is the resultant displacement vector of the object
+     - $F$ and $\Delta r$ are the respective magnitudes
+     - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
+*** def of work by varying force                                       :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999897514
+    :END:
+**** Front
+     Definition of work with varying force
+**** Back
+     $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
+*** spring force                                                       :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999897653
+    :END:
+**** Front
+     Definition of Spring Force, aka Hooke's Law
+**** Back
+     $F_{s} = -kx$
+     - note, spring force is *always* directed opposite of the displacement from
+       equilibrium, ergo negative sign
+*** work done by a spring                                              :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999897763
+    :END:
+**** Front
+     Work done by a spring
+**** Back
+         $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
+         \frac{1}{2}kx_{f}^{2}$
+*** work done by external force                                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002246724
+    :END:
+**** Front
+     Work done by external force on a system
+**** Back
+     $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
+     \frac{1}{2}kx_{i}^{2}$
+*** kinetic energy                                                     :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999295454
+    :END:
+**** Front
+     Kinetic energy of a particle of mass $m$, velocity $v$
+**** Back
+     $K \equiv \frac{1}{2}mv^{2}}$
+*** work by external force in terms of velocity                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002246919
+    :END:
+**** Front
+     Work of external force on system in terms of velocity
+**** Back
+     $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
+*** Work of external force in terms of kinetic                         :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002247088
+    :END:
+**** Front
+     Work of external force on system in terms of kinetic energy
+**** Back
+     $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
+*** Work-Kinetic Energy Theorem                                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002781522
+    :END:
+**** Front
+     Work-Kinetic Energy Theorem
+**** Back
+     When work is done on a system and the only change in the system is in its
+     speed, the net work done on the system equals the change in kinetic energy
+     of the system.
+
+     - furthermore
+
+       The work–kinetic energy theorem indicates that the speed of a system
+       increases if the net work done on it is positive because the final
+       kinetic energy is greater than the initial kinetic energy. The speed
+       decreases if the net work is negative because the final kinetic energy is
+       less than the initial kinetic energy.
+
+*** Relationship between Work done inside a system and potential energy :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002247200
+    :END:
+**** Front
+     Potential energy of work done inside a system
+**** Back
+     $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
+*** Def of Conservative Force                                          :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002781776
+    :END:
+**** Front
+     Definition of Conservative Force
+**** Back
+     A force is conservative if the work it does on a particle that is a member
+     of the system as the particle moves between two points is independent of
+     the path the particle takes between the two points. Furthermore, a force is
+     conservative if the work it does on a particle is zero when the particle
+     moves through an arbitrary closed path and returns to its initial position.
+     A force that does not meet these criteria is said to be nonconservative.
+*** relation between potential energy and direction of F, dr           :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002781957
+    :END:
+**** Front
+     relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
+**** Back
+     $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
+*** potential energy function of a conservative system                 :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002782089
+    :END:
+**** Front
+     Potential energy function of a conservative system
+**** Back
+     $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
+
+     - alternatively
+
+     $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
+
+*** relation of force between members of a system and potential energy :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524002247312
+    :END:
+**** Front
+     relation of force between members of a system to the potential energy of
+     the system
+**** Back
+     $F_{x} = - \frack{dU}{dx}$
+** CH8: Conservation of Energy
+*** gravitational potential energy                                     :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999295564
+    :END:
+**** Front
+     Gravitational potential energy of a particle of mass $m$, distance $y$
+     above earth's surface
+**** Back
+     $U_{g} \equiv mgy$
+*** Earth-Object system of potential energy                            :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1524036150646
+    :END:
+**** Front
+     Earth-Object system of potential energy (object falling)
+**** Back
+     $mg_{i} - mgy_{f} = -\Delta U$
+     - where $mg_{i}$ is the start (distance) of the fall to the surface.
+*** elastic potential energy of a spring                               :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999295687
+    :END:
+**** Front
+     elastic potential energy of a spring with a force of constant $k$
+**** Back
+     $U_{s} \equiv \frac{1}{2}kx^{2}}$
+*** conservation of energy                                             :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523997113818
+    :END:
+**** Front
+     conservation of energy equation
+**** Back
+     $\Delta E_{system} = \Sigma T$
+*** relationship of kinetic and potential energy in isolated system    :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523997645577
+    :END:
+**** Front
+     How are Kinetic and Potential energy related in an isolated system?
+**** Back
+     $\Delta K + \Delta U = 0$
+*** mechanical energy of a system                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523997963582
+    :END:
+**** Front
+     Mechanical Energy of a System
+**** Back
+     $E_{mech} \equiv K + U$
+*** conservation of mech energy                                        :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1523999296332
+    :END:
+**** Front
+     conservation of mechanical energy/total energy of isolated system
+**** Back
+     $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
+     forces.
+     - total energy in an isolated system
 * discrete math                                                        :deck:
 ** logical equiv                                                       :note:
    :PROPERTIES:
