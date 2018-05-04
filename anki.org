@@ -51,34 +51,10 @@
     5. target code generation (assembler)
     6. machine-specific code improvement (*optional*)
 * physics                                                              :deck:
+** TODO
+   - [ ] find all analysis models and include them
+   - [ ] find common problems to provide numberless solutions to
 ** CH 1-3: Kinematics, 1D Vectors, motion
-*** v^2 kinematics eq                                                  :note:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658929429
-    :END:
-**** Front
-     $v(x)^2$, constant accel
-**** Back
-     $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
-*** A_y component                                                      :note:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658929825
-    :END:
-**** Front
-     $A_y$ component
-**** Back
-     $A\sin(\theta)$
-*** A_x component                                                      :note:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658993520
-    :END:
-**** Front
-     $A_x$ component
-**** Back
-     $A\cos\theta$
 *** x_f kinematic eq, velocity                                         :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -127,7 +103,43 @@
 **** Back
      $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
      - no time component!
-*** Ave Accel                                                          :note:
+*** v_f kinematic eq, constant acc                                     :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525396912360
+    :END:
+**** Front
+     $v_{xf}$, constant $a_{x}$?
+**** Back
+     $v_{xf} = v_{xi} + a_{x}t$
+*** v_avg (Avg Speed)                                                  :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658930804
+    :END:
+**** Front
+     $v_{avg}$, average speed (not $v_{x,avg}$)?
+**** Back
+     $v_{avg}=\frac{d}{\Delta t}$
+*** v_x,avg kinematic eq, constant acc                                 :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525396912820
+    :END:
+**** Front
+     $v_{x,avg}$, where $a_{x}$ is constant?
+**** Back
+     $v_{x,avg} = \frac{v_{xi} + v_{xf}}{2} = \frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
+*** v^2 kinematics eq                                                  :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1521658929429
+    :END:
+**** Front
+     $v(x)^2$, constant accel
+**** Back
+     $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
+*** a_x,avg kinematic eq                                               :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :ANKI_NOTE_ID: 1521658930680
@@ -136,24 +148,24 @@
      Average Acceleration
 **** Back
      $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
-*** Ave Speed                                                          :note:
+*** A_y component                                                      :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930804
+    :ANKI_NOTE_ID: 1521658929825
     :END:
 **** Front
-     Average Speed
+     $A_y$ component
 **** Back
-     $v_{avg}=\frac{d}{\Delta t}$
-*** average velocity                                                   :note:
+     $A\sin(\theta)$
+*** A_x component                                                      :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930915
+    :ANKI_NOTE_ID: 1521658993520
     :END:
 **** Front
-     average velocity
+     $A_x$ component
 **** Back
-     $v_{x,avg}=\frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
+     $A\cos\theta$
 *** cartesian to polar                                                 :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -230,31 +242,29 @@
     
      [[file:position-vector.png][position vector]]
 
-*** centripetal acceleration                                           :note:
+*** a_c                                                                :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524037733682
+    :ANKI_NOTE_ID: 1525397433371
     :END:
 **** Front
-     Centripetal Acceleration
+     centripetal acceleration, $a_{c}$?
 **** Back
-     the acceleration of a particle in uniform circular motion:
-     
+     the acceleration of a particle in uniform circular motion:     
      $a_{c} = \frac{v^{2}}{r}$
-
      - is called centripetal because:
        - $\vec{a_{c}}$ is directed towards the center of the circle$
        - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
-         - if it wasn't, there would be a component of acceleration parallel to
-           velocity, and thus speed would be changing, motion non-uniform
+       - if it wasn't, there would be a component of acceleration parallel to
+         velocity, and thus speed would be changing, motion non-uniform
 ** CH5: Newton's Laws
-*** Newton's First Law                                                 :note:
+*** Newton's First                                                     :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524037733858
+    :ANKI_NOTE_ID: 1525397433557
     :END:
 **** Front
-     Newton's First Law
+     Newton’s First Law
 **** Back
      In the absence of external forces and when viewed from an inertial
      reference frame, an object at rest remains at rest and an object in motion
@@ -265,39 +275,39 @@
        object is zero.
      -  The tendency of an object to resist any attempt to change its velocity
        is called inertia.
-*** def of mass                                                        :note:
+*** definition of mass                                                 :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524037733978
+    :ANKI_NOTE_ID: 1525397476802
     :END:
 **** Front
-     Definition of Mass
+     Definition of mass
 **** Back
-      Mass is that property of an object that specifies how much resistance an
-      object exhibits to changes in its velocity
+     Mass is that property of an object that specifies how much resistance an
+     object exhibits to changes in its velocity
 
       - larger the mass, the greater the resistance to acceleration with the
         same amount of force
-*** Ratio of Two Masses                                                :note:
+*** ratio of two masses                                                :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524037734112
+    :ANKI_NOTE_ID: 1525397433786
     :END:
 **** Front
-     Ratio of two masses
+     ratio of two masses?
 **** Back
      The inverse ratio of the magnitudes of acceleration produced by the same force
      on the two masses:
      
      $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
 ** CH6: Circular Motion
-*** Centripetal Force                                                  :note:
+*** centripetal force                                                  :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524037738204
+    :ANKI_NOTE_ID: 1525397437878
     :END:
 **** Front
-     Centripetal Force
+     Centripetal force, $F_{c}?$
 **** Back
      $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
 
@@ -538,3 +548,28 @@
     equivalence of implication
 *** Back
     $p \implies q \equiv \neg p \vee q$
+** euclid algo for gcd                                                 :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1525396923452
+   :END:
+*** Front
+    What is the Euclidean algorithm for GCD?
+*** Back
+    $GCD(a, b) = GCD(b, r)$ where $r = a mod b$
+    - recursively apply until you acquire a result where $b=0$, $a$ will be the
+      $GCD$ of the original $a, b$
+** Rule of Product                                                     :note:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1525396923605
+   :END:
+*** Front
+    What is the Rule of Product?
+*** Back
+    If a procedure can be broken into first and second stages, and if there are
+    $m$ possible outcomes for the first stage and $n$ possible outcomes to the
+    second stage, then the total procedure can be carried out, in the
+    designated procedure, in $mn$ ways.
+    - this can be applied to any amount of stages, i.e. if there are 10
+      possible, then $n_{1} \mult n_{2} \mult ... \mult n_{10}$, etcetera.
