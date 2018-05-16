@@ -52,7 +52,21 @@
     6. machine-specific code improvement (*optional*)
 * physics                                                              :deck:
 ** TODO
-   - [ ] find all analysis models and include them
+   - [0/2] find all analysis models and include them:
+     - [ ] ch4
+       - [ ] projectile motion
+         - particle under constant velocity for x-dimension
+         - particle under constant accel for y-dimension
+       - [ ] particle in uniform circular motion
+         - circular path with radius r, constant speed v, magnitude is a_c
+     - [ ] ch5
+       - [ ] Particle under net-force
+         - if a mass, m, experiences a non-zero netforce, its acceleration is
+           related to the force via Newton’s 2nd
+       - [ ] Particle in equilibrium
+         - particle maintains constant velocity such that acceleration is zero
+           - this includes a velocity of zero itself
+         - the forces of Newton’s Second balance and $\Sigma \vec{F} = 0$
    - [ ] find common problems to provide numberless solutions to
 ** CH 1-3: Kinematics, 1D Vectors, motion
 *** x_f kinematic eq, velocity                                         :note:
@@ -102,7 +116,7 @@
      $y_f$ in terms of $v_y$
 **** Back
      $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
-     - no time component!
+     - no $a_{y}$ component!
 *** v_f kinematic eq, constant acc                                     :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -245,74 +259,179 @@
 *** a_c                                                                :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525397433371
+    :ANKI_NOTE_ID: 1525565545181
     :END:
 **** Front
      centripetal acceleration, $a_{c}$?
 **** Back
-     the acceleration of a particle in uniform circular motion:     
+     the acceleration of a particle in uniform circular motion:
      $a_{c} = \frac{v^{2}}{r}$
      - is called centripetal because:
        - $\vec{a_{c}}$ is directed towards the center of the circle$
        - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
        - if it wasn't, there would be a component of acceleration parallel to
          velocity, and thus speed would be changing, motion non-uniform
+*** max height, h                                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525566235076
+    :END:
+**** Front
+     equation for maximum height, $h$?
+**** Back
+     $h = \frac{v^{2}_{i}sin^{2}(\theta_{i})}{2g}$
+*** horizontal distance R                                              :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525564439135
+    :END:
+**** Front
+     Equation for horizontal distance, $R$
+**** Back
+     $R = \frac{v^{2}_{i}sin(2\theta_{i})}{g}$
+*** max horizontal distance R                                          :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525565545491
+    :END:
+**** Front
+     What is the equation and condition for $R_{max}$
+**** Back
+     $R_{max} = \frac{v^{2}_{i}}{g}$
+     - this occurs when $\theta = 45$ because the maximum value of
+       $sin(2\theta)$ is $1$, which occurs when $\theta = 45$ in our equation
+       since $sin(2 \theta) = sin(90^{\circ}) = 1$
 ** CH5: Newton's Laws
 *** Newton's First                                                     :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525397433557
+    :ANKI_NOTE_ID: 1525565097273
     :END:
 **** Front
      Newton’s First Law
 **** Back
      In the absence of external forces and when viewed from an inertial
      reference frame, an object at rest remains at rest and an object in motion
-     continues in motion with a constant velocity (that is, with a constant speed in
-     a straight line).
-
+     continues in motion with a constant velocity (that is, with a constant
+     speed in a straight line).
      - In other words, when no force acts on an object, the acceleration of the
        object is zero.
-     -  The tendency of an object to resist any attempt to change its velocity
+     - The tendency of an object to resist any attempt to change its velocity
        is called inertia.
+*** Newton's Second                                                    :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525650568759
+    :END:
+**** Front
+     Newton’s Second Law
+**** Back
+     When viewed from an inertial reference frame, the acceleration of an
+     object is directly proportional to the net force acting on it and
+     inversely proportional to its mass:
+
+     $\vec{a} \propto \frac{\Sigma \vec{F}}{m}$
+
+     When a proportionality constant of 1 is chosen, mass, acceleration, and
+     force are related via:
+
+     $\Sigma \vec{F} = m\vec{a}$
+
+     - Note, we are discussing the relation of /net force/ with an object’s
+       acceleration
+     - Newton’s 2nd is easily decomposed into component form:
+
+       $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
+*** Newton's Third                                                     :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525651005762
+    :END:
+**** Front
+     Newton’s Third Law
+**** Back
+     If two objects interact, the force $\vec{F_{12}}$ exerted by object 1 on
+     object 2 is equal in magnitude and opposite in direction to the force
+     $\vec{F_{21}}$ exerted by object 2 on object 1:
+
+     $\vec{F_{12}}=\vec{F_{21}}$
 *** definition of mass                                                 :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525397476802
+    :ANKI_NOTE_ID: 1525565545807
     :END:
 **** Front
      Definition of mass
 **** Back
      Mass is that property of an object that specifies how much resistance an
      object exhibits to changes in its velocity
-
-      - larger the mass, the greater the resistance to acceleration with the
-        same amount of force
+      - larger the mass, the greater the resistance to acceleration with the same amount of force
 *** ratio of two masses                                                :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525397433786
+    :ANKI_NOTE_ID: 1525565546024
     :END:
 **** Front
      ratio of two masses?
 **** Back
      The inverse ratio of the magnitudes of acceleration produced by the same force
      on the two masses:
-     
      $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
+*** modeling F_x, F_y on inclined planes                               :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525650570838
+    :END:
+**** Front
+     How do you model $F_{x}$ and $F_{y}$ on inclined planes?
+**** Back
+     You swap their geometric identities. Assuming we are modeling the effect
+     of an object on a plane inclined downwards, right under the net-force of
+     $F_{g} = m\vec{g}$:
+     - $F_{x} = mgsin(\theta) = ma_{x}$
+     - $F_{y} = F_{n} - mgcos(\theta) = 0$
+     - $a_{x} = gsin(\theta)$
+
+       [[file:force-components-inclined-plane.png][force components inclined plane]]
 ** CH6: Circular Motion
 *** centripetal force                                                  :note:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525397437878
+    :ANKI_NOTE_ID: 1525565550190
     :END:
 **** Front
      Centripetal force, $F_{c}?$
 **** Back
      $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
-
      [[file:centripetal-force.png][centripetal force diagram]]
+*** Period, T                                                          :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525650575156
+    :END:
+**** Front
+     Period, $T$, of an object in UCM?
+**** Back
+     $T=\frac{2 \pi r}{v}$
+*** rotation rate                                                      :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     What is the rotation rate of a particle in UCM?
+**** Back
+     The inverse of period, $T$:
 
+     $\frac{v}{2\pi r}$
+*** angular speed, w                                                   :note:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1525650575347
+    :END:
+**** Front
+     Angular speed, $\omega$, of an object in UCM?
+**** Back
+     $\omega = \frac{2 \pi}{T}$
 ** CH7: Energy of a System
 *** definition of constant work                                        :note:
     :PROPERTIES:
