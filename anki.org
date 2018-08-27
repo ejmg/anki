@@ -1,8 +1,11 @@
-* PL Theory and Design                                                 :deck:
-** Declarative vs Imperative                                           :note:
+* PL Theory and Design                                                 
+  :PROPERTIES:
+  :ANKI_DECK: pl
+  :END:
+** Declarative vs Imperative                                           
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521217938193
+   :ANKI_NOTE_ID: 1535396788649
    :END:
 *** Front
     What is the difference between declarative and imperative languages?
@@ -14,10 +17,10 @@
        task.
 
      - Declarative languages focus on /what/ the computer does.
-** Types of Declarative PLs                                            :note:
+** Types of Declarative PLs                                            
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521236332948
+   :ANKI_NOTE_ID: 1535396788699
    :END:
 *** Front
     What are the types of Declarative PLs?
@@ -25,10 +28,10 @@
     1. Functional -> Lisp, ML, Haskell
     2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
     3. Dataflow -> Id, Val
-** Types of Imperative PLs                                             :note:
+** Types of Imperative PLs                                             
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521236333159
+   :ANKI_NOTE_ID: 1535396788724
    :END:
 *** Front
     What are the types of Imperative PLs?
@@ -36,10 +39,10 @@
     1. von Neumann -> C, Ada, Fortran
     2. OOP -> Smalltalk, Eiffel, Java
     3. Scripting -> Perl, Python, PHP
-** General Compilation Process                                         :note:
+** General Compilation Process                                         
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1521236333359
+   :ANKI_NOTE_ID: 1535396788874
    :END:
 *** Front
     What are the steps of the compilation process?
@@ -49,8 +52,11 @@
     3. semantic analysis & intermediate code generation
     4. machine independent code improvement (*optional*)
     5. target code generation (assembler)
-    6. machine-specific code improvement (*optional*)
-* physics                                                              :deck:
+    6. machine-specific code improvement (*optional*) 
+* physics                                                              
+  :PROPERTIES:
+  :ANKI_DECK: physics
+  :END:
 ** TODO
    - [0/2] find all analysis models and include them:
      - [ ] ch4
@@ -69,37 +75,37 @@
          - the forces of Newton’s Second balance and $\Sigma \vec{F} = 0$
    - [ ] find common problems to provide numberless solutions to
 ** CH 1-3: Kinematics, 1D Vectors, motion
-*** x_f kinematic eq, velocity                                         :note:
+*** x_f kinematic eq, velocity                                         
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658929942
+    :ANKI_NOTE_ID: 1535396788924
     :END:
 **** Front
      $x_f$ in terms of initial and final $v$, constant $a$
 **** Back
      $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
-*** x_f kinematic eq, time                                             :note:
+*** x_f kinematic eq, time                                             
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930125
+    :ANKI_NOTE_ID: 1535396788975
     :END:
 **** Front
      $x_f$ in terms of time, constant $a$
 **** Back
      $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
-*** x_f kinematic eq, const velocity                                   :note:
+*** x_f kinematic eq, const velocity                                   
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930238
+    :ANKI_NOTE_ID: 1535396789023
     :END:
 **** Front
      $x_f$ in terms of constant $v(x)$
 **** Back
      $x_f = x(t) = x_i + v_xt$
-*** y_f kinematic eq, time                                             :note:
+*** y_f kinematic eq, time                                             
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930371
+    :ANKI_NOTE_ID: 1535396789074
     :END:
 **** Front
      $y_f$ in terms of $t$
@@ -107,83 +113,83 @@
      $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
      - constant acceleration
      - final position
-*** y_f kinematic eq, velocity                                         :note:
+*** y_f kinematic eq, velocity                                         
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930501
+    :ANKI_NOTE_ID: 1535396789199
     :END:
 **** Front
      $y_f$ in terms of $v_y$
 **** Back
      $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
      - no $a_{y}$ component!
-*** v_f kinematic eq, constant acc                                     :note:
+*** v_f kinematic eq, constant acc                                     
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525396912360
+    :ANKI_NOTE_ID: 1535396789249
     :END:
 **** Front
      $v_{xf}$, constant $a_{x}$?
 **** Back
      $v_{xf} = v_{xi} + a_{x}t$
-*** v_avg (Avg Speed)                                                  :note:
+*** v_avg (Avg Speed)                                                  
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930804
+    :ANKI_NOTE_ID: 1535396789299
     :END:
 **** Front
      $v_{avg}$, average speed (not $v_{x,avg}$)?
 **** Back
      $v_{avg}=\frac{d}{\Delta t}$
-*** v_x,avg kinematic eq, constant acc                                 :note:
+*** v_x,avg kinematic eq, constant acc                                 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525396912820
+    :ANKI_NOTE_ID: 1535396789349
     :END:
 **** Front
      $v_{x,avg}$, where $a_{x}$ is constant?
 **** Back
      $v_{x,avg} = \frac{v_{xi} + v_{xf}}{2} = \frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
-*** v^2 kinematics eq                                                  :note:
+*** v^2 kinematics eq                                                  
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658929429
+    :ANKI_NOTE_ID: 1535396789399
     :END:
 **** Front
      $v(x)^2$, constant accel
 **** Back
      $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
-*** a_x,avg kinematic eq                                               :note:
+*** a_x,avg kinematic eq                                               
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658930680
+    :ANKI_NOTE_ID: 1535396789524
     :END:
 **** Front
      Average Acceleration
 **** Back
      $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
-*** A_y component                                                      :note:
+*** A_y component                                                      
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658929825
+    :ANKI_NOTE_ID: 1535396789573
     :END:
 **** Front
      $A_y$ component
 **** Back
      $A\sin(\theta)$
-*** A_x component                                                      :note:
+*** A_x component                                                      
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658993520
+    :ANKI_NOTE_ID: 1535396789624
     :END:
 **** Front
      $A_x$ component
 **** Back
      $A\cos\theta$
-*** cartesian to polar                                                 :note:
+*** cartesian to polar                                                 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658931026
+    :ANKI_NOTE_ID: 1535396789674
     :END:
 **** Front
      cartesian $(x,y)$ to polar coordinates $(r, \theta)$
@@ -196,19 +202,19 @@
      - if (x,y) values are in QII or QIII, must add 180 to result of
        $\theta^{-1}$
      - if (x,y) values are in QIV, must add 360.
-*** magnitude of a vector                                              :note:
+*** magnitude of a vector                                              
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658931604
+    :ANKI_NOTE_ID: 1535396789724
     :END:
 **** Front
      magnitude of a vector, $\vec{A}$
 **** Back
      $A = \sqrt{A_{x}^{2} + A_y^2}$
-*** polar to cartesian                                                 :note:
+*** polar to cartesian                                                 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658931230
+    :ANKI_NOTE_ID: 1535396789775
     :END:
 **** Front
      convert polar $(r, \theta)$ to cartesian $(x,y)$
@@ -216,38 +222,38 @@
      $x = r\cos(\theta)$
 
      $y = r\sin(\theta)$
-*** direction of a vector                                              :note:
+*** direction of a vector                                              
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658931354
+    :ANKI_NOTE_ID: 1535396789924
     :END:
 **** Front
      direction of some vector, $\vec{A}$
 **** Back
      $\theta = tan^{-1}(\frac{A_y}{A_x})$
-*** instant velocity                                                   :note:
+*** instant velocity                                                   
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658931463
+    :ANKI_NOTE_ID: 1535396789974
     :END:
 **** Front
      instantaneous velocity
 **** Back
      $v_x = \frac{dx}{dt}$
-*** result vector                                                      :note:
+*** result vector                                                      
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658933152
+    :ANKI_NOTE_ID: 1535396790026
     :END:
 **** Front
      result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
 **** Back
      $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
 ** CH4: 2D Motion, Vectors
-*** position vector                                                    :note:
+*** position vector                                                    
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1521658933042
+    :ANKI_NOTE_ID: 1535396791374
     :END:
 **** Front
      position vector, $\vec{r}$
@@ -256,10 +262,10 @@
     
      [[file:position-vector.png][position vector]]
 
-*** a_c                                                                :note:
+*** a_c                                                                
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565545181
+    :ANKI_NOTE_ID: 1535396791424
     :END:
 **** Front
      centripetal acceleration, $a_{c}$?
@@ -271,28 +277,28 @@
        - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
        - if it wasn't, there would be a component of acceleration parallel to
          velocity, and thus speed would be changing, motion non-uniform
-*** max height, h                                                      :note:
+*** max height, h                                                      
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525566235076
+    :ANKI_NOTE_ID: 1535396791574
     :END:
 **** Front
      equation for maximum height, $h$?
 **** Back
      $h = \frac{v^{2}_{i}sin^{2}(\theta_{i})}{2g}$
-*** horizontal distance R                                              :note:
+*** horizontal distance R                                              
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525564439135
+    :ANKI_NOTE_ID: 1535396791625
     :END:
 **** Front
      Equation for horizontal distance, $R$
 **** Back
      $R = \frac{v^{2}_{i}sin(2\theta_{i})}{g}$
-*** max horizontal distance R                                          :note:
+*** max horizontal distance R                                          
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565545491
+    :ANKI_NOTE_ID: 1535396791674
     :END:
 **** Front
      What is the equation and condition for $R_{max}$
@@ -302,10 +308,10 @@
        $sin(2\theta)$ is $1$, which occurs when $\theta = 45$ in our equation
        since $sin(2 \theta) = sin(90^{\circ}) = 1$
 ** CH5: Newton's Laws
-*** Newton's First                                                     :note:
+*** Newton's First                                                     
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565097273
+    :ANKI_NOTE_ID: 1535396791724
     :END:
 **** Front
      Newton’s First Law
@@ -318,10 +324,10 @@
        object is zero.
      - The tendency of an object to resist any attempt to change its velocity
        is called inertia.
-*** Newton's Second                                                    :note:
+*** Newton's Second                                                    
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525650568759
+    :ANKI_NOTE_ID: 1535396791800
     :END:
 **** Front
      Newton’s Second Law
@@ -342,10 +348,10 @@
      - Newton’s 2nd is easily decomposed into component form:
 
        $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
-*** Newton's Third                                                     :note:
+*** Newton's Third                                                     
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525651005762
+    :ANKI_NOTE_ID: 1535396791949
     :END:
 **** Front
      Newton’s Third Law
@@ -355,10 +361,10 @@
      $\vec{F_{21}}$ exerted by object 2 on object 1:
 
      $\vec{F_{12}}=\vec{F_{21}}$
-*** definition of mass                                                 :note:
+*** definition of mass                                                 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565545807
+    :ANKI_NOTE_ID: 1535396791999
     :END:
 **** Front
      Definition of mass
@@ -366,10 +372,10 @@
      Mass is that property of an object that specifies how much resistance an
      object exhibits to changes in its velocity
       - larger the mass, the greater the resistance to acceleration with the same amount of force
-*** ratio of two masses                                                :note:
+*** ratio of two masses                                                
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565546024
+    :ANKI_NOTE_ID: 1535396792049
     :END:
 **** Front
      ratio of two masses?
@@ -377,10 +383,10 @@
      The inverse ratio of the magnitudes of acceleration produced by the same force
      on the two masses:
      $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
-*** modeling F_x, F_y on inclined planes                               :note:
+*** modeling F_x, F_y on inclined planes                               
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525650570838
+    :ANKI_NOTE_ID: 1535396793649
     :END:
 **** Front
      How do you model $F_{x}$ and $F_{y}$ on inclined planes?
@@ -394,49 +400,50 @@
 
        [[file:force-components-inclined-plane.png][force components inclined plane]]
 ** CH6: Circular Motion
-*** centripetal force                                                  :note:
+*** centripetal force                                                  
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525565550190
+    :ANKI_NOTE_ID: 1535396797700
     :END:
 **** Front
      Centripetal force, $F_{c}?$
 **** Back
      $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
      [[file:centripetal-force.png][centripetal force diagram]]
-*** Period, T                                                          :note:
+*** Period, T                                                          
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525650575156
+    :ANKI_NOTE_ID: 1535396797774
     :END:
 **** Front
      Period, $T$, of an object in UCM?
 **** Back
      $T=\frac{2 \pi r}{v}$
-*** rotation rate                                                      :note:
+*** rotation rate
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1535396797824
     :END:
 **** Front
-     What is the rotation rate of a particle in UCM?
+     Rotation rate of a particle in UCM?
 **** Back
-     The inverse of period, $T$:
-
-     $\frac{v}{2\pi r}$
-*** angular speed, w                                                   :note:
+     Inverse of period, $T$:
+     
+     $\frac{v}{2 \pi r}$
+*** angular speed, w                                                   
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1525650575347
+    :ANKI_NOTE_ID: 1535396797874
     :END:
 **** Front
      Angular speed, $\omega$, of an object in UCM?
 **** Back
      $\omega = \frac{2 \pi}{T}$
 ** CH7: Energy of a System
-*** definition of constant work                                        :note:
+*** definition of constant work                                        
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999295313
+    :ANKI_NOTE_ID: 1535396797924
     :END:
 **** Front
      Definition of work (constant $\vec{F}$)
@@ -446,19 +453,19 @@
      - $\Delta \vec{r}$ is the resultant displacement vector of the object
      - $F$ and $\Delta r$ are the respective magnitudes
      - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
-*** def of work by varying force                                       :note:
+*** def of work by varying force                                       
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999897514
+    :ANKI_NOTE_ID: 1535396797975
     :END:
 **** Front
      Definition of work with varying force
 **** Back
      $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
-*** spring force                                                       :note:
+*** spring force                                                       
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999897653
+    :ANKI_NOTE_ID: 1535396798124
     :END:
 **** Front
      Definition of Spring Force, aka Hooke's Law
@@ -466,57 +473,57 @@
      $F_{s} = -kx$
      - note, spring force is *always* directed opposite of the displacement from
        equilibrium, ergo negative sign
-*** work done by a spring                                              :note:
+*** work done by a spring                                              
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999897763
+    :ANKI_NOTE_ID: 1535396798174
     :END:
 **** Front
      Work done by a spring
 **** Back
          $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
          \frac{1}{2}kx_{f}^{2}$
-*** work done by external force                                        :note:
+*** work done by external force                                        
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002246724
+    :ANKI_NOTE_ID: 1535396798224
     :END:
 **** Front
      Work done by external force on a system
 **** Back
      $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
      \frac{1}{2}kx_{i}^{2}$
-*** kinetic energy                                                     :note:
+*** kinetic energy                                                     
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999295454
+    :ANKI_NOTE_ID: 1535396798275
     :END:
 **** Front
      Kinetic energy of a particle of mass $m$, velocity $v$
 **** Back
      $K \equiv \frac{1}{2}mv^{2}}$
-*** work by external force in terms of velocity                        :note:
+*** work by external force in terms of velocity                        
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002246919
+    :ANKI_NOTE_ID: 1535396798326
     :END:
 **** Front
      Work of external force on system in terms of velocity
 **** Back
      $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
-*** Work of external force in terms of kinetic                         :note:
+*** Work of external force in terms of kinetic                         
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002247088
+    :ANKI_NOTE_ID: 1535396798475
     :END:
 **** Front
      Work of external force on system in terms of kinetic energy
 **** Back
      $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
-*** Work-Kinetic Energy Theorem                                        :note:
+*** Work-Kinetic Energy Theorem                                        
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002781522
+    :ANKI_NOTE_ID: 1535396798524
     :END:
 **** Front
      Work-Kinetic Energy Theorem
@@ -533,19 +540,19 @@
        decreases if the net work is negative because the final kinetic energy is
        less than the initial kinetic energy.
 
-*** Relationship between Work done inside a system and potential energy :note:
+*** Relationship between Work done inside a system and potential energy 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002247200
+    :ANKI_NOTE_ID: 1535396798578
     :END:
 **** Front
      Potential energy of work done inside a system
 **** Back
      $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
-*** Def of Conservative Force                                          :note:
+*** Def of Conservative Force                                          
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002781776
+    :ANKI_NOTE_ID: 1535396798625
     :END:
 **** Front
      Definition of Conservative Force
@@ -556,19 +563,19 @@
      conservative if the work it does on a particle is zero when the particle
      moves through an arbitrary closed path and returns to its initial position.
      A force that does not meet these criteria is said to be nonconservative.
-*** relation between potential energy and direction of F, dr           :note:
+*** relation between potential energy and direction of F, dr           
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002781957
+    :ANKI_NOTE_ID: 1535396798674
     :END:
 **** Front
      relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
 **** Back
      $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
-*** potential energy function of a conservative system                 :note:
+*** potential energy function of a conservative system                 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002782089
+    :ANKI_NOTE_ID: 1535396798724
     :END:
 **** Front
      Potential energy function of a conservative system
@@ -579,10 +586,10 @@
 
      $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
 
-*** relation of force between members of a system and potential energy :note:
+*** relation of force between members of a system and potential energy 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524002247312
+    :ANKI_NOTE_ID: 1535396798874
     :END:
 **** Front
      relation of force between members of a system to the potential energy of
@@ -590,66 +597,66 @@
 **** Back
      $F_{x} = - \frack{dU}{dx}$
 ** CH8: Conservation of Energy
-*** gravitational potential energy                                     :note:
+*** gravitational potential energy                                     
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999295564
+    :ANKI_NOTE_ID: 1535396798924
     :END:
 **** Front
      Gravitational potential energy of a particle of mass $m$, distance $y$
      above earth's surface
 **** Back
      $U_{g} \equiv mgy$
-*** Earth-Object system of potential energy                            :note:
+*** Earth-Object system of potential energy                            
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1524036150646
+    :ANKI_NOTE_ID: 1535396798974
     :END:
 **** Front
      Earth-Object system of potential energy (object falling)
 **** Back
      $mg_{i} - mgy_{f} = -\Delta U$
      - where $mg_{i}$ is the start (distance) of the fall to the surface.
-*** elastic potential energy of a spring                               :note:
+*** elastic potential energy of a spring                               
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999295687
+    :ANKI_NOTE_ID: 1535396799026
     :END:
 **** Front
      elastic potential energy of a spring with a force of constant $k$
 **** Back
      $U_{s} \equiv \frac{1}{2}kx^{2}}$
-*** conservation of energy                                             :note:
+*** conservation of energy                                             
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523997113818
+    :ANKI_NOTE_ID: 1535396799074
     :END:
 **** Front
      conservation of energy equation
 **** Back
      $\Delta E_{system} = \Sigma T$
-*** relationship of kinetic and potential energy in isolated system    :note:
+*** relationship of kinetic and potential energy in isolated system    
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523997645577
+    :ANKI_NOTE_ID: 1535396799226
     :END:
 **** Front
      How are Kinetic and Potential energy related in an isolated system?
 **** Back
      $\Delta K + \Delta U = 0$
-*** mechanical energy of a system                                      :note:
+*** mechanical energy of a system                                      
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523997963582
+    :ANKI_NOTE_ID: 1535396799299
     :END:
 **** Front
      Mechanical Energy of a System
 **** Back
      $E_{mech} \equiv K + U$
-*** conservation of mech energy                                        :note:
+*** conservation of mech energy                                        
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1523999296332
+    :ANKI_NOTE_ID: 1535396799351
     :END:
 **** Front
      conservation of mechanical energy/total energy of isolated system
@@ -657,20 +664,23 @@
      $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
      forces.
      - total energy in an isolated system
-* discrete math                                                        :deck:
-** logical equiv                                                       :note:
+* discrete math                                                        
+  :PROPERTIES:
+  :ANKI_DECK: discrete_math
+  :END:
+** logical equiv                                                       
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1522876490520
+   :ANKI_NOTE_ID: 1535396799399
    :END:
 *** Front
     equivalence of implication
 *** Back
     $p \implies q \equiv \neg p \vee q$
-** euclid algo for gcd                                                 :note:
+** euclid algo for gcd                                                 
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1525396923452
+   :ANKI_NOTE_ID: 1535396799448
    :END:
 *** Front
     What is the Euclidean algorithm for GCD?
@@ -678,10 +688,10 @@
     $GCD(a, b) = GCD(b, r)$ where $r = a mod b$
     - recursively apply until you acquire a result where $b=0$, $a$ will be the
       $GCD$ of the original $a, b$
-** Rule of Product                                                     :note:
+** Rule of Product                                                     
    :PROPERTIES:
    :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1525396923605
+   :ANKI_NOTE_ID: 1535396799499
    :END:
 *** Front
     What is the Rule of Product?
