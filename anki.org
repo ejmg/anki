@@ -259,9 +259,6 @@
      position vector, $\vec{r}$
 **** Back
      $\vec{r} = x\hat{i} + y\hat{j}$
-    
-     [[file:position-vector.png][position vector]]
-
 *** a_c                                                                
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -397,8 +394,6 @@
      - $F_{x} = mgsin(\theta) = ma_{x}$
      - $F_{y} = F_{n} - mgcos(\theta) = 0$
      - $a_{x} = gsin(\theta)$
-
-       [[file:force-components-inclined-plane.png][force components inclined plane]]
 ** CH6: Circular Motion
 *** centripetal force                                                  
     :PROPERTIES:
@@ -409,7 +404,6 @@
      Centripetal force, $F_{c}?$
 **** Back
      $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
-     [[file:centripetal-force.png][centripetal force diagram]]
 *** Period, T                                                          
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -702,3 +696,11 @@
     designated procedure, in $mn$ ways.
     - this can be applied to any amount of stages, i.e. if there are 10
       possible, then $n_{1} \mult n_{2} \mult ... \mult n_{10}$, etcetera.
+* swe
+  :PROPERTIES:
+  :ANKI_DECK: swe
+  :END:
+** TODO
+   - [ ] Web Fundamentals
+     - [ ] POST/GET/etc requests
+   - [ ] Database Fundamentals
