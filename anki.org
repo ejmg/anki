@@ -1,4 +1,4 @@
-* PL Theory and Design                                                 
+* PL Theory and Design
   :PROPERTIES:
   :ANKI_DECK: pl
   :END:
@@ -53,7 +53,7 @@
     4. machine independent code improvement (*optional*)
     5. target code generation (assembler)
     6. machine-specific code improvement (*optional*) 
-* physics                                                              
+* physics
   :PROPERTIES:
   :ANKI_DECK: physics
   :END:
@@ -658,7 +658,7 @@
      $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
      forces.
      - total energy in an isolated system
-* discrete math                                                        
+* discrete math
   :PROPERTIES:
   :ANKI_DECK: discrete_math
   :END:
@@ -696,6 +696,68 @@
     designated procedure, in $mn$ ways.
     - this can be applied to any amount of stages, i.e. if there are 10
       possible, then $n_{1} \mult n_{2} \mult ... \mult n_{10}$, etcetera.
+* graphs
+  :PROPERTIES:
+  :ANKI_DECK: graphs
+  :END:
+** def of graph 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1538442951900
+   :END:
+*** Front
+    Definition of Graph
+*** Back
+    a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
+    edges such that each $e \in E$ is associated with an unordered pair of
+    vertices, $e = (v, w)$.
+** dir graph
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1538947874483
+   :END:
+*** Front
+    Definition of Directed Graph
+*** Back
+   a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
+   edges such that each $e \in E$ is associated with an $\textbf{ordered}$ pair of
+   vertices where $e = (v, w)$ denotes a unique edge $e$ from $v$ to $w$.
+** simple graph
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1538947874532
+   :END:
+*** Front
+    Definition of a Simple Graph
+*** Back
+    $G = (V, E)$ that has neither loops nor parallel edges.
+** path
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1538947874582
+   :END:
+*** Front
+    Definition of Path
+*** Back
+    Finite or infinite sequence of vertices $v_{0}, v_{1}, ..., v_{n}$ that
+    are connected and "traveled" within a graph. Its length is always $n - 1$,
+    the number of edges traveled. In a weighted graph, it is the
+    $\textbf{sum}$ of the weights of the edges traveled.
+** weighted G
+*** Front
+    Definition of weighted Graph
+*** Back
+   a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
+   called its "weight."
+* Example Image note
+** Front
+   Foo!
+** Back
+   Here's a demo image, but first, let's ensure it's composable with latex,
+   $F = \frac{\vec{A}}{x^{2 \dot \cup C}}$
+   #+BEGIN_EXPORT html
+   <img src="https://i.imgur.com/YheHQPT.jpg"/>
+   #+END_EXPORT
 * swe
   :PROPERTIES:
   :ANKI_DECK: swe
@@ -704,3 +766,5 @@
    - [ ] Web Fundamentals
      - [ ] POST/GET/etc requests
    - [ ] Database Fundamentals
+* TODO terms
+  - [ ] Superposition principle 
