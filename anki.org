@@ -830,8 +830,332 @@
      - AKA Joule Heating
 
 ** CH28
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
 ** CH29
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
 ** CH30
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** Item
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
 * discrete math
   :PROPERTIES:
   :ANKI_DECK: discrete_math
