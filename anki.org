@@ -815,7 +815,7 @@
 **** Front
      Rate of energy being delivered to a resistor?
 **** Back
-     $\Rho = I^{2}R = \frac{(\Delta V)^{2}}{R}$
+     $P = I^{2}R = \frac{(\Delta V)^{2}}{R}$
 
 *** Power [27.21]
     :PROPERTIES:
@@ -825,337 +825,174 @@
 **** Front
      Power
 **** Back
-     $\Rho = I \Delta V$
+     $P = I \Delta V$
      - SI unit is Watts, $1 W = 1 \frac{Joule}{second}$
      - AKA Joule Heating
-
 ** CH28
-*** Item
+*** Terminal Voltage of a Battery [28.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539452849782
+    :END:
+**** Front
+     Terminal Voltage of a Battery?
+**** Back
+     $\Delta V = \mathcal{E} - Ir$ where:
+     - $\mathcal{E}$ is equivalent to open-circuit voltage
+*** Current of Resistors in Series
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539452849833
+    :END:
+**** Front
+     Current of Resistors in Series?
+**** Back
+     $I = I_{1} = I_{2} = \dotsi$ where:
+     - $I$ is the current leaving the battery
+     - $I_{i}$ is the current in $i^{th}$ Resistor, $R_{i}$
+*** Electric Potential Difference Across Resistors in Series
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539452849882
+    :END:
+**** Front
+     Electric Potential Difference Across Resistors in Series
+**** Back
+     \[
+     \Delta V = \Delta V_{1} + \Delta V_{2} + \dotsi
+              = I_{1}R_{1} + I_{2}R_{2} + \dotsi
+     \]
+*** Equivalent Resistance of Resistors Connected in Series [28.6]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539452849983
+    :END:
+**** Front
+     Equivalent Resistance of Resistors Connected in Series
+**** Back
+     $R_{eq} = R_{1} + R_{2} + \dotsi$
+*** Electric Potential Difference Across Resistors in Parallel
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Electric Potential Difference Across Resistors in Parallel
 **** Back
-*** Item
+     $\Delta V = \Delta V_{1} = \Delta V_{2} = \dotsi$
+*** Current of Resistors in Series
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Current of Resistors in Series
 **** Back
-*** Item
+     \[
+     I = I_{1} + I_{2} + \dotsi 
+       = \frac{\Delta V_{1}}{R_{1}} + \frac{\Delta V_{2}}{R_{2}} + \dotsi
+     \]
+*** Equivalent Resistance of Resistors in Parallel [28.8]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Equivalent Resistance of Resistors in Parallel
 **** Back
-*** Item
+     $frac{1}{R_{eq}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dotsi$
+*** Kirchhoff's Rules [28.9 - 28.10]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Kirchhoff's Rules
 **** Back
-*** Item
+     1. *Junction Rule.* At any junction, the sum of currents must equal zero:
+        $\sum_{junction}^{} I = 0$
+     2. *Loop Rule.* The sum of the potential differences across all elements
+        around any closed circuit loop must be zero:
+        $\sum_{closed loop}^{} \Delta V = 0$
+*** Potential Diff of a resistor traveled in direction of the current
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Potential Difference of a resistor traveled in direction of the current
 **** Back
-*** Item
+     $\Delta V = -IR$
+*** Potential Diff of a resistor traveled in opposite direction of the current
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Potential Difference of a resistor traveled in opposite direction of the current
 **** Back
-*** Item
+     $\Delta V = +IR$
+*** Potential Difference of an EMF traveled in direction of EMF
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Potential Difference of an EMF traveled in direction of EMF
 **** Back
-*** Item
+     $\Delta V = +\mathcal{E}$
+*** Potential Difference of an EMF traveled in direction opposite of EMF
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Potential Difference of an EMF traveled in direction opposite of EMF
 **** Back
-*** Item
+     $\Delta V = -\mathcal{E}$
+*** Charge as a function of time for a capacitor being charged [28.14]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Charge as a function of time for a capacitor being charged
 **** Back
-*** Item
+     $q(t) = C\mathcal{E}(1 - e^{\frac{-t}{RC}} = Q_{max}(1 -
+     e^{\frac{-t}{RC}}$ where:
+     - $e$ is the base of the natural logarithm
+     - $RC$ is the time constant of the circuit, aka $\tau$
+*** Current as a function of time for a capacitor being charged [28.15]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Current as a function of time for a capacitor being charged
 **** Back
-*** Item
+     $i(t) = \frac{\mathcal{E}}{R}e^{\frac{-t}{RC}}$ where:
+     - $e$ is the base of the natural logarithm
+     - $RC$ is the time constant of the circuit, aka $\tau$
+*** Charge as a function of time for discharging capacitor [28.18]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Charge as a function of time for discharging capacitor
 **** Back
-*** Item
+     $q(t) = Q_{i}e^{\frac{-t}{RC}}$
+*** Current as a function of time for a discharging capacitor [28.19]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Current as a function of time for a discharging capacitor
 **** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
+     $i(t) = -\frac{Q_{i}}{RC}e^{\frac{-t}{RC}}$
 ** CH29
-*** Item
+*** Vector expression for magnetic force on a charged particle in MF [29.1]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Vector expression for magnetic force on a charged particle in MF
 **** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
+     $\vec{F}_{B} = q\vec{v} \times \vec{B}$ where:
+     - by definition of cross product, is perpendicular to both $\vec{v}$ and
+       $\vec{B}$
+     - This is the magnetic version of the *particle in a field model*
 ** CH30
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
-*** Item
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-**** Back
+** CH31
 * discrete math
   :PROPERTIES:
   :ANKI_DECK: discrete_math
