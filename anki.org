@@ -874,6 +874,7 @@
 *** Electric Potential Difference Across Resistors in Parallel
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741491
     :END:
 **** Front
      Electric Potential Difference Across Resistors in Parallel
@@ -882,6 +883,7 @@
 *** Current of Resistors in Series
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741591
     :END:
 **** Front
      Current of Resistors in Series
@@ -893,6 +895,7 @@
 *** Equivalent Resistance of Resistors in Parallel [28.8]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741716
     :END:
 **** Front
      Equivalent Resistance of Resistors in Parallel
@@ -901,6 +904,7 @@
 *** Kirchhoff's Rules [28.9 - 28.10]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741766
     :END:
 **** Front
      Kirchhoff's Rules
@@ -913,6 +917,7 @@
 *** Potential Diff of a resistor traveled in direction of the current
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741816
     :END:
 **** Front
      Potential Difference of a resistor traveled in direction of the current
@@ -921,6 +926,7 @@
 *** Potential Diff of a resistor traveled in opposite direction of the current
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741866
     :END:
 **** Front
      Potential Difference of a resistor traveled in opposite direction of the current
@@ -929,6 +935,7 @@
 *** Potential Difference of an EMF traveled in direction of EMF
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552741991
     :END:
 **** Front
      Potential Difference of an EMF traveled in direction of EMF
@@ -937,6 +944,7 @@
 *** Potential Difference of an EMF traveled in direction opposite of EMF
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742043
     :END:
 **** Front
      Potential Difference of an EMF traveled in direction opposite of EMF
@@ -945,6 +953,7 @@
 *** Charge as a function of time for a capacitor being charged [28.14]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742092
     :END:
 **** Front
      Charge as a function of time for a capacitor being charged
@@ -956,6 +965,7 @@
 *** Current as a function of time for a capacitor being charged [28.15]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742141
     :END:
 **** Front
      Current as a function of time for a capacitor being charged
@@ -966,6 +976,7 @@
 *** Charge as a function of time for discharging capacitor [28.18]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742266
     :END:
 **** Front
      Charge as a function of time for discharging capacitor
@@ -974,6 +985,7 @@
 *** Current as a function of time for a discharging capacitor [28.19]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742319
     :END:
 **** Front
      Current as a function of time for a discharging capacitor
@@ -983,6 +995,7 @@
 *** Vector expression for magnetic force on a charged particle in MF [29.1]
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742366
     :END:
 **** Front
      Vector expression for magnetic force on a charged particle in MF
@@ -991,6 +1004,57 @@
      - by definition of cross product, is perpendicular to both $\vec{v}$ and
        $\vec{B}$
      - This is the magnetic version of the *particle in a field model*
+*** Similarities between electric and magnetic forces
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552742416
+    :END:
+**** Front
+     What are similarities that magnetic force $\vec{F_{B}}$ shares with
+     electric force $\vec{F_{e}}$?
+     and $\vec{F_{B}}$
+**** Back
+     Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
+     show the magnetic force is:
+     - proportional to the charge $q$.
+     - proportional to the magnitude of the magnetic field akin to $\vec{E}$.
+     - directed opposite to the equivalent magnetic force on a positive charge
+       that moves in the same direction.
+*** Difference between electric and magnetic forces
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552743566
+    :END:
+**** Front
+     What are differences that magnetic force $\vec{F_{B}}$ has compared with
+     electric force $\vec{F_{e}}$?
+**** Back
+     Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
+     show the magnetic force is:
+     - proportional to the speed of the particle, $\vec{v}$ where $F_{e}$ is
+       unaffected.
+     - if $\vec{v}$ makes an angle $\theta$ with $\vec{B}$, then the magnitude
+       of the magnetic force is proportional to $\sin \theta$. No such behavior
+       with electric force.
+     - When the charged particle moves parallel with $\vec{B}$, then the
+       magnetic force is zero.
+     - When the charged particle moves in any direction *not parallel*, the
+       magnetic force is *perpendicular* with *both* $\vec{v}$ and $\vec{B}$.
+*** Right hand rules for the direction of magnetic force
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539552743691
+    :END:
+**** Front
+     What are the two right hand rules for determining the direction of $\vec{F}_{B}$?
+**** Back
+     Where $\vec{F}_{B}$ is assumed positive:
+     #+BEGIN_EXPORT html
+     <img src="https://gist.githubusercontent.com/ejmg/8bdfa07ccff5f0d190cb1a800981523a/raw/9e697bb2b3d80e4eddfc21da25e097af4280d4c0/right-hand-rule.png"/>
+     #+END_EXPORT
+
+     When $\vec{F}_{B}$ is negative, then it is opposite of what the right hand
+     rule would suggest.
 ** CH30
 ** CH31
 * discrete math
