@@ -880,13 +880,13 @@
      Electric Potential Difference Across Resistors in Parallel
 **** Back
      $\Delta V = \Delta V_{1} = \Delta V_{2} = \dotsi$
-*** Current of Resistors in Series
+*** Current of Resistors in Parallel
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :ANKI_NOTE_ID: 1539552741591
     :END:
 **** Front
-     Current of Resistors in Series
+     Current of Resistors in Parallel
 **** Back
      \[
      I = I_{1} + I_{2} + \dotsi 
@@ -1056,6 +1056,63 @@
      When $\vec{F}_{B}$ is negative, then it is opposite of what the right hand
      rule would suggest.
 ** CH30
+*** Biot-Savart Law [30.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1539566463392
+    :END:
+**** Front
+     Definition of Biot-Savart Law, $d\vec{B}$?
+**** Back
+     $d\vec{B} = \frac{\mu_{0}}{4\pi} \frac{Id\vec{s} \times \hat{r}}{r^{2}}$
+     where:
+     - $d\vec{B}$ is at a point $P$ associated with a length element $d\vec{s}$
+       of a wire carrying $I$.
+     - $d\vec{s}$ points in the direction of the current $I$
+     - the unit vector $\hat{r}$ is directed from $d\vec{s}$ toward $P$
+     - $d\vec{B}$ is $\perp$ with both $d\vec{s}$ and $\hat{r}$
+     - $\mu_{0}$ is the *permeability of free space*:
+       $\mu_{0} = 4\pi \times 10^{-7} T\cdot m / A$
+     - $d\vec{B}$ is the field created at a point by the current in only a
+       small length element, $d\vec{s}$, of the conductor.
+*** 
+*** Magnetic Field of Conductor (with radius R, current I) at distance r, R \leq r [30.14]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance
+     $r$, $R \leq r$
+**** Back
+     $B = \frac{\mu_{0}I}{2\pi r$
+*** Magnetic Field of Conductor (with radius R, current I) at distance r, r < R [30.15]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance $r$, $r < R$
+**** Back
+     $B = (\frac{\mu_{0}I}{2\pi R^{2}})r$
+     
+*** Ampere's Law [30.13]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     Ampere's Law
+**** Back
+     The line integral of $\vec{B} \centerdot d\vec{s}$ around any closed path
+     equals $\mu_{0}I$ where $I$ is the total steady current passing through
+     any surface bounded by the closed path:
+     $\oint \vec{B} \centerdot d\vec{s} = \mu_{0}I$
+*** Magnetic Force between two parallel conductors [30.12]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     Magnetic Force between two parallel conductors?
+**** Back
+     $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
 ** CH31
 * discrete math
   :PROPERTIES:
