@@ -1205,6 +1205,173 @@
 *** Back
    a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
    called its "weight."
+* trees
+  :PROPERTIES:
+  :ANKI_DECK: trees
+  :END:
+** Tree [9.1.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664525
+   :END:
+*** Front
+    Definition of a Tree, Free and Rooted.
+*** Back
+    A (free) tree $T$ is a simple graph where $v$ and $w$ are vertices in $T$,
+    there exists a unique path from $v$ to $w$.
+
+    $T$ is a *rooted* tree where a particular vertex is designated the *root*.
+** Level of a vertex
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664623
+   :END:
+*** Front
+    The level of a vertex in a Tree?
+*** Back
+    The level of a vertex $v$ is the length of the simple path from the root
+    $v_{0}$ to $v_{n}$. Level is also known as *Depth* and runs opposite of a
+    Tree's Height.
+    #+BEGIN_EXPORT html
+      <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+    #+END_EXPORT
+** Height of a vertex
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664673
+   :END:
+*** Front
+    The height of a vertex?
+*** Back
+    The height of a vertex is the longest simplest path from the vertex $v$ and
+    a tree's leaf. A *tree's height* is the longest simplest path from root to
+    a leaf or, equivalently, the maximum level that occurs in the tree.
+    #+BEGIN_EXPORT html
+      <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+    #+END_EXPORT
+** Parent of Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664701
+   :END:
+*** Front
+    Definition of parent vertex in a tree $T$?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    $v_{n - 1}$ is the parent of $v_{n}$
+** Ancestors of Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664748
+   :END:
+*** Front
+    Definition of a vertex's ancestors in tree $T$?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    $v_{0}, ..., v_{n - 1}$ are the ancestors of $v_{n}$.
+** Descendant of Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664799
+   :END:
+*** Front
+    Definition of a vertex's descendants in tree $T$?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    If $x$ is an ancestor of $y$, then $y$ is a *descendant* of $x$.
+** Siblings of Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827664973
+   :END:
+*** Front
+    Definition of a vertex's siblings?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    If $x$ and $y$ are children of $z$, then $x$ and $y$ are *siblings*.
+** Terminal Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827665024
+   :END:
+*** Front
+    Definition of terminal(leaf) vertex?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    If $x$ has no children then $x$ is a *terminal* vertex, aka *leaf*.
+** Internal Vertex [9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827665073
+   :END:
+*** Front
+    Definition of an internal vertex?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    If $x$ has children, then $x$ is an *internal* vertex, aka *branch*.
+** Subtree of a tree[9.2.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540827665123
+   :END:
+*** Front
+    Definition of a subtree?
+*** Back
+    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+    $T$. Then:
+
+    The *subtree* of $T$ rooted at $x$ is the graph with vertex set $V$ and edge set $E$,
+    where $V$ is $x$ together with the descendants of $x$ and $E = {e | e
+    \text{ is an edge on a simple path from } x \text{ to some vertex in } V}$
+** Definitional Equivalents of trees [9.2.3]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540829112448
+   :END:
+*** Front
+    Different definitions of a tree, $T$?
+*** Back
+    Let $T$ be a graph with $n$ vertices. The following are equivalent for $T$:
+    1. is a tree.
+    2. is *connected* and *acyclic*.
+    3. is *connected* and has $n - 1$ edges.
+    4. is *acyclic* and has $n - 1$ edges.
+** Spanning Tree [9.3.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1540829112498
+   :END:
+*** Front
+    Definition of spanning tree?
+*** Back
+    a tree $T$ is a *spanning tree* of a graph $G$ if $T$ is a subgraph of $G$
+    that contains all the vertices of $G$
+
+    In the image below, the black lines mark the edges included in the spanning
+    tree of $G$:
+
+    #+BEGIN_EXPORT html
+      <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
+    #+END_EXPORT
 * Example Image note
 ** Front
    Foo!
@@ -1222,5 +1389,3 @@
    - [ ] Web Fundamentals
      - [ ] POST/GET/etc requests
    - [ ] Database Fundamentals
-* TODO terms
-  - [ ] Superposition principle 
