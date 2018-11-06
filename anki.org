@@ -1372,6 +1372,104 @@
     #+BEGIN_EXPORT html
       <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
     #+END_EXPORT
+** Spanning Tree <=> Connected [9.3.4]
+*** Text
+    A graph $G$ has a spanning tree if and only if {{c1::$G$ is connected.}}
+*** Extra
+** Breadth-First Description 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541468592350
+   :END:
+*** Text
+    Breadth-First Search (BFS) is an algorithm for traversing {{c1::tree or graph data structures}}
+    by starting at some root and explores {{c1::all neighbor nodes at the present
+    depth}} before {{c1::moving to the next level}}.
+*** Extra
+** Depth-First Description
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541470347577
+   :END:
+*** Text
+    Depth-First Search (DFS) is an algorithm for traversing {{c1::tree or graph data
+    structures.}} It starts at some node and explores{{c1:: as far as possible along
+    each branch}} before {{c1::backtracking}}.
+*** Extra
+** Minimal Spanning Tree [9.4.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1541470347703
+   :END:
+*** Front
+    Definition of a Minimum Spanning Tree of graph $G$?
+*** Back
+    Let $G$ be a weighted graph. A *minimal spanning tree* of $G$ is a spanning tree
+    of *G* with minimum weight.
+** Prim's Algo Description
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541470347777
+   :END:
+*** Text
+    Prim's algorithm is a greedy algorithm that {{c1::finds a minimum spanning tree
+    for a weighted undirected graph}} by starting {{c1::from an arbitrary vertex}} and
+    {{c1::incrementally adding the cheapest possible connection from the tree}} to
+    another vertex without {{c1::forming a complete cycle.}}
+*** Extra
+** Kruskal's Algo Description
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541470347826
+   :END:
+*** Text
+    Kruskal's algorithm is a greedy algorithm that {{c1::finds a minimum spanning
+    tree $T$ for a weighted undirected graph $G$}} by starting {{c1::with all vertices of $G$}} and
+    no edges, incrementally adding {{c1::the lowest cost edge $e$ to $T$ without
+    forming a complete cycle}}.
+*** Extra
+** Definition of Binary Tree [9.5.1]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1541471750101
+   :END:
+*** Front
+    Definition of a Binary Tree?
+*** Back
+    A *Binary Tree* is a rooted tree in which each vertex has either no
+    children, one child, or two children.
+** Full Binary Tree and # Leaves, Total Vertices [9.5.4]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541471750175
+   :END:
+*** Text
+    If $T$ is a *full* binary tree with $i$ internal vertices, then $T$ has {{c1::$i + 1$}}
+    terminal vertices (leaves) and {{c1::$2i + 1$}} total vertices.
+*** Extra
+** Relation between height and leaves in Binary Tree [9.5.6]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1541471873127
+   :END:
+*** Text
+    If a binary tree of height $h$ has $t$ terminal (leaf) vertices, then {{c1::$\lg
+    t \leq  h$.}}
+*** Extra
+** Definition of Binary Search Tree [9.5.8]
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1541472272176
+   :END:
+*** Front
+    Definition of a Binary Search Tree?
+*** Back
+    A binary search tree is a binary tree $T$ in which data are associated with
+    the vertices. The data are arranged so that, for each vertex $v$ in $T$,
+    each data item in the left subtree of $v$ is less than the data item in
+    $v$, and each data item in the right subtree of $v$ is greater than the
+    data item in $v$.
+
 * Example Image note
 ** Front
    Foo!
