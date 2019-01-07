@@ -53,1423 +53,1535 @@
     4. machine independent code improvement (*optional*)
     5. target code generation (assembler)
     6. machine-specific code improvement (*optional*) 
-* physics_240
-  :PROPERTIES:
-  :ANKI_DECK: physics_240
-  :END:
-** TODO
-   - [0/2] find all analysis models and include them:
-     - [ ] ch4
-       - [ ] projectile motion
-         - particle under constant velocity for x-dimension
-         - particle under constant accel for y-dimension
-       - [ ] particle in uniform circular motion
-         - circular path with radius r, constant speed v, magnitude is a_c
-     - [ ] ch5
-       - [ ] Particle under net-force
-         - if a mass, m, experiences a non-zero netforce, its acceleration is
-           related to the force via Newton’s 2nd
-       - [ ] Particle in equilibrium
-         - particle maintains constant velocity such that acceleration is zero
-           - this includes a velocity of zero itself
-         - the forces of Newton’s Second balance and $\Sigma \vec{F} = 0$
-   - [ ] find common problems to provide numberless solutions to
-** CH 1-3: Kinematics, 1D Vectors, motion
-*** x_f kinematic eq, velocity                                         
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788924
-    :END:
-**** Front
-     $x_f$ in terms of initial and final $v$, constant $a$
-**** Back
-     $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
-*** x_f kinematic eq, time                                             
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788975
-    :END:
-**** Front
-     $x_f$ in terms of time, constant $a$
-**** Back
-     $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
-*** x_f kinematic eq, const velocity                                   
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789023
-    :END:
-**** Front
-     $x_f$ in terms of constant $v(x)$
-**** Back
-     $x_f = x(t) = x_i + v_xt$
-*** y_f kinematic eq, time                                             
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789074
-    :END:
-**** Front
-     $y_f$ in terms of $t$
-**** Back
-     $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
-     - constant acceleration
-     - final position
-*** y_f kinematic eq, velocity                                         
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789199
-    :END:
-**** Front
-     $y_f$ in terms of $v_y$
-**** Back
-     $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
-     - no $a_{y}$ component!
-*** v_f kinematic eq, constant acc                                     
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789249
-    :END:
-**** Front
-     $v_{xf}$, constant $a_{x}$?
-**** Back
-     $v_{xf} = v_{xi} + a_{x}t$
-*** v_avg (Avg Speed)                                                  
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789299
-    :END:
-**** Front
-     $v_{avg}$, average speed (not $v_{x,avg}$)?
-**** Back
-     $v_{avg}=\frac{d}{\Delta t}$
-*** v_x,avg kinematic eq, constant acc                                 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789349
-    :END:
-**** Front
-     $v_{x,avg}$, where $a_{x}$ is constant?
-**** Back
-     $v_{x,avg} = \frac{v_{xi} + v_{xf}}{2} = \frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
-*** v^2 kinematics eq                                                  
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789399
-    :END:
-**** Front
-     $v(x)^2$, constant accel
-**** Back
-     $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
-*** a_x,avg kinematic eq                                               
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789524
-    :END:
-**** Front
-     Average Acceleration
-**** Back
-     $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
-*** A_y component                                                      
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789573
-    :END:
-**** Front
-     $A_y$ component
-**** Back
-     $A\sin(\theta)$
-*** A_x component                                                      
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789624
-    :END:
-**** Front
-     $A_x$ component
-**** Back
-     $A\cos\theta$
-*** cartesian to polar                                                 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789674
-    :END:
-**** Front
-     cartesian $(x,y)$ to polar coordinates $(r, \theta)$
-**** Back
-     $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
+* school
+** physics_240
+   :PROPERTIES:
+   :ANKI_DECK: physics_240
+   :END:
+*** TODO
+    - [0/2] find all analysis models and include them:
+      - [ ] ch4
+        - [ ] projectile motion
+          - particle under constant velocity for x-dimension
+          - particle under constant accel for y-dimension
+        - [ ] particle in uniform circular motion
+          - circular path with radius r, constant speed v, magnitude is a_c
+      - [ ] ch5
+        - [ ] Particle under net-force
+          - if a mass, m, experiences a non-zero netforce, its acceleration is
+            related to the force via Newton’s 2nd
+        - [ ] Particle in equilibrium
+          - particle maintains constant velocity such that acceleration is zero
+            - this includes a velocity of zero itself
+          - the forces of Newton’s Second balance and $\Sigma \vec{F} = 0$
+    - [ ] find common problems to provide numberless solutions to
+*** CH 1-3: Kinematics, 1D Vectors, motion
+**** x_f kinematic eq, velocity                                         
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396788924
+     :END:
+***** Front
+      $x_f$ in terms of initial and final $v$, constant $a$
+***** Back
+      $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
+**** x_f kinematic eq, time                                             
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396788975
+     :END:
+***** Front
+      $x_f$ in terms of time, constant $a$
+***** Back
+      $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
+**** x_f kinematic eq, const velocity                                   
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789023
+     :END:
+***** Front
+      $x_f$ in terms of constant $v(x)$
+***** Back
+      $x_f = x(t) = x_i + v_xt$
+**** y_f kinematic eq, time                                             
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789074
+     :END:
+***** Front
+      $y_f$ in terms of $t$
+***** Back
+      $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
+      - constant acceleration
+      - final position
+**** y_f kinematic eq, velocity                                         
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789199
+     :END:
+***** Front
+      $y_f$ in terms of $v_y$
+***** Back
+      $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
+      - no $a_{y}$ component!
+**** v_f kinematic eq, constant acc                                     
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789249
+     :END:
+***** Front
+      $v_{xf}$, constant $a_{x}$?
+***** Back
+      $v_{xf} = v_{xi} + a_{x}t$
+**** v_avg (Avg Speed)                                                  
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789299
+     :END:
+***** Front
+      $v_{avg}$, average speed (not $v_{x,avg}$)?
+***** Back
+      $v_{avg}=\frac{d}{\Delta t}$
+**** v_x,avg kinematic eq, constant acc                                 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789349
+     :END:
+***** Front
+      $v_{x,avg}$, where $a_{x}$ is constant?
+***** Back
+      $v_{x,avg} = \frac{v_{xi} + v_{xf}}{2} = \frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
+**** v^2 kinematics eq                                                  
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789399
+     :END:
+***** Front
+      $v(x)^2$, constant accel
+***** Back
+      $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
+**** a_x,avg kinematic eq                                               
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789524
+     :END:
+***** Front
+      Average Acceleration
+***** Back
+      $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
+**** A_y component                                                      
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789573
+     :END:
+***** Front
+      $A_y$ component
+***** Back
+      $A\sin(\theta)$
+**** A_x component                                                      
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789624
+     :END:
+***** Front
+      $A_x$ component
+***** Back
+      $A\cos\theta$
+**** cartesian to polar                                                 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789674
+     :END:
+***** Front
+      cartesian $(x,y)$ to polar coordinates $(r, \theta)$
+***** Back
+      $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
     
-     $r = \sqrt{x^2 + y^2}$
+      $r = \sqrt{x^2 + y^2}$
 
-     Note:
-     - if (x,y) values are in QII or QIII, must add 180 to result of
-       $\theta^{-1}$
-     - if (x,y) values are in QIV, must add 360.
-*** magnitude of a vector                                              
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789724
-    :END:
-**** Front
-     magnitude of a vector, $\vec{A}$
-**** Back
-     $A = \sqrt{A_{x}^{2} + A_y^2}$
-*** polar to cartesian                                                 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789775
-    :END:
-**** Front
-     convert polar $(r, \theta)$ to cartesian $(x,y)$
-**** Back
-     $x = r\cos(\theta)$
+      Note:
+      - if (x,y) values are in QII or QIII, must add 180 to result of
+        $\theta^{-1}$
+      - if (x,y) values are in QIV, must add 360.
+**** magnitude of a vector                                              
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789724
+     :END:
+***** Front
+      magnitude of a vector, $\vec{A}$
+***** Back
+      $A = \sqrt{A_{x}^{2} + A_y^2}$
+**** polar to cartesian                                                 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789775
+     :END:
+***** Front
+      convert polar $(r, \theta)$ to cartesian $(x,y)$
+***** Back
+      $x = r\cos(\theta)$
 
-     $y = r\sin(\theta)$
-*** direction of a vector                                              
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789924
-    :END:
-**** Front
-     direction of some vector, $\vec{A}$
-**** Back
-     $\theta = tan^{-1}(\frac{A_y}{A_x})$
-*** instant velocity                                                   
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396789974
-    :END:
-**** Front
-     instantaneous velocity
-**** Back
-     $v_x = \frac{dx}{dt}$
-*** result vector                                                      
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396790026
-    :END:
-**** Front
-     result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
-**** Back
-     $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
-** CH4: 2D Motion, Vectors
-*** position vector                                                    
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791374
-    :END:
-**** Front
-     position vector, $\vec{r}$
-**** Back
-     $\vec{r} = x\hat{i} + y\hat{j}$
-*** a_c                                                                
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791424
-    :END:
-**** Front
-     centripetal acceleration, $a_{c}$?
-**** Back
-     the acceleration of a particle in uniform circular motion:
-     $a_{c} = \frac{v^{2}}{r}$
-     - is called centripetal because:
-       - $\vec{a_{c}}$ is directed towards the center of the circle$
-       - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
-       - if it wasn't, there would be a component of acceleration parallel to
-         velocity, and thus speed would be changing, motion non-uniform
-*** max height, h                                                      
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791574
-    :END:
-**** Front
-     equation for maximum height, $h$?
-**** Back
-     $h = \frac{v^{2}_{i}sin^{2}(\theta_{i})}{2g}$
-*** horizontal distance R                                              
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791625
-    :END:
-**** Front
-     Equation for horizontal distance, $R$
-**** Back
-     $R = \frac{v^{2}_{i}sin(2\theta_{i})}{g}$
-*** max horizontal distance R                                          
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791674
-    :END:
-**** Front
-     What is the equation and condition for $R_{max}$
-**** Back
-     $R_{max} = \frac{v^{2}_{i}}{g}$
-     - this occurs when $\theta = 45$ because the maximum value of
-       $sin(2\theta)$ is $1$, which occurs when $\theta = 45$ in our equation
-       since $sin(2 \theta) = sin(90^{\circ}) = 1$
-** CH5: Newton's Laws
-*** Newton's First                                                     
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791724
-    :END:
-**** Front
-     Newton’s First Law
-**** Back
-     In the absence of external forces and when viewed from an inertial
-     reference frame, an object at rest remains at rest and an object in motion
-     continues in motion with a constant velocity (that is, with a constant
-     speed in a straight line).
-     - In other words, when no force acts on an object, the acceleration of the
-       object is zero.
-     - The tendency of an object to resist any attempt to change its velocity
-       is called inertia.
-*** Newton's Second                                                    
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791800
-    :END:
-**** Front
-     Newton’s Second Law
-**** Back
-     When viewed from an inertial reference frame, the acceleration of an
-     object is directly proportional to the net force acting on it and
-     inversely proportional to its mass:
+      $y = r\sin(\theta)$
+**** direction of a vector                                              
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789924
+     :END:
+***** Front
+      direction of some vector, $\vec{A}$
+***** Back
+      $\theta = tan^{-1}(\frac{A_y}{A_x})$
+**** instant velocity                                                   
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396789974
+     :END:
+***** Front
+      instantaneous velocity
+***** Back
+      $v_x = \frac{dx}{dt}$
+**** result vector                                                      
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396790026
+     :END:
+***** Front
+      result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
+***** Back
+      $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
+*** CH4: 2D Motion, Vectors
+**** position vector                                                    
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791374
+     :END:
+***** Front
+      position vector, $\vec{r}$
+***** Back
+      $\vec{r} = x\hat{i} + y\hat{j}$
+**** a_c                                                                
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791424
+     :END:
+***** Front
+      centripetal acceleration, $a_{c}$?
+***** Back
+      the acceleration of a particle in uniform circular motion:
+      $a_{c} = \frac{v^{2}}{r}$
+      - is called centripetal because:
+        - $\vec{a_{c}}$ is directed towards the center of the circle$
+        - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
+        - if it wasn't, there would be a component of acceleration parallel to
+          velocity, and thus speed would be changing, motion non-uniform
+**** max height, h                                                      
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791574
+     :END:
+***** Front
+      equation for maximum height, $h$?
+***** Back
+      $h = \frac{v^{2}_{i}sin^{2}(\theta_{i})}{2g}$
+**** horizontal distance R                                              
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791625
+     :END:
+***** Front
+      Equation for horizontal distance, $R$
+***** Back
+      $R = \frac{v^{2}_{i}sin(2\theta_{i})}{g}$
+**** max horizontal distance R                                          
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791674
+     :END:
+***** Front
+      What is the equation and condition for $R_{max}$
+***** Back
+      $R_{max} = \frac{v^{2}_{i}}{g}$
+      - this occurs when $\theta = 45$ because the maximum value of
+        $sin(2\theta)$ is $1$, which occurs when $\theta = 45$ in our equation
+        since $sin(2 \theta) = sin(90^{\circ}) = 1$
+*** CH5: Newton's Laws
+**** Newton's First                                                     
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791724
+     :END:
+***** Front
+      Newton’s First Law
+***** Back
+      In the absence of external forces and when viewed from an inertial
+      reference frame, an object at rest remains at rest and an object in motion
+      continues in motion with a constant velocity (that is, with a constant
+      speed in a straight line).
+      - In other words, when no force acts on an object, the acceleration of the
+        object is zero.
+      - The tendency of an object to resist any attempt to change its velocity
+        is called inertia.
+**** Newton's Second                                                    
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791800
+     :END:
+***** Front
+      Newton’s Second Law
+***** Back
+      When viewed from an inertial reference frame, the acceleration of an
+      object is directly proportional to the net force acting on it and
+      inversely proportional to its mass:
 
-     $\vec{a} \propto \frac{\Sigma \vec{F}}{m}$
+      $\vec{a} \propto \frac{\Sigma \vec{F}}{m}$
 
-     When a proportionality constant of 1 is chosen, mass, acceleration, and
-     force are related via:
+      When a proportionality constant of 1 is chosen, mass, acceleration, and
+      force are related via:
 
-     $\Sigma \vec{F} = m\vec{a}$
+      $\Sigma \vec{F} = m\vec{a}$
 
-     - Note, we are discussing the relation of /net force/ with an object’s
-       acceleration
-     - Newton’s 2nd is easily decomposed into component form:
+      - Note, we are discussing the relation of /net force/ with an object’s
+        acceleration
+      - Newton’s 2nd is easily decomposed into component form:
 
-       $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
-*** Newton's Third                                                     
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791949
-    :END:
-**** Front
-     Newton’s Third Law
-**** Back
-     If two objects interact, the force $\vec{F_{12}}$ exerted by object 1 on
-     object 2 is equal in magnitude and opposite in direction to the force
-     $\vec{F_{21}}$ exerted by object 2 on object 1:
+        $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
+**** Newton's Third                                                     
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791949
+     :END:
+***** Front
+      Newton’s Third Law
+***** Back
+      If two objects interact, the force $\vec{F_{12}}$ exerted by object 1 on
+      object 2 is equal in magnitude and opposite in direction to the force
+      $\vec{F_{21}}$ exerted by object 2 on object 1:
 
-     $\vec{F_{12}}=\vec{F_{21}}$
-*** definition of mass                                                 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396791999
-    :END:
-**** Front
-     Definition of mass
-**** Back
-     Mass is that property of an object that specifies how much resistance an
-     object exhibits to changes in its velocity
-      - larger the mass, the greater the resistance to acceleration with the same amount of force
-*** ratio of two masses                                                
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396792049
-    :END:
-**** Front
-     ratio of two masses?
-**** Back
-     The inverse ratio of the magnitudes of acceleration produced by the same force
-     on the two masses:
-     $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
-*** modeling F_x, F_y on inclined planes                               
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396793649
-    :END:
-**** Front
-     How do you model $F_{x}$ and $F_{y}$ on inclined planes?
-**** Back
-     You swap their geometric identities. Assuming we are modeling the effect
-     of an object on a plane inclined downwards, right under the net-force of
-     $F_{g} = m\vec{g}$:
-     - $F_{x} = mgsin(\theta) = ma_{x}$
-     - $F_{y} = F_{n} - mgcos(\theta) = 0$
-     - $a_{x} = gsin(\theta)$
-** CH6: Circular Motion
-*** centripetal force                                                  
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797700
-    :END:
-**** Front
-     Centripetal force, $F_{c}?$
-**** Back
-     $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
-*** Period, T                                                          
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797774
-    :END:
-**** Front
-     Period, $T$, of an object in UCM?
-**** Back
-     $T=\frac{2 \pi r}{v}$
-*** rotation rate
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797824
-    :END:
-**** Front
-     Rotation rate of a particle in UCM?
-**** Back
-     Inverse of period, $T$:
+      $\vec{F_{12}}=\vec{F_{21}}$
+**** definition of mass                                                 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396791999
+     :END:
+***** Front
+      Definition of mass
+***** Back
+      Mass is that property of an object that specifies how much resistance an
+      object exhibits to changes in its velocity
+       - larger the mass, the greater the resistance to acceleration with the same amount of force
+**** ratio of two masses                                                
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396792049
+     :END:
+***** Front
+      ratio of two masses?
+***** Back
+      The inverse ratio of the magnitudes of acceleration produced by the same force
+      on the two masses:
+      $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
+**** modeling F_x, F_y on inclined planes                               
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396793649
+     :END:
+***** Front
+      How do you model $F_{x}$ and $F_{y}$ on inclined planes?
+***** Back
+      You swap their geometric identities. Assuming we are modeling the effect
+      of an object on a plane inclined downwards, right under the net-force of
+      $F_{g} = m\vec{g}$:
+      - $F_{x} = mgsin(\theta) = ma_{x}$
+      - $F_{y} = F_{n} - mgcos(\theta) = 0$
+      - $a_{x} = gsin(\theta)$
+*** CH6: Circular Motion
+**** centripetal force                                                  
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797700
+     :END:
+***** Front
+      Centripetal force, $F_{c}?$
+***** Back
+      $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
+**** Period, T                                                          
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797774
+     :END:
+***** Front
+      Period, $T$, of an object in UCM?
+***** Back
+      $T=\frac{2 \pi r}{v}$
+**** rotation rate
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797824
+     :END:
+***** Front
+      Rotation rate of a particle in UCM?
+***** Back
+      Inverse of period, $T$:
      
-     $\frac{v}{2 \pi r}$
-*** angular speed, w                                                   
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797874
-    :END:
-**** Front
-     Angular speed, $\omega$, of an object in UCM?
-**** Back
-     $\omega = \frac{2 \pi}{T}$
-** CH7: Energy of a System
-*** definition of constant work                                        
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797924
-    :END:
-**** Front
-     Definition of work (constant $\vec{F}$)
-**** Back
-     $\mathbf{W} \equiv F \Delta r cos(\theta)$
-     - where $\vec{F}$ is the force on the system
-     - $\Delta \vec{r}$ is the resultant displacement vector of the object
-     - $F$ and $\Delta r$ are the respective magnitudes
-     - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
-*** def of work by varying force                                       
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396797975
-    :END:
-**** Front
-     Definition of work with varying force
-**** Back
-     $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
-*** spring force                                                       
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798124
-    :END:
-**** Front
-     Definition of Spring Force, aka Hooke's Law
-**** Back
-     $F_{s} = -kx$
-     - note, spring force is *always* directed opposite of the displacement from
-       equilibrium, ergo negative sign
-*** work done by a spring                                              
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798174
-    :END:
-**** Front
-     Work done by a spring
-**** Back
-         $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
-         \frac{1}{2}kx_{f}^{2}$
-*** work done by external force                                        
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798224
-    :END:
-**** Front
-     Work done by external force on a system
-**** Back
-     $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
-     \frac{1}{2}kx_{i}^{2}$
-*** kinetic energy                                                     
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798275
-    :END:
-**** Front
-     Kinetic energy of a particle of mass $m$, velocity $v$
-**** Back
-     $K \equiv \frac{1}{2}mv^{2}}$
-*** work by external force in terms of velocity                        
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798326
-    :END:
-**** Front
-     Work of external force on system in terms of velocity
-**** Back
-     $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
-*** Work of external force in terms of kinetic                         
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798475
-    :END:
-**** Front
-     Work of external force on system in terms of kinetic energy
-**** Back
-     $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
-*** Work-Kinetic Energy Theorem                                        
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798524
-    :END:
-**** Front
-     Work-Kinetic Energy Theorem
-**** Back
-     When work is done on a system and the only change in the system is in its
-     speed, the net work done on the system equals the change in kinetic energy
-     of the system.
+      $\frac{v}{2 \pi r}$
+**** angular speed, w                                                   
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797874
+     :END:
+***** Front
+      Angular speed, $\omega$, of an object in UCM?
+***** Back
+      $\omega = \frac{2 \pi}{T}$
+*** CH7: Energy of a System
+**** definition of constant work                                        
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797924
+     :END:
+***** Front
+      Definition of work (constant $\vec{F}$)
+***** Back
+      $\mathbf{W} \equiv F \Delta r cos(\theta)$
+      - where $\vec{F}$ is the force on the system
+      - $\Delta \vec{r}$ is the resultant displacement vector of the object
+      - $F$ and $\Delta r$ are the respective magnitudes
+      - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
+**** def of work by varying force                                       
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396797975
+     :END:
+***** Front
+      Definition of work with varying force
+***** Back
+      $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
+**** spring force                                                       
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798124
+     :END:
+***** Front
+      Definition of Spring Force, aka Hooke's Law
+***** Back
+      $F_{s} = -kx$
+      - note, spring force is *always* directed opposite of the displacement from
+        equilibrium, ergo negative sign
+**** work done by a spring                                              
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798174
+     :END:
+***** Front
+      Work done by a spring
+***** Back
+          $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
+          \frac{1}{2}kx_{f}^{2}$
+**** work done by external force                                        
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798224
+     :END:
+***** Front
+      Work done by external force on a system
+***** Back
+      $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
+      \frac{1}{2}kx_{i}^{2}$
+**** kinetic energy                                                     
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798275
+     :END:
+***** Front
+      Kinetic energy of a particle of mass $m$, velocity $v$
+***** Back
+      $K \equiv \frac{1}{2}mv^{2}}$
+**** work by external force in terms of velocity                        
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798326
+     :END:
+***** Front
+      Work of external force on system in terms of velocity
+***** Back
+      $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
+**** Work of external force in terms of kinetic                         
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798475
+     :END:
+***** Front
+      Work of external force on system in terms of kinetic energy
+***** Back
+      $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
+**** Work-Kinetic Energy Theorem                                        
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798524
+     :END:
+***** Front
+      Work-Kinetic Energy Theorem
+***** Back
+      When work is done on a system and the only change in the system is in its
+      speed, the net work done on the system equals the change in kinetic energy
+      of the system.
 
-     - furthermore
+      - furthermore
 
-       The work–kinetic energy theorem indicates that the speed of a system
-       increases if the net work done on it is positive because the final
-       kinetic energy is greater than the initial kinetic energy. The speed
-       decreases if the net work is negative because the final kinetic energy is
-       less than the initial kinetic energy.
+        The work–kinetic energy theorem indicates that the speed of a system
+        increases if the net work done on it is positive because the final
+        kinetic energy is greater than the initial kinetic energy. The speed
+        decreases if the net work is negative because the final kinetic energy is
+        less than the initial kinetic energy.
 
-*** Relationship between Work done inside a system and potential energy 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798578
-    :END:
-**** Front
-     Potential energy of work done inside a system
-**** Back
-     $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
-*** Def of Conservative Force                                          
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798625
-    :END:
-**** Front
-     Definition of Conservative Force
-**** Back
-     A force is conservative if the work it does on a particle that is a member
-     of the system as the particle moves between two points is independent of
-     the path the particle takes between the two points. Furthermore, a force is
-     conservative if the work it does on a particle is zero when the particle
-     moves through an arbitrary closed path and returns to its initial position.
-     A force that does not meet these criteria is said to be nonconservative.
-*** relation between potential energy and direction of F, dr           
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798674
-    :END:
-**** Front
-     relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
-**** Back
-     $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
-*** potential energy function of a conservative system                 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798724
-    :END:
-**** Front
-     Potential energy function of a conservative system
-**** Back
-     $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
+**** Relationship between Work done inside a system and potential energy 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798578
+     :END:
+***** Front
+      Potential energy of work done inside a system
+***** Back
+      $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
+**** Def of Conservative Force                                          
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798625
+     :END:
+***** Front
+      Definition of Conservative Force
+***** Back
+      A force is conservative if the work it does on a particle that is a member
+      of the system as the particle moves between two points is independent of
+      the path the particle takes between the two points. Furthermore, a force is
+      conservative if the work it does on a particle is zero when the particle
+      moves through an arbitrary closed path and returns to its initial position.
+      A force that does not meet these criteria is said to be nonconservative.
+**** relation between potential energy and direction of F, dr           
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798674
+     :END:
+***** Front
+      relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
+***** Back
+      $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
+**** potential energy function of a conservative system                 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798724
+     :END:
+***** Front
+      Potential energy function of a conservative system
+***** Back
+      $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
 
-     - alternatively
+      - alternatively
 
-     $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
+      $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
 
-*** relation of force between members of a system and potential energy 
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798874
-    :END:
-**** Front
-     relation of force between members of a system to the potential energy of
-     the system
-**** Back
-     $F_{x} = - \frack{dU}{dx}$
-** CH8: Conservation of Energy
-*** gravitational potential energy                                     
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798924
-    :END:
-**** Front
-     Gravitational potential energy of a particle of mass $m$, distance $y$
-     above earth's surface
-**** Back
-     $U_{g} \equiv mgy$
-*** Earth-Object system of potential energy                            
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396798974
-    :END:
-**** Front
-     Earth-Object system of potential energy (object falling)
-**** Back
-     $mg_{i} - mgy_{f} = -\Delta U$
-     - where $mg_{i}$ is the start (distance) of the fall to the surface.
-*** elastic potential energy of a spring                               
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396799026
-    :END:
-**** Front
-     elastic potential energy of a spring with a force of constant $k$
-**** Back
-     $U_{s} \equiv \frac{1}{2}kx^{2}}$
-*** conservation of energy                                             
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396799074
-    :END:
-**** Front
-     conservation of energy equation
-**** Back
-     $\Delta E_{system} = \Sigma T$
-*** relationship of kinetic and potential energy in isolated system    
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396799226
-    :END:
-**** Front
-     How are Kinetic and Potential energy related in an isolated system?
-**** Back
-     $\Delta K + \Delta U = 0$
-*** mechanical energy of a system                                      
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396799299
-    :END:
-**** Front
-     Mechanical Energy of a System
-**** Back
-     $E_{mech} \equiv K + U$
-*** conservation of mech energy                                        
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396799351
-    :END:
-**** Front
-     conservation of mechanical energy/total energy of isolated system
-**** Back
-     $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
-     forces.
-     - total energy in an isolated system
-* physics_250
-  :PROPERTIES:
-  :ANKI_DECK: physics_250
-  :END:
-** CH27
-*** average current [27.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281448894
-    :END:
-**** Front
-     Average Current, $I_{avg}$
-**** Back
-     $I_{avg} = \frac{\Delta Q}{\Delta t}$
-*** Electric Current [27.2]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281448968
-    :END:
-**** Front
-     Instantaneous (Electric) Current $I$
-**** Back
-     $I \equiv \frac{dQ}{dt}$, where:
-     - SI unit is $1 A = 1 \frac{Coulomb}{second}$
-*** Average Current wrt "Charged Carriers" [27.4]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449018
-    :END:
-**** Front
-     Average Current $I_{avg}$ with respect to the motion of the charge
-**** Back
-     $I_{avg} = nqv_{d}A$, where:
-     - $n$ is the density of the charge carriers
-     - $q$ is the charge on each carrier
-     - $v_{d}$ is the drift speed
-     - $A$ is the cross sectional area of the conductor
-*** Current Density [27.5]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449069
-    :END:
-**** Front
-     Current Density $J$ of a conductor
-**** Back
-     $J = \frac{I}{A}$
-*** Current Density (Proportional to E) [27.6]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449194
-    :END:
-**** Front
-     Current Density (proportional to $\vec{E}$)
-**** Back
-     $J = \sigma E$, where $\sigma$ is the proportional constant of
-     *conductivity*
-     - Materials that obey this equation follow *Ohm's Law*
-*** Resistance [27.7]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449244
-    :END:
-**** Front
-     Resistance of a conductor $R$
-**** Back
-     $R = \frac{\Delta V}{I}$ where:
-     - $\Delta V$ is the potential difference across the conductor
-     - $I$ is the current it carries
-     - SI unit is *Ohm*, $1 \Omega = 1 \frac{V}{A}$
-*** Resistivity [27.9]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449293
-    :END:
-**** Front
-     Resistivity of a conductor, $\rho$
-**** Back
-     $\rho = \frac{1}{\sigma}$
-*** Resistance of a uniform material along l [27.10]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449318
-    :END:
-**** Front
-     Resistance of a uniform material along $\ell$
-**** Back
-     $R = \rho \frac{\ell}{A}$
-*** Ohm's Law
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449368
-    :END:
-**** Front
-     Ohm's Law?
-**** Back
-     For many materials (including most metals), the ratio of the current
-     density to the electric field is a constant $\sigma$ that is independent of the
-     electric field producing the current.
-*** Drift Velocity [27.13]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449494
-    :END:
-**** Front
-     Drift velocity of a free electron $v_{d}$
-**** Back
-     $\vec{v_{d}} = \frac{q \vec{E}}{m_{e}}\tau$
-*** Conductivity in terms of microscopic quantities [27.15]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449543
-    :END:
-**** Front
-     Conductivity $\sigma$ in terms of microscopic quantities?
-**** Back
-     $\sigma = \frac{nq^{2}E}{m_{e}}\tau$
-*** Resistivity in terms of microscopic quantities[27.16]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449593
-    :END:
-**** Front
-     Resistivity $\rho$ in terms of microscopic quantities
-**** Back
-     $\rho = \frac{m_{e}}{nq^{2}\tau}$
-*** Resistivity wrt Temperature [27.18]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449643
-    :END:
-**** Front
-     Resistivity $\rho$ of a conductor wrt temperature?
-**** Back
-     $\rho = \rho_{0}[1 + \alpha(T - T_{0})]$ where:
-     - $\rho$ is the resistivity at some temperature $T$ in Celsius
-     - $\rho_{0}$ is the resistivity at some reference temperature $T_{0}$
-       (often taken at 20 Celsius)
-     - $\alpha$ is the *temperature coefficient of resistivity*
-*** Temperature Coefficient [27.19]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449694
-    :END:
-**** Front
-     Temperature Coefficient of Resistivity $\alpha$
-**** Back
-     $\alpha = \frac{1}{\rho_{0}}\frac{\Delta \rho}{\Delta T}$ where:
-     - $\Delta \rho = \rho - \rho_{0}$
-     - $\Delta T = T - T_{0}$
-*** Power to a Resistor [27.22]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449819
-    :END:
-**** Front
-     Rate of energy being delivered to a resistor?
-**** Back
-     $P = I^{2}R = \frac{(\Delta V)^{2}}{R}$
+**** relation of force between members of a system and potential energy 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798874
+     :END:
+***** Front
+      relation of force between members of a system to the potential energy of
+      the system
+***** Back
+      $F_{x} = - \frack{dU}{dx}$
+*** CH8: Conservation of Energy
+**** gravitational potential energy                                     
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798924
+     :END:
+***** Front
+      Gravitational potential energy of a particle of mass $m$, distance $y$
+      above earth's surface
+***** Back
+      $U_{g} \equiv mgy$
+**** Earth-Object system of potential energy                            
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396798974
+     :END:
+***** Front
+      Earth-Object system of potential energy (object falling)
+***** Back
+      $mg_{i} - mgy_{f} = -\Delta U$
+      - where $mg_{i}$ is the start (distance) of the fall to the surface.
+**** elastic potential energy of a spring                               
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396799026
+     :END:
+***** Front
+      elastic potential energy of a spring with a force of constant $k$
+***** Back
+      $U_{s} \equiv \frac{1}{2}kx^{2}}$
+**** conservation of energy                                             
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396799074
+     :END:
+***** Front
+      conservation of energy equation
+***** Back
+      $\Delta E_{system} = \Sigma T$
+**** relationship of kinetic and potential energy in isolated system    
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396799226
+     :END:
+***** Front
+      How are Kinetic and Potential energy related in an isolated system?
+***** Back
+      $\Delta K + \Delta U = 0$
+**** mechanical energy of a system                                      
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396799299
+     :END:
+***** Front
+      Mechanical Energy of a System
+***** Back
+      $E_{mech} \equiv K + U$
+**** conservation of mech energy                                        
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1535396799351
+     :END:
+***** Front
+      conservation of mechanical energy/total energy of isolated system
+***** Back
+      $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
+      forces.
+      - total energy in an isolated system
+** physics_250
+   :PROPERTIES:
+   :ANKI_DECK: physics_250
+   :END:
+*** CH27
+**** average current [27.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281448894
+     :END:
+***** Front
+      Average Current, $I_{avg}$
+***** Back
+      $I_{avg} = \frac{\Delta Q}{\Delta t}$
+**** Electric Current [27.2]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281448968
+     :END:
+***** Front
+      Instantaneous (Electric) Current $I$
+***** Back
+      $I \equiv \frac{dQ}{dt}$, where:
+      - SI unit is $1 A = 1 \frac{Coulomb}{second}$
+**** Average Current wrt "Charged Carriers" [27.4]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449018
+     :END:
+***** Front
+      Average Current $I_{avg}$ with respect to the motion of the charge
+***** Back
+      $I_{avg} = nqv_{d}A$, where:
+      - $n$ is the density of the charge carriers
+      - $q$ is the charge on each carrier
+      - $v_{d}$ is the drift speed
+      - $A$ is the cross sectional area of the conductor
+**** Current Density [27.5]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449069
+     :END:
+***** Front
+      Current Density $J$ of a conductor
+***** Back
+      $J = \frac{I}{A}$
+**** Current Density (Proportional to E) [27.6]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449194
+     :END:
+***** Front
+      Current Density (proportional to $\vec{E}$)
+***** Back
+      $J = \sigma E$, where $\sigma$ is the proportional constant of
+      *conductivity*
+      - Materials that obey this equation follow *Ohm's Law*
+**** Resistance [27.7]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449244
+     :END:
+***** Front
+      Resistance of a conductor $R$
+***** Back
+      $R = \frac{\Delta V}{I}$ where:
+      - $\Delta V$ is the potential difference across the conductor
+      - $I$ is the current it carries
+      - SI unit is *Ohm*, $1 \Omega = 1 \frac{V}{A}$
+**** Resistivity [27.9]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449293
+     :END:
+***** Front
+      Resistivity of a conductor, $\rho$
+***** Back
+      $\rho = \frac{1}{\sigma}$
+**** Resistance of a uniform material along l [27.10]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449318
+     :END:
+***** Front
+      Resistance of a uniform material along $\ell$
+***** Back
+      $R = \rho \frac{\ell}{A}$
+**** Ohm's Law
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449368
+     :END:
+***** Front
+      Ohm's Law?
+***** Back
+      For many materials (including most metals), the ratio of the current
+      density to the electric field is a constant $\sigma$ that is independent of the
+      electric field producing the current.
+**** Drift Velocity [27.13]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449494
+     :END:
+***** Front
+      Drift velocity of a free electron $v_{d}$
+***** Back
+      $\vec{v_{d}} = \frac{q \vec{E}}{m_{e}}\tau$
+**** Conductivity in terms of microscopic quantities [27.15]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449543
+     :END:
+***** Front
+      Conductivity $\sigma$ in terms of microscopic quantities?
+***** Back
+      $\sigma = \frac{nq^{2}E}{m_{e}}\tau$
+**** Resistivity in terms of microscopic quantities[27.16]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449593
+     :END:
+***** Front
+      Resistivity $\rho$ in terms of microscopic quantities
+***** Back
+      $\rho = \frac{m_{e}}{nq^{2}\tau}$
+**** Resistivity wrt Temperature [27.18]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449643
+     :END:
+***** Front
+      Resistivity $\rho$ of a conductor wrt temperature?
+***** Back
+      $\rho = \rho_{0}[1 + \alpha(T - T_{0})]$ where:
+      - $\rho$ is the resistivity at some temperature $T$ in Celsius
+      - $\rho_{0}$ is the resistivity at some reference temperature $T_{0}$
+        (often taken at 20 Celsius)
+      - $\alpha$ is the *temperature coefficient of resistivity*
+**** Temperature Coefficient [27.19]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449694
+     :END:
+***** Front
+      Temperature Coefficient of Resistivity $\alpha$
+***** Back
+      $\alpha = \frac{1}{\rho_{0}}\frac{\Delta \rho}{\Delta T}$ where:
+      - $\Delta \rho = \rho - \rho_{0}$
+      - $\Delta T = T - T_{0}$
+**** Power to a Resistor [27.22]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449819
+     :END:
+***** Front
+      Rate of energy being delivered to a resistor?
+***** Back
+      $P = I^{2}R = \frac{(\Delta V)^{2}}{R}$
 
-*** Power [27.21]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539281449869
-    :END:
-**** Front
-     Power
-**** Back
-     $P = I \Delta V$
-     - SI unit is Watts, $1 W = 1 \frac{Joule}{second}$
-     - AKA Joule Heating
-** CH28
-*** Terminal Voltage of a Battery [28.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539452849782
-    :END:
-**** Front
-     Terminal Voltage of a Battery?
-**** Back
-     $\Delta V = \mathcal{E} - Ir$ where:
-     - $\mathcal{E}$ is equivalent to open-circuit voltage
-*** Current of Resistors in Series
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539452849833
-    :END:
-**** Front
-     Current of Resistors in Series?
-**** Back
-     $I = I_{1} = I_{2} = \dotsi$ where:
-     - $I$ is the current leaving the battery
-     - $I_{i}$ is the current in $i^{th}$ Resistor, $R_{i}$
-*** Electric Potential Difference Across Resistors in Series
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539452849882
-    :END:
-**** Front
-     Electric Potential Difference Across Resistors in Series
-**** Back
-     \[
-     \Delta V = \Delta V_{1} + \Delta V_{2} + \dotsi
-              = I_{1}R_{1} + I_{2}R_{2} + \dotsi
-     \]
-*** Equivalent Resistance of Resistors Connected in Series [28.6]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539452849983
-    :END:
-**** Front
-     Equivalent Resistance of Resistors Connected in Series
-**** Back
-     $R_{eq} = R_{1} + R_{2} + \dotsi$
-*** Electric Potential Difference Across Resistors in Parallel
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741491
-    :END:
-**** Front
-     Electric Potential Difference Across Resistors in Parallel
-**** Back
-     $\Delta V = \Delta V_{1} = \Delta V_{2} = \dotsi$
-*** Current of Resistors in Parallel
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741591
-    :END:
-**** Front
-     Current of Resistors in Parallel
-**** Back
-     \[
-     I = I_{1} + I_{2} + \dotsi 
-       = \frac{\Delta V_{1}}{R_{1}} + \frac{\Delta V_{2}}{R_{2}} + \dotsi
-     \]
-*** Equivalent Resistance of Resistors in Parallel [28.8]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741716
-    :END:
-**** Front
-     Equivalent Resistance of Resistors in Parallel
-**** Back
-     $frac{1}{R_{eq}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dotsi$
-*** Kirchhoff's Rules [28.9 - 28.10]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741766
-    :END:
-**** Front
-     Kirchhoff's Rules
-**** Back
-     1. *Junction Rule.* At any junction, the sum of currents must equal zero:
-        $\sum_{junction}^{} I = 0$
-     2. *Loop Rule.* The sum of the potential differences across all elements
-        around any closed circuit loop must be zero:
-        $\sum_{closed loop}^{} \Delta V = 0$
-*** Potential Diff of a resistor traveled in direction of the current
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741816
-    :END:
-**** Front
-     Potential Difference of a resistor traveled in direction of the current
-**** Back
-     $\Delta V = -IR$
-*** Potential Diff of a resistor traveled in opposite direction of the current
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741866
-    :END:
-**** Front
-     Potential Difference of a resistor traveled in opposite direction of the current
-**** Back
-     $\Delta V = +IR$
-*** Potential Difference of an EMF traveled in direction of EMF
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552741991
-    :END:
-**** Front
-     Potential Difference of an EMF traveled in direction of EMF
-**** Back
-     $\Delta V = +\mathcal{E}$
-*** Potential Difference of an EMF traveled in direction opposite of EMF
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742043
-    :END:
-**** Front
-     Potential Difference of an EMF traveled in direction opposite of EMF
-**** Back
-     $\Delta V = -\mathcal{E}$
-*** Charge as a function of time for a capacitor being charged [28.14]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742092
-    :END:
-**** Front
-     Charge as a function of time for a capacitor being charged
-**** Back
-     $q(t) = C\mathcal{E}(1 - e^{\frac{-t}{RC}} = Q_{max}(1 -
-     e^{\frac{-t}{RC}}$ where:
-     - $e$ is the base of the natural logarithm
-     - $RC$ is the time constant of the circuit, aka $\tau$
-*** Current as a function of time for a capacitor being charged [28.15]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742141
-    :END:
-**** Front
-     Current as a function of time for a capacitor being charged
-**** Back
-     $i(t) = \frac{\mathcal{E}}{R}e^{\frac{-t}{RC}}$ where:
-     - $e$ is the base of the natural logarithm
-     - $RC$ is the time constant of the circuit, aka $\tau$
-*** Charge as a function of time for discharging capacitor [28.18]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742266
-    :END:
-**** Front
-     Charge as a function of time for discharging capacitor
-**** Back
-     $q(t) = Q_{i}e^{\frac{-t}{RC}}$
-*** Current as a function of time for a discharging capacitor [28.19]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742319
-    :END:
-**** Front
-     Current as a function of time for a discharging capacitor
-**** Back
-     $i(t) = -\frac{Q_{i}}{RC}e^{\frac{-t}{RC}}$
-** CH29
-*** Vector expression for magnetic force on a charged particle in MF [29.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742366
-    :END:
-**** Front
-     Vector expression for magnetic force on a charged particle in MF
-**** Back
-     $\vec{F}_{B} = q\vec{v} \times \vec{B}$ where:
-     - by definition of cross product, is perpendicular to both $\vec{v}$ and
-       $\vec{B}$
-     - This is the magnetic version of the *particle in a field model*
-*** Similarities between electric and magnetic forces
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552742416
-    :END:
-**** Front
-     What are similarities that magnetic force $\vec{F_{B}}$ shares with
-     electric force $\vec{F_{e}}$?
-     and $\vec{F_{B}}$
-**** Back
-     Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
-     show the magnetic force is:
-     - proportional to the charge $q$.
-     - proportional to the magnitude of the magnetic field akin to $\vec{E}$.
-     - directed opposite to the equivalent magnetic force on a positive charge
-       that moves in the same direction.
-*** Difference between electric and magnetic forces
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552743566
-    :END:
-**** Front
-     What are differences that magnetic force $\vec{F_{B}}$ has compared with
-     electric force $\vec{F_{e}}$?
-**** Back
-     Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
-     show the magnetic force is:
-     - proportional to the speed of the particle, $\vec{v}$ where $F_{e}$ is
-       unaffected.
-     - if $\vec{v}$ makes an angle $\theta$ with $\vec{B}$, then the magnitude
-       of the magnetic force is proportional to $\sin \theta$. No such behavior
-       with electric force.
-     - When the charged particle moves parallel with $\vec{B}$, then the
-       magnetic force is zero.
-     - When the charged particle moves in any direction *not parallel*, the
-       magnetic force is *perpendicular* with *both* $\vec{v}$ and $\vec{B}$.
-*** Right hand rules for the direction of magnetic force
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539552743691
-    :END:
-**** Front
-     What are the two right hand rules for determining the direction of $\vec{F}_{B}$?
-**** Back
-     Where $\vec{F}_{B}$ is assumed positive:
-     #+BEGIN_EXPORT html
-     <img src="https://gist.githubusercontent.com/ejmg/8bdfa07ccff5f0d190cb1a800981523a/raw/9e697bb2b3d80e4eddfc21da25e097af4280d4c0/right-hand-rule.png"/>
-     #+END_EXPORT
+**** Power [27.21]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539281449869
+     :END:
+***** Front
+      Power
+***** Back
+      $P = I \Delta V$
+      - SI unit is Watts, $1 W = 1 \frac{Joule}{second}$
+      - AKA Joule Heating
+*** CH28
+**** Terminal Voltage of a Battery [28.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539452849782
+     :END:
+***** Front
+      Terminal Voltage of a Battery?
+***** Back
+      $\Delta V = \mathcal{E} - Ir$ where:
+      - $\mathcal{E}$ is equivalent to open-circuit voltage
+**** Current of Resistors in Series
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539452849833
+     :END:
+***** Front
+      Current of Resistors in Series?
+***** Back
+      $I = I_{1} = I_{2} = \dotsi$ where:
+      - $I$ is the current leaving the battery
+      - $I_{i}$ is the current in $i^{th}$ Resistor, $R_{i}$
+**** Electric Potential Difference Across Resistors in Series
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539452849882
+     :END:
+***** Front
+      Electric Potential Difference Across Resistors in Series
+***** Back
+      \[
+      \Delta V = \Delta V_{1} + \Delta V_{2} + \dotsi
+               = I_{1}R_{1} + I_{2}R_{2} + \dotsi
+      \]
+**** Equivalent Resistance of Resistors Connected in Series [28.6]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539452849983
+     :END:
+***** Front
+      Equivalent Resistance of Resistors Connected in Series
+***** Back
+      $R_{eq} = R_{1} + R_{2} + \dotsi$
+**** Electric Potential Difference Across Resistors in Parallel
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741491
+     :END:
+***** Front
+      Electric Potential Difference Across Resistors in Parallel
+***** Back
+      $\Delta V = \Delta V_{1} = \Delta V_{2} = \dotsi$
+**** Current of Resistors in Parallel
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741591
+     :END:
+***** Front
+      Current of Resistors in Parallel
+***** Back
+      \[
+      I = I_{1} + I_{2} + \dotsi 
+        = \frac{\Delta V_{1}}{R_{1}} + \frac{\Delta V_{2}}{R_{2}} + \dotsi
+      \]
+**** Equivalent Resistance of Resistors in Parallel [28.8]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741716
+     :END:
+***** Front
+      Equivalent Resistance of Resistors in Parallel
+***** Back
+      $frac{1}{R_{eq}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dotsi$
+**** Kirchhoff's Rules [28.9 - 28.10]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741766
+     :END:
+***** Front
+      Kirchhoff's Rules
+***** Back
+      1. *Junction Rule.* At any junction, the sum of currents must equal zero:
+         $\sum_{junction}^{} I = 0$
+      2. *Loop Rule.* The sum of the potential differences across all elements
+         around any closed circuit loop must be zero:
+         $\sum_{closed loop}^{} \Delta V = 0$
+**** Potential Diff of a resistor traveled in direction of the current
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741816
+     :END:
+***** Front
+      Potential Difference of a resistor traveled in direction of the current
+***** Back
+      $\Delta V = -IR$
+**** Potential Diff of a resistor traveled in opposite direction of the current
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741866
+     :END:
+***** Front
+      Potential Difference of a resistor traveled in opposite direction of the current
+***** Back
+      $\Delta V = +IR$
+**** Potential Difference of an EMF traveled in direction of EMF
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552741991
+     :END:
+***** Front
+      Potential Difference of an EMF traveled in direction of EMF
+***** Back
+      $\Delta V = +\mathcal{E}$
+**** Potential Difference of an EMF traveled in direction opposite of EMF
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742043
+     :END:
+***** Front
+      Potential Difference of an EMF traveled in direction opposite of EMF
+***** Back
+      $\Delta V = -\mathcal{E}$
+**** Charge as a function of time for a capacitor being charged [28.14]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742092
+     :END:
+***** Front
+      Charge as a function of time for a capacitor being charged
+***** Back
+      $q(t) = C\mathcal{E}(1 - e^{\frac{-t}{RC}} = Q_{max}(1 -
+      e^{\frac{-t}{RC}}$ where:
+      - $e$ is the base of the natural logarithm
+      - $RC$ is the time constant of the circuit, aka $\tau$
+**** Current as a function of time for a capacitor being charged [28.15]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742141
+     :END:
+***** Front
+      Current as a function of time for a capacitor being charged
+***** Back
+      $i(t) = \frac{\mathcal{E}}{R}e^{\frac{-t}{RC}}$ where:
+      - $e$ is the base of the natural logarithm
+      - $RC$ is the time constant of the circuit, aka $\tau$
+**** Charge as a function of time for discharging capacitor [28.18]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742266
+     :END:
+***** Front
+      Charge as a function of time for discharging capacitor
+***** Back
+      $q(t) = Q_{i}e^{\frac{-t}{RC}}$
+**** Current as a function of time for a discharging capacitor [28.19]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742319
+     :END:
+***** Front
+      Current as a function of time for a discharging capacitor
+***** Back
+      $i(t) = -\frac{Q_{i}}{RC}e^{\frac{-t}{RC}}$
+*** CH29
+**** Vector expression for magnetic force on a charged particle in MF [29.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742366
+     :END:
+***** Front
+      Vector expression for magnetic force on a charged particle in MF
+***** Back
+      $\vec{F}_{B} = q\vec{v} \times \vec{B}$ where:
+      - by definition of cross product, is perpendicular to both $\vec{v}$ and
+        $\vec{B}$
+      - This is the magnetic version of the *particle in a field model*
+**** Similarities between electric and magnetic forces
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552742416
+     :END:
+***** Front
+      What are similarities that magnetic force $\vec{F_{B}}$ shares with
+      electric force $\vec{F_{e}}$?
+      and $\vec{F_{B}}$
+***** Back
+      Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
+      show the magnetic force is:
+      - proportional to the charge $q$.
+      - proportional to the magnitude of the magnetic field akin to $\vec{E}$.
+      - directed opposite to the equivalent magnetic force on a positive charge
+        that moves in the same direction.
+**** Difference between electric and magnetic forces
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552743566
+     :END:
+***** Front
+      What are differences that magnetic force $\vec{F_{B}}$ has compared with
+      electric force $\vec{F_{e}}$?
+***** Back
+      Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
+      show the magnetic force is:
+      - proportional to the speed of the particle, $\vec{v}$ where $F_{e}$ is
+        unaffected.
+      - if $\vec{v}$ makes an angle $\theta$ with $\vec{B}$, then the magnitude
+        of the magnetic force is proportional to $\sin \theta$. No such behavior
+        with electric force.
+      - When the charged particle moves parallel with $\vec{B}$, then the
+        magnetic force is zero.
+      - When the charged particle moves in any direction *not parallel*, the
+        magnetic force is *perpendicular* with *both* $\vec{v}$ and $\vec{B}$.
+**** Right hand rules for the direction of magnetic force
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539552743691
+     :END:
+***** Front
+      What are the two right hand rules for determining the direction of $\vec{F}_{B}$?
+***** Back
+      Where $\vec{F}_{B}$ is assumed positive:
+      #+BEGIN_EXPORT html
+      <img src="https://gist.githubusercontent.com/ejmg/8bdfa07ccff5f0d190cb1a800981523a/raw/9e697bb2b3d80e4eddfc21da25e097af4280d4c0/right-hand-rule.png"/>
+      #+END_EXPORT
 
-     When $\vec{F}_{B}$ is negative, then it is opposite of what the right hand
-     rule would suggest.
-** CH30
-*** Biot-Savart Law [30.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1539566463392
-    :END:
-**** Front
-     Definition of Biot-Savart Law, $d\vec{B}$?
-**** Back
-     $d\vec{B} = \frac{\mu_{0}}{4\pi} \frac{Id\vec{s} \times \hat{r}}{r^{2}}$
-     where:
-     - $d\vec{B}$ is at a point $P$ associated with a length element $d\vec{s}$
-       of a wire carrying $I$.
-     - $d\vec{s}$ points in the direction of the current $I$
-     - the unit vector $\hat{r}$ is directed from $d\vec{s}$ toward $P$
-     - $d\vec{B}$ is $\perp$ with both $d\vec{s}$ and $\hat{r}$
-     - $\mu_{0}$ is the *permeability of free space*:
-       $\mu_{0} = 4\pi \times 10^{-7} T\cdot m / A$
-     - $d\vec{B}$ is the field created at a point by the current in only a
-       small length element, $d\vec{s}$, of the conductor.
-*** 
-*** Magnetic Field of Conductor (with radius R, current I) at distance r, R \leq r [30.14]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-     Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance
-     $r$, $R \leq r$
-**** Back
-     $B = \frac{\mu_{0}I}{2\pi r$
-*** Magnetic Field of Conductor (with radius R, current I) at distance r, r < R [30.15]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :END:
-**** Front
-     Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance $r$, $r < R$
-**** Back
-     $B = (\frac{\mu_{0}I}{2\pi R^{2}})r$
+      When $\vec{F}_{B}$ is negative, then it is opposite of what the right hand
+      rule would suggest.
+*** CH30
+**** Biot-Savart Law [30.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1539566463392
+     :END:
+***** Front
+      Definition of Biot-Savart Law, $d\vec{B}$?
+***** Back
+      $d\vec{B} = \frac{\mu_{0}}{4\pi} \frac{Id\vec{s} \times \hat{r}}{r^{2}}$
+      where:
+      - $d\vec{B}$ is at a point $P$ associated with a length element $d\vec{s}$
+        of a wire carrying $I$.
+      - $d\vec{s}$ points in the direction of the current $I$
+      - the unit vector $\hat{r}$ is directed from $d\vec{s}$ toward $P$
+      - $d\vec{B}$ is $\perp$ with both $d\vec{s}$ and $\hat{r}$
+      - $\mu_{0}$ is the *permeability of free space*:
+        $\mu_{0} = 4\pi \times 10^{-7} T\cdot m / A$
+      - $d\vec{B}$ is the field created at a point by the current in only a
+        small length element, $d\vec{s}$, of the conductor.
+**** 
+**** Magnetic Field of Conductor (with radius R, current I) at distance r, R \leq r [30.14]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1545621803209
+     :END:
+***** Front
+      Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance
+      $r$, $R \leq r$
+***** Back
+      $B = \frac{\mu_{0}I}{2\pi r$
+**** Magnetic Field of Conductor (with radius R, current I) at distance r, r < R [30.15]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1545621803410
+     :END:
+***** Front
+      Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance $r$, $r < R$
+***** Back
+      $B = (\frac{\mu_{0}I}{2\pi R^{2}})r$
      
-*** Ampere's Law [30.13]
+**** Ampere's Law [30.13]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1545621803459
+     :END:
+***** Front
+      Ampere's Law
+***** Back
+      The line integral of $\vec{B} \centerdot d\vec{s}$ around any closed path
+      equals $\mu_{0}I$ where $I$ is the total steady current passing through
+      any surface bounded by the closed path:
+      $\oint \vec{B} \centerdot d\vec{s} = \mu_{0}I$
+**** Magnetic Force between two parallel conductors [30.12]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1545621803511
+     :END:
+***** Front
+      Magnetic Force between two parallel conductors?
+***** Back
+      $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
+*** CH31
+* discrete
+  :PROPERTIES:
+  :ANKI_DECK: discrete
+  :END:
+** graphs
+*** def of graph 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828409936
     :END:
 **** Front
-     Ampere's Law
+     Definition of Graph
 **** Back
-     The line integral of $\vec{B} \centerdot d\vec{s}$ around any closed path
-     equals $\mu_{0}I$ where $I$ is the total steady current passing through
-     any surface bounded by the closed path:
-     $\oint \vec{B} \centerdot d\vec{s} = \mu_{0}I$
-*** Magnetic Force between two parallel conductors [30.12]
+     a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
+     edges such that each $e \in E$ is associated with an unordered pair of
+     vertices, $e = (v, w)$.
+*** dir graph
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828488911
     :END:
 **** Front
-     Magnetic Force between two parallel conductors?
+     Definition of Directed Graph
 **** Back
-     $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
-** CH31
-* discrete math
-  :PROPERTIES:
-  :ANKI_DECK: discrete_math
-  :END:
-** logical equiv                                                       
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396799399
-   :END:
-*** Front
-    equivalence of implication
-*** Back
-    $p \implies q \equiv \neg p \vee q$
-** euclid algo for gcd                                                 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396799448
-   :END:
-*** Front
-    What is the Euclidean algorithm for GCD?
-*** Back
-    $GCD(a, b) = GCD(b, r)$ where $r = a mod b$
-    - recursively apply until you acquire a result where $b=0$, $a$ will be the
-      $GCD$ of the original $a, b$
-** Rule of Product                                                     
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396799499
-   :END:
-*** Front
-    What is the Rule of Product?
-*** Back
-    If a procedure can be broken into first and second stages, and if there are
-    $m$ possible outcomes for the first stage and $n$ possible outcomes to the
-    second stage, then the total procedure can be carried out, in the
-    designated procedure, in $mn$ ways.
-    - this can be applied to any amount of stages, i.e. if there are 10
-      possible, then $n_{1} \mult n_{2} \mult ... \mult n_{10}$, etcetera.
-* graphs
-  :PROPERTIES:
-  :ANKI_DECK: graphs
-  :END:
-** def of graph 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1538442951900
-   :END:
-*** Front
-    Definition of Graph
-*** Back
     a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
-    edges such that each $e \in E$ is associated with an unordered pair of
-    vertices, $e = (v, w)$.
-** dir graph
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1538947874483
-   :END:
-*** Front
-    Definition of Directed Graph
-*** Back
-   a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
-   edges such that each $e \in E$ is associated with an $\textbf{ordered}$ pair of
-   vertices where $e = (v, w)$ denotes a unique edge $e$ from $v$ to $w$.
-** simple graph
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1538947874532
-   :END:
-*** Front
-    Definition of a Simple Graph
-*** Back
-    $G = (V, E)$ that has neither loops nor parallel edges.
-** path
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1538947874582
-   :END:
-*** Front
-    Definition of Path
-*** Back
-    Finite or infinite sequence of vertices $v_{0}, v_{1}, ..., v_{n}$ that
-    are connected and "traveled" within a graph. Its length is always $n - 1$,
-    the number of edges traveled. In a weighted graph, it is the
-    $\textbf{sum}$ of the weights of the edges traveled.
-** weighted G
-*** Front
-    Definition of weighted Graph
-*** Back
-   a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
-   called its "weight."
-* trees
+    edges such that each $e \in E$ is associated with an $\textbf{ordered}$ pair of
+    vertices where $e = (v, w)$ denotes a unique edge $e$ from $v$ to $w$.
+*** simple graph
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828488961
+    :END:
+**** Front
+     Definition of a Simple Graph
+**** Back
+     $G = (V, E)$ that has neither loops nor parallel edges.
+*** path
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828489011
+    :END:
+**** Front
+     Definition of Path
+**** Back
+     Finite or infinite sequence of vertices $v_{0}, v_{1}, ..., v_{n}$ that
+     are connected and "traveled" within a graph. Its length is always $n - 1$,
+     the number of edges traveled. In a weighted graph, it is the
+     $\textbf{sum}$ of the weights of the edges traveled.
+*** weighted G
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828489061
+    :END:
+**** Front
+     Definition of weighted Graph
+**** Back
+    a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
+    called its "weight."
+** trees
+*** Tree [9.1.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828534486
+    :END:
+**** Front
+     Definition of a Tree, Free and Rooted.
+**** Back
+     A (free) tree $T$ is a simple graph where $v$ and $w$ are vertices in $T$,
+     there exists a unique path from $v$ to $w$.
+
+     $T$ is a *rooted* tree where a particular vertex is designated the *root*.
+*** Level of a vertex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828534535
+    :END:
+**** Front
+     The level of a vertex in a Tree?
+**** Back
+     The level of a vertex $v$ is the length of the simple path from the root
+     $v_{0}$ to $v_{n}$. Level is also known as *Depth* and runs opposite of a
+     Tree's Height.
+     #+BEGIN_EXPORT html
+       <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+     #+END_EXPORT
+*** Height of a vertex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828534586
+    :END:
+**** Front
+     The height of a vertex?
+**** Back
+     The height of a vertex is the longest simplest path from the vertex $v$ and
+     a tree's leaf. A *tree's height* is the longest simplest path from root to
+     a leaf or, equivalently, the maximum level that occurs in the tree.
+     #+BEGIN_EXPORT html
+       <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+     #+END_EXPORT
+*** Parent of Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828534638
+    :END:
+**** Front
+     Definition of parent vertex in a tree $T$?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     $v_{n - 1}$ is the parent of $v_{n}$
+*** Ancestors of Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828534786
+    :END:
+**** Front
+     Definition of a vertex's ancestors in tree $T$?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     $v_{0}, ..., v_{n - 1}$ are the ancestors of $v_{n}$.
+*** Descendant of Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574612
+    :END:
+**** Front
+     Definition of a vertex's descendants in tree $T$?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     If $x$ is an ancestor of $y$, then $y$ is a *descendant* of $x$.
+*** Siblings of Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574662
+    :END:
+**** Front
+     Definition of a vertex's siblings?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     If $x$ and $y$ are children of $z$, then $x$ and $y$ are *siblings*.
+*** Terminal Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574710
+    :END:
+**** Front
+     Definition of terminal(leaf) vertex?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     If $x$ has no children then $x$ is a *terminal* vertex, aka *leaf*.
+*** Internal Vertex [9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574761
+    :END:
+**** Front
+     Definition of an internal vertex?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     If $x$ has children, then $x$ is an *internal* vertex, aka *branch*.
+*** Subtree of a tree[9.2.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574811
+    :END:
+**** Front
+     Definition of a subtree?
+**** Back
+     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+     $T$. Then:
+
+     The *subtree* of $T$ rooted at $x$ is the graph with vertex set $V$ and edge set $E$,
+     where $V$ is $x$ together with the descendants of $x$ and $E = {e | e
+     \text{ is an edge on a simple path from } x \text{ to some vertex in } V}$
+*** Definitional Equivalents of trees [9.2.3]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828574861
+    :END:
+**** Front
+     Different definitions of a tree, $T$?
+**** Back
+     Let $T$ be a graph with $n$ vertices. The following are equivalent for $T$:
+     1. is a tree.
+     2. is *connected* and *acyclic*.
+     3. is *connected* and has $n - 1$ edges.
+     4. is *acyclic* and has $n - 1$ edges.
+*** Spanning Tree [9.3.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546828650511
+    :END:
+**** Front
+     Definition of spanning tree?
+**** Back
+     a tree $T$ is a *spanning tree* of a graph $G$ if $T$ is a subgraph of $G$
+     that contains all the vertices of $G$
+
+     In the image below, the black lines mark the edges included in the spanning
+     tree of $G$:
+
+     #+BEGIN_EXPORT html
+       <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
+     #+END_EXPORT
+*** Spanning Tree <=> Connected [9.3.4]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546828650561
+    :END:
+**** Text
+     A graph $G$ has a spanning tree if and only if {{c1::$G$ is connected.}}
+**** Extra
+*** Breadth-First Description 
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546828650611
+    :END:
+**** Text
+     Breadth-First Search (BFS) is an algorithm for traversing {{c1::tree or graph data structures}}
+     by starting at some root and explores {{c1::all neighbor nodes at the present
+     depth}} before {{c1::moving to the next level}}.
+**** Extra
+*** Depth-First Description
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546828650651
+    :END:
+**** Text
+     Depth-First Search (DFS) is an algorithm for traversing {{c1::tree or graph data
+     structures.}} It starts at some node and explores{{c1:: as far as possible along
+     each branch}} before {{c1::backtracking}}.
+**** Extra
+*** Minimal Spanning Tree [9.4.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546829177961
+    :END:
+**** Front
+     Definition of a Minimum Spanning Tree of graph $G$?
+**** Back
+     Let $G$ be a weighted graph. A *minimal spanning tree* of $G$ is a spanning tree
+     of *G* with minimum weight.
+*** Prim's Algo Description
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546829178012
+    :END:
+**** Text
+     Prim's algorithm is a greedy algorithm that {{c1::finds a minimum spanning tree
+     for a weighted undirected graph}} by starting {{c1::from an arbitrary vertex}} and
+     {{c1::incrementally adding the cheapest possible connection from the tree}} to
+     another vertex without {{c1::forming a complete cycle.}}
+**** Extra
+*** Kruskal's Algo Description
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546829178035
+    :END:
+**** Text
+     Kruskal's algorithm is a greedy algorithm that {{c1::finds a minimum spanning
+     tree $T$ for a weighted undirected graph $G$}} by starting {{c1::with all vertices of $G$}} and
+     no edges, incrementally adding {{c1::the lowest cost edge $e$ to $T$ without
+     forming a complete cycle}}.
+**** Extra
+*** Definition of Binary Tree [9.5.1]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546829178186
+    :END:
+**** Front
+     Definition of a Binary Tree?
+**** Back
+     A *Binary Tree* is a rooted tree in which each vertex has either no
+     children, one child, or two children.
+*** Full Binary Tree and # Leaves, Total Vertices [9.5.4]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546829214911
+    :END:
+**** Text
+     If $T$ is a *full* binary tree with $i$ internal vertices, then $T$ has {{c1::$i + 1$}}
+     terminal vertices (leaves) and {{c1::$2i + 1$}} total vertices.
+**** Extra
+*** Relation between height and leaves in Binary Tree [9.5.6]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546829214961
+    :END:
+**** Text
+     If a binary tree of height $h$ has $t$ terminal (leaf) vertices, then {{c1::$\lg
+     t \leq  h$.}}
+**** Extra
+*** Definition of Binary Search Tree [9.5.8]
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546829215112
+    :END:
+**** Front
+     Definition of a Binary Search Tree?
+**** Back
+     A binary search tree is a binary tree $T$ in which data are associated with
+     the vertices. The data are arranged so that, for each vertex $v$ in $T$,
+     each data item in the left subtree of $v$ is less than the data item in
+     $v$, and each data item in the right subtree of $v$ is greater than the
+     data item in $v$.
+* swe
   :PROPERTIES:
-  :ANKI_DECK: trees
+  :ANKI_DECK: swe
   :END:
-** Tree [9.1.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664525
-   :END:
-*** Front
-    Definition of a Tree, Free and Rooted.
-*** Back
-    A (free) tree $T$ is a simple graph where $v$ and $w$ are vertices in $T$,
-    there exists a unique path from $v$ to $w$.
-
-    $T$ is a *rooted* tree where a particular vertex is designated the *root*.
-** Level of a vertex
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664623
-   :END:
-*** Front
-    The level of a vertex in a Tree?
-*** Back
-    The level of a vertex $v$ is the length of the simple path from the root
-    $v_{0}$ to $v_{n}$. Level is also known as *Depth* and runs opposite of a
-    Tree's Height.
-    #+BEGIN_EXPORT html
-      <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
-    #+END_EXPORT
-** Height of a vertex
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664673
-   :END:
-*** Front
-    The height of a vertex?
-*** Back
-    The height of a vertex is the longest simplest path from the vertex $v$ and
-    a tree's leaf. A *tree's height* is the longest simplest path from root to
-    a leaf or, equivalently, the maximum level that occurs in the tree.
-    #+BEGIN_EXPORT html
-      <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
-    #+END_EXPORT
-** Parent of Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664701
-   :END:
-*** Front
-    Definition of parent vertex in a tree $T$?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    $v_{n - 1}$ is the parent of $v_{n}$
-** Ancestors of Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664748
-   :END:
-*** Front
-    Definition of a vertex's ancestors in tree $T$?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    $v_{0}, ..., v_{n - 1}$ are the ancestors of $v_{n}$.
-** Descendant of Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664799
-   :END:
-*** Front
-    Definition of a vertex's descendants in tree $T$?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    If $x$ is an ancestor of $y$, then $y$ is a *descendant* of $x$.
-** Siblings of Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827664973
-   :END:
-*** Front
-    Definition of a vertex's siblings?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    If $x$ and $y$ are children of $z$, then $x$ and $y$ are *siblings*.
-** Terminal Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827665024
-   :END:
-*** Front
-    Definition of terminal(leaf) vertex?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    If $x$ has no children then $x$ is a *terminal* vertex, aka *leaf*.
-** Internal Vertex [9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827665073
-   :END:
-*** Front
-    Definition of an internal vertex?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    If $x$ has children, then $x$ is an *internal* vertex, aka *branch*.
-** Subtree of a tree[9.2.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540827665123
-   :END:
-*** Front
-    Definition of a subtree?
-*** Back
-    Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-    vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-    $T$. Then:
-
-    The *subtree* of $T$ rooted at $x$ is the graph with vertex set $V$ and edge set $E$,
-    where $V$ is $x$ together with the descendants of $x$ and $E = {e | e
-    \text{ is an edge on a simple path from } x \text{ to some vertex in } V}$
-** Definitional Equivalents of trees [9.2.3]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540829112448
-   :END:
-*** Front
-    Different definitions of a tree, $T$?
-*** Back
-    Let $T$ be a graph with $n$ vertices. The following are equivalent for $T$:
-    1. is a tree.
-    2. is *connected* and *acyclic*.
-    3. is *connected* and has $n - 1$ edges.
-    4. is *acyclic* and has $n - 1$ edges.
-** Spanning Tree [9.3.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1540829112498
-   :END:
-*** Front
-    Definition of spanning tree?
-*** Back
-    a tree $T$ is a *spanning tree* of a graph $G$ if $T$ is a subgraph of $G$
-    that contains all the vertices of $G$
-
-    In the image below, the black lines mark the edges included in the spanning
-    tree of $G$:
-
-    #+BEGIN_EXPORT html
-      <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
-    #+END_EXPORT
-** Spanning Tree <=> Connected [9.3.4]
-*** Text
-    A graph $G$ has a spanning tree if and only if {{c1::$G$ is connected.}}
-*** Extra
-** Breadth-First Description 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541468592350
-   :END:
-*** Text
-    Breadth-First Search (BFS) is an algorithm for traversing {{c1::tree or graph data structures}}
-    by starting at some root and explores {{c1::all neighbor nodes at the present
-    depth}} before {{c1::moving to the next level}}.
-*** Extra
-** Depth-First Description
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541470347577
-   :END:
-*** Text
-    Depth-First Search (DFS) is an algorithm for traversing {{c1::tree or graph data
-    structures.}} It starts at some node and explores{{c1:: as far as possible along
-    each branch}} before {{c1::backtracking}}.
-*** Extra
-** Minimal Spanning Tree [9.4.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1541470347703
-   :END:
-*** Front
-    Definition of a Minimum Spanning Tree of graph $G$?
-*** Back
-    Let $G$ be a weighted graph. A *minimal spanning tree* of $G$ is a spanning tree
-    of *G* with minimum weight.
-** Prim's Algo Description
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541470347777
-   :END:
-*** Text
-    Prim's algorithm is a greedy algorithm that {{c1::finds a minimum spanning tree
-    for a weighted undirected graph}} by starting {{c1::from an arbitrary vertex}} and
-    {{c1::incrementally adding the cheapest possible connection from the tree}} to
-    another vertex without {{c1::forming a complete cycle.}}
-*** Extra
-** Kruskal's Algo Description
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541470347826
-   :END:
-*** Text
-    Kruskal's algorithm is a greedy algorithm that {{c1::finds a minimum spanning
-    tree $T$ for a weighted undirected graph $G$}} by starting {{c1::with all vertices of $G$}} and
-    no edges, incrementally adding {{c1::the lowest cost edge $e$ to $T$ without
-    forming a complete cycle}}.
-*** Extra
-** Definition of Binary Tree [9.5.1]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1541471750101
-   :END:
-*** Front
-    Definition of a Binary Tree?
-*** Back
-    A *Binary Tree* is a rooted tree in which each vertex has either no
-    children, one child, or two children.
-** Full Binary Tree and # Leaves, Total Vertices [9.5.4]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541471750175
-   :END:
-*** Text
-    If $T$ is a *full* binary tree with $i$ internal vertices, then $T$ has {{c1::$i + 1$}}
-    terminal vertices (leaves) and {{c1::$2i + 1$}} total vertices.
-*** Extra
-** Relation between height and leaves in Binary Tree [9.5.6]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_NOTE_ID: 1541471873127
-   :END:
-*** Text
-    If a binary tree of height $h$ has $t$ terminal (leaf) vertices, then {{c1::$\lg
-    t \leq  h$.}}
-*** Extra
-** Definition of Binary Search Tree [9.5.8]
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1541472272176
-   :END:
-*** Front
-    Definition of a Binary Search Tree?
-*** Back
-    A binary search tree is a binary tree $T$ in which data are associated with
-    the vertices. The data are arranged so that, for each vertex $v$ in $T$,
-    each data item in the left subtree of $v$ is less than the data item in
-    $v$, and each data item in the right subtree of $v$ is greater than the
-    data item in $v$.
-
+* haskell book
+  :PROPERTIES:
+  :ANKI_DECK: haskell_book
+  :END:
+** CH1
+*** the lambda in the lambda calculus
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546835357160
+    :END:
+**** Text
+     The lambda in lambda calculus is the greek letter 𝜆 used to {{c1::introduce, or
+     abstract,}} arguments for {{c1::binding}} in an expression.
+**** Extra
+*** the lambda abstraction
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546835357234
+    :END:
+**** Text
+     A lambda abstraction is an {{c1::anonymous function or lambda term}}.  $(\lambda x.x + 1)$
+     The {{c1::head}} of the expression, $\lambda x$., abstracts out the {{c1::term}} $x + 1$. We can apply it
+     to any x and recompute different results for each x we applied the lambda to.
+**** Extra
+*** application
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546877373875
+    :END:
+**** Text
+     Application is how one {{c1::evaluates or reduces lambdas}}, which binds the
+     {{c1::parameter}} to the {{c1::concrete argument}}. The {{c1::argument}} is what specific term the
+     lambda was applied to. Computations are performed in lambda calculus by
+     applying {{c2::lambdas}} to arguments until you run out of {{c2::applications}} to perform.
+**** Extra
+*** lambda calculus
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546878448425
+    :END:
+**** Front
+     Definition of the Lambda Calculus?
+**** Back
+     Lambda calculus is a formal system for expressing programs in terms of
+     abstraction and application.
+*** Normal Order
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546878384275
+    :END:
+**** Text
+     {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
+     order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
+     lambdas first, evaluating terms {{c2::nested within}} after you’ve run out of arguments
+     to apply.
+**** Extra
+*** how is haskell code evaluated?
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546878384328
+    :END:
+**** Front
+     Is Haskell code evaluated in normal order?
+**** Back
+     Normal order isn’t how Haskell code is evaluated - it’s call-by-need
+     instead.
+** CH2
+*** parameter
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546882037500
+    :END:
+**** Text
+     A {{c1::parameter, or formal parameter,}} represents a value that will be {{c2::passed
+     to the function when the function is called}}. Thus, {{c1::parameters}} are usually
+     {{c2::variables}}.
+**** Extra
+*** arguments
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546882037550
+    :END:
+**** Text
+     An {{c1::argument}} is an input value the function is applied to. A function’s
+     parameter is bound to an {{c1::argument}} when the function is applied to that
+     argument.
+**** Extra
+*** expression
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1546882037675
+    :END:
+**** Text
+     An {{c1::expression}} is a combination of symbols that conforms to syn- tactic
+     rules and can be evaluated to some result.
+**** Extra
+*** components of Haskell expression?
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546882037725
+    :END:
+**** Front
+     Components of Haskell expression?
+**** Back
+     In Haskell, an expression is a well-structured combination of constants,
+     variables, and functions. While irreducible constants are technically
+     expressions, we usually refer to those as “values”, so we usually mean
+     “reducible expression” when we use the term expression
+*** value in Haskell
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546882037775
+    :END:
+**** Front
+     What is a /value/ in Haskell?
+**** Back
+     A value is an expression that cannot be reduced or evaluated any
+     further. 2 * 2 is an expression, but not a value, whereas what it
+     evaluates to, 4, is a value.
+*** functions
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1546882037826
+    :END:
+**** Front
+     What is a function?
+**** Back
+     A function is a mathematical object whose capabilities are limited to
+     being applied to an argument and returning a result. Functions can be
+     described as a list of ordered pairs of their inputs and the resulting
+     outputs, like a mapping.
+** CH3
+** CH4
+** CH5
+** CH6
+** CH7
 * Example Image note
 ** Front
    Foo!
@@ -1479,11 +1591,4 @@
    #+BEGIN_EXPORT html
    <img src="https://i.imgur.com/YheHQPT.jpg"/>
    #+END_EXPORT
-* swe
-  :PROPERTIES:
-  :ANKI_DECK: swe
-  :END:
-** TODO
-   - [ ] Web Fundamentals
-     - [ ] POST/GET/etc requests
-   - [ ] Database Fundamentals
+
