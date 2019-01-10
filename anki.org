@@ -1578,7 +1578,188 @@
      described as a list of ordered pairs of their inputs and the resulting
      outputs, like a mapping.
 ** CH3
+*** Top Level Bindings
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547064272357
+    :END:
+**** Text
+     /Top Level Bindings/ (in Haskell) are bindings that {{c1::stand outside of any
+     other declaration}}. The main feature of /top level/ bindings is that they
+     can {{c1::be made available to other modules in or outside}} of your program.
+**** Extra
+*** Local Bindings
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547064272431
+    :END:
+**** Text
+     /Local Bindings/ are bindings {{c1::local to particular expressions}}. They cannot
+     be {{c1::imported by other programs or modules}}.
+**** Extra
+*** Scope
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547063637657
+    :END:
+**** Text
+     /Scope/ is where a {{c1::variable referred to by name is valid}}.
+**** Extra
+*** Concatenation
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547063637706
+    :END:
+**** Text
+     /Concatenation/ is the {{c1::joining together of sequences}} of values. In Haskell,
+     this is typically meant with respect to {{c1::the /list/, [],}} datatype.
+**** Extra
+*** types in Haskell
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547063637731
+    :END:
+**** Text
+     Types (aka Datatypes) in Haskell determine {{c1::what values are members of the
+     type or that /inhabit/ the type}}. Unlike other languages, datatypes in
+     Haskell by default {{c1::do not delimit the operations that can be performed on
+     the data.}}
+**** Extra
+*** type (datatype)
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547063637756
+    :END:
+**** Text
+     A /type/ (or /datatype/) is a {{c1::classification of values or data}}.
+**** Extra
+*** Strings in Haskell
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547063637782
+    :END:
+**** Text
+     A /String/ is a {{c1::sequence of characters}}. In Haskell, =String= is represented
+     by a {{c1::linked-list of =Char=}} values, aka =[Char]=.
+**** Extra
 ** CH4
+*** types of polymorphism in Haskell
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1547089995068
+    :END:
+**** Front
+     Types of polymorphism in Haskell
+**** Back
+     Polymorphism in Haskell is either /Parametric/ or /Constrained/.
+*** polymorphism
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547089995118
+    :END:
+**** Text
+     /Polymorphism/ in Haskell means being able to write code in terms of {{c1::values
+     which may be one of several, or any, type}}.
+**** Extra
+*** arity
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547089995168
+    :END:
+**** Text
+     /Arity/ is the {{c1::number of arguments a function accepts}}. This notion
+     is a little slippery in Haskell {{c1::due to currying}}, as all functions are
+     {{c1::1-arity}}.
+**** Extra
+*** type alias in haskell
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547089995219
+    :END:
+**** Text
+     A /type alias/ is a way to refer to a {{c1::type constructor}} or {{c1::type constant}} by an
+     alternate name, usually to {{c1::communicate something more specific or for
+     brevity}}.
+**** Extra
+*** data declarations
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :END:
+**** Text
+**** Extra
+*** type constructor
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :END:
+**** Text
+     /Type constructors/ in Haskell are {{c1::*not values* and can only be used in type
+     signatures}}. Type constructors are used to {{c1::denote the type being declared
+     by a data declaration}}.
+**** Extra
+*** Type Signature Example
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1547066838858
+    :END:
+**** Front
+     In the snippet below:
+     #+BEGIN_SRC haskell
+       type Name = String  
+       data Pet = Cat | Dog Name
+     #+END_SRC
+     What are the type signatures of the data constructors?
+**** Back
+     #+BEGIN_SRC haskell
+       Cat :: Pet
+       Dog :: Name -> Pet
+     #+END_SRC
+*** Data & Type Constructors Example
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1547066838858
+    :END:
+**** Front
+     In the snippet below:
+     #+BEGIN_SRC haskell
+       type Name = String  
+       data Pet = Cat | Dog Name
+     #+END_SRC
+     What is/are the type and data constructors?
+**** Back
+     =Pet= is the /type constructor/ and both =Cat= and =Dog Name= are /Data
+     Constructors/ for the type =Cat=.
+*** Data Constructors
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547066513606
+    :END:
+**** Text
+     {{c1::/Data constructors/}} in Haskell provide a means of {{c2::creating
+     values that inhabit a given type}}. {{c1::Data constructors}} in Haskell
+     have a {{c1::type}} and can either be {{c2::constant values (nullary)}} or
+     {{c2::take one or more arguments, like functions}}.
+**** Extra
+*** Type Class
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547066513631
+    :END:
+**** Text
+     a {{c1::/Type Class/}} is a set of {{c2::operations defined with respect to
+     a polymorphic type}}. When a type has an instance of a {{c1::type class}},
+     {{c2::values of that type can be used in the standard operations}} defined
+     for that {{c1::type class}}.
+**** Extra
+*** Tuple
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1547066513656
+    :END:
+**** Text
+     a /Tuple/ is an {{c1::ordered group of values}}. In Haskell, you cannot
+     have a tuple with {{c1::only one element}}, but there is a zero tuple also
+     {{c1::called /unit/ or =()=}}.
+**** Extra
 ** CH5
 ** CH6
 ** CH7
