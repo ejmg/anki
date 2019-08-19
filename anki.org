@@ -1,385 +1,462 @@
-* PL Theory and Design
-  :PROPERTIES:
-  :ANKI_DECK: pl
-  :END:
-** Declarative vs Imperative                                           
+* job prep
+** PL Theory and Design
    :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396788649
+   :ANKI_DECK: pl
    :END:
-*** Front
-    What is the difference between declarative and imperative languages?
-*** Back
-    Declarative vs Imperative is the topmost level of distinction between types
-    of PLs. 
-
-     - Imperative languages focus on /how/ a computer goes about its instructed
-       task.
-
-     - Declarative languages focus on /what/ the computer does.
-** Types of Declarative PLs                                            
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396788699
-   :END:
-*** Front
-    What are the types of Declarative PLs?
-*** Back
-    1. Functional -> Lisp, ML, Haskell
-    2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
-    3. Dataflow -> Id, Val
-** Types of Imperative PLs                                             
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396788724
-   :END:
-*** Front
-    What are the types of Imperative PLs?
-*** Back
-    1. von Neumann -> C, Ada, Fortran
-    2. OOP -> Smalltalk, Eiffel, Java
-    3. Scripting -> Perl, Python, PHP
-** General Compilation Process                                         
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_NOTE_ID: 1535396788874
-   :END:
-*** Front
-    What are the steps of the compilation process?
-*** Back
-    1. scanner (lexical analysis)
-    2. parser (syntax analysis)
-    3. semantic analysis & intermediate code generation
-    4. machine independent code improvement (*optional*)
-    5. target code generation (assembler)
-    6. machine-specific code improvement (*optional*) 
-* discrete
-  :PROPERTIES:
-  :ANKI_DECK: discrete
-  :END:
-** graphs
-*** def of graph 
+*** Declarative vs Imperative                                           
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828409936
+    :ANKI_NOTE_ID: 1535396788649
     :END:
 **** Front
-     Definition of Graph
+     What is the difference between declarative and imperative languages?
 **** Back
+     Declarative vs Imperative is the topmost level of distinction between types
+     of PLs. 
+
+      - Imperative languages focus on /how/ a computer goes about its instructed
+        task.
+
+      - Declarative languages focus on /what/ the computer does.
+*** Types of Declarative PLs                                            
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1535396788699
+    :END:
+**** Front
+     What are the types of Declarative PLs?
+**** Back
+     1. Functional -> Lisp, ML, Haskell
+     2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
+     3. Dataflow -> Id, Val
+*** Types of Imperative PLs                                             
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1535396788724
+    :END:
+**** Front
+     What are the types of Imperative PLs?
+**** Back
+     1. von Neumann -> C, Ada, Fortran
+     2. OOP -> Smalltalk, Eiffel, Java
+     3. Scripting -> Perl, Python, PHP
+*** General Compilation Process                                         
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1535396788874
+    :END:
+**** Front
+     What are the steps of the compilation process?
+**** Back
+     1. scanner (lexical analysis)
+     2. parser (syntax analysis)
+     3. semantic analysis & intermediate code generation
+     4. machine independent code improvement (*optional*)
+     5. target code generation (assembler)
+     6. machine-specific code improvement (*optional*) 
+** discrete
+   :PROPERTIES:
+   :ANKI_DECK: discrete
+   :END:
+*** graphs
+**** def of graph 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828409936
+     :END:
+***** Front
+      Definition of Graph
+***** Back
+      a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
+      edges such that each $e \in E$ is associated with an unordered pair of
+      vertices, $e = (v, w)$.
+**** dir graph
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828488911
+     :END:
+***** Front
+      Definition of Directed Graph
+***** Back
      a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
-     edges such that each $e \in E$ is associated with an unordered pair of
-     vertices, $e = (v, w)$.
-*** dir graph
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828488911
-    :END:
-**** Front
-     Definition of Directed Graph
-**** Back
-    a graph $G = (V,E)$ consists of a set of a set $V$ of vertices and a set $E$ of
-    edges such that each $e \in E$ is associated with an $\textbf{ordered}$ pair of
-    vertices where $e = (v, w)$ denotes a unique edge $e$ from $v$ to $w$.
-*** simple graph
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828488961
-    :END:
-**** Front
-     Definition of a Simple Graph
-**** Back
-     $G = (V, E)$ that has neither loops nor parallel edges.
-*** path
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828489011
-    :END:
-**** Front
-     Definition of Path
-**** Back
-     Finite or infinite sequence of vertices $v_{0}, v_{1}, ..., v_{n}$ that
-     are connected and "traveled" within a graph. Its length is always $n - 1$,
-     the number of edges traveled. In a weighted graph, it is the
-     $\textbf{sum}$ of the weights of the edges traveled.
-*** weighted G
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828489061
-    :END:
-**** Front
-     Definition of weighted Graph
-**** Back
-    a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
-    called its "weight."
-** trees
-*** Tree [9.1.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828534486
-    :END:
-**** Front
-     Definition of a Tree, Free and Rooted.
-**** Back
-     A (free) tree $T$ is a simple graph where $v$ and $w$ are vertices in $T$,
-     there exists a unique path from $v$ to $w$.
+     edges such that each $e \in E$ is associated with an $\textbf{ordered}$ pair of
+     vertices where $e = (v, w)$ denotes a unique edge $e$ from $v$ to $w$.
+**** simple graph
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828488961
+     :END:
+***** Front
+      Definition of a Simple Graph
+***** Back
+      $G = (V, E)$ that has neither loops nor parallel edges.
+**** path
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828489011
+     :END:
+***** Front
+      Definition of Path
+***** Back
+      Finite or infinite sequence of vertices $v_{0}, v_{1}, ..., v_{n}$ that
+      are connected and "traveled" within a graph. Its length is always $n - 1$,
+      the number of edges traveled. In a weighted graph, it is the
+      $\textbf{sum}$ of the weights of the edges traveled.
+**** weighted G
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828489061
+     :END:
+***** Front
+      Definition of weighted Graph
+***** Back
+     a graph $G = (V,E)$ where all $e \in E$ there is a real number $w(e)$
+     called its "weight."
+*** trees
+**** Tree [9.1.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828534486
+     :END:
+***** Front
+      Definition of a Tree, Free and Rooted.
+***** Back
+      A (free) tree $T$ is a simple graph where $v$ and $w$ are vertices in $T$,
+      there exists a unique path from $v$ to $w$.
 
-     $T$ is a *rooted* tree where a particular vertex is designated the *root*.
-*** Level of a vertex
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828534535
-    :END:
-**** Front
-     The level of a vertex in a Tree?
-**** Back
-     The level of a vertex $v$ is the length of the simple path from the root
-     $v_{0}$ to $v_{n}$. Level is also known as *Depth* and runs opposite of a
-     Tree's Height.
-     #+BEGIN_EXPORT html
-       <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
-     #+END_EXPORT
-*** Height of a vertex
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828534586
-    :END:
-**** Front
-     The height of a vertex?
-**** Back
-     The height of a vertex is the longest simplest path from the vertex $v$ and
-     a tree's leaf. A *tree's height* is the longest simplest path from root to
-     a leaf or, equivalently, the maximum level that occurs in the tree.
-     #+BEGIN_EXPORT html
-       <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
-     #+END_EXPORT
-*** Parent of Vertex [9.2.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828534638
-    :END:
-**** Front
-     Definition of parent vertex in a tree $T$?
-**** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
+      $T$ is a *rooted* tree where a particular vertex is designated the *root*.
+**** Level of a vertex
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828534535
+     :END:
+***** Front
+      The level of a vertex in a Tree?
+***** Back
+      The level of a vertex $v$ is the length of the simple path from the root
+      $v_{0}$ to $v_{n}$. Level is also known as *Depth* and runs opposite of a
+      Tree's Height.
+      #+BEGIN_EXPORT html
+        <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+      #+END_EXPORT
+**** Height of a vertex
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828534586
+     :END:
+***** Front
+      The height of a vertex?
+***** Back
+      The height of a vertex is the longest simplest path from the vertex $v$ and
+      a tree's leaf. A *tree's height* is the longest simplest path from root to
+      a leaf or, equivalently, the maximum level that occurs in the tree.
+      #+BEGIN_EXPORT html
+        <img src="https://user-images.githubusercontent.com/18218174/47659697-7e2e2a00-db63-11e8-97bc-5e961a19dfff.png"/>
+      #+END_EXPORT
+**** Parent of Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828534638
+     :END:
+***** Front
+      Definition of parent vertex in a tree $T$?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
 
-     $v_{n - 1}$ is the parent of $v_{n}$
-*** Ancestors of Vertex [9.2.1]
+      $v_{n - 1}$ is the parent of $v_{n}$
+**** Ancestors of Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828534786
+     :END:
+***** Front
+      Definition of a vertex's ancestors in tree $T$?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      $v_{0}, ..., v_{n - 1}$ are the ancestors of $v_{n}$.
+**** Descendant of Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574612
+     :END:
+***** Front
+      Definition of a vertex's descendants in tree $T$?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      If $x$ is an ancestor of $y$, then $y$ is a *descendant* of $x$.
+**** Siblings of Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574662
+     :END:
+***** Front
+      Definition of a vertex's siblings?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      If $x$ and $y$ are children of $z$, then $x$ and $y$ are *siblings*.
+**** Terminal Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574710
+     :END:
+***** Front
+      Definition of terminal(leaf) vertex?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      If $x$ has no children then $x$ is a *terminal* vertex, aka *leaf*.
+**** Internal Vertex [9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574761
+     :END:
+***** Front
+      Definition of an internal vertex?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      If $x$ has children, then $x$ is an *internal* vertex, aka *branch*.
+**** Subtree of a tree[9.2.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574811
+     :END:
+***** Front
+      Definition of a subtree?
+***** Back
+      Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
+      vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
+      $T$. Then:
+
+      The *subtree* of $T$ rooted at $x$ is the graph with vertex set $V$ and edge set $E$,
+      where $V$ is $x$ together with the descendants of $x$ and $E = {e | e
+      \text{ is an edge on a simple path from } x \text{ to some vertex in } V}$
+**** Definitional Equivalents of trees [9.2.3]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828574861
+     :END:
+***** Front
+      Different definitions of a tree, $T$?
+***** Back
+      Let $T$ be a graph with $n$ vertices. The following are equivalent for $T$:
+      1. is a tree.
+      2. is *connected* and *acyclic*.
+      3. is *connected* and has $n - 1$ edges.
+      4. is *acyclic* and has $n - 1$ edges.
+**** Spanning Tree [9.3.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546828650511
+     :END:
+***** Front
+      Definition of spanning tree?
+***** Back
+      a tree $T$ is a *spanning tree* of a graph $G$ if $T$ is a subgraph of $G$
+      that contains all the vertices of $G$
+
+      In the image below, the black lines mark the edges included in the spanning
+      tree of $G$:
+
+      #+BEGIN_EXPORT html
+        <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
+      #+END_EXPORT
+**** Spanning Tree <=> Connected [9.3.4]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546828650561
+     :END:
+***** Text
+      A graph $G$ has a spanning tree if and only if {{c1::$G$ is connected.}}
+***** Extra
+**** Breadth-First Description 
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546828650611
+     :END:
+***** Text
+      Breadth-First Search (BFS) is an algorithm for traversing {{c1::tree or graph data structures}}
+      by starting at some root and explores {{c1::all neighbor nodes at the present
+      depth}} before {{c1::moving to the next level}}.
+***** Extra
+**** Depth-First Description
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546828650651
+     :END:
+***** Text
+      Depth-First Search (DFS) is an algorithm for traversing {{c1::tree or graph data
+      structures.}} It starts at some node and explores{{c1:: as far as possible along
+      each branch}} before {{c1::backtracking}}.
+***** Extra
+**** Minimal Spanning Tree [9.4.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546829177961
+     :END:
+***** Front
+      Definition of a Minimum Spanning Tree of graph $G$?
+***** Back
+      Let $G$ be a weighted graph. A *minimal spanning tree* of $G$ is a spanning tree
+      of *G* with minimum weight.
+**** Prim's Algo Description
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546829178012
+     :END:
+***** Text
+      Prim's algorithm is a greedy algorithm that {{c1::finds a minimum spanning tree
+      for a weighted undirected graph}} by starting {{c1::from an arbitrary vertex}} and
+      {{c1::incrementally adding the cheapest possible connection from the tree}} to
+      another vertex without {{c1::forming a complete cycle.}}
+***** Extra
+**** Kruskal's Algo Description
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546829178035
+     :END:
+***** Text
+      Kruskal's algorithm is a greedy algorithm that {{c1::finds a minimum spanning
+      tree $T$ for a weighted undirected graph $G$}} by starting {{c1::with all vertices of $G$}} and
+      no edges, incrementally adding {{c1::the lowest cost edge $e$ to $T$ without
+      forming a complete cycle}}.
+***** Extra
+**** Definition of Binary Tree [9.5.1]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546829178186
+     :END:
+***** Front
+      Definition of a Binary Tree?
+***** Back
+      A *Binary Tree* is a rooted tree in which each vertex has either no
+      children, one child, or two children.
+**** Full Binary Tree and # Leaves, Total Vertices [9.5.4]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546829214911
+     :END:
+***** Text
+      If $T$ is a *full* binary tree with $i$ internal vertices, then $T$ has {{c1::$i + 1$}}
+      terminal vertices (leaves) and {{c1::$2i + 1$}} total vertices.
+***** Extra
+**** Relation between height and leaves in Binary Tree [9.5.6]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546829214961
+     :END:
+***** Text
+      If a binary tree of height $h$ has $t$ terminal (leaf) vertices, then {{c1::$\lg
+      t \leq  h$.}}
+***** Extra
+**** Definition of Binary Search Tree [9.5.8]
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546829215112
+     :END:
+***** Front
+      Definition of a Binary Search Tree?
+***** Back
+      A binary search tree is a binary tree $T$ in which data are associated with
+      the vertices. The data are arranged so that, for each vertex $v$ in $T$,
+      each data item in the left subtree of $v$ is less than the data item in
+      $v$, and each data item in the right subtree of $v$ is greater than the
+      data item in $v$.
+** swe
+   :PROPERTIES:
+   :ANKI_DECK: swe
+   :END:
+** data structures
+   :PROPERTIES:
+   :ANKI_DECK: data structures and algorithms
+   :END:
+** rust
+   :PROPERTIES:
+   :ANKI_DECK: rust
+   :END:
+*** Basic Pointer Types                                            :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828534786
+    :ANKI_NOTE_ID: 1566234808011
     :END:
 **** Front
-     Definition of a vertex's ancestors in tree $T$?
+     rust's basic pointer types?
 **** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
-
-     $v_{0}, ..., v_{n - 1}$ are the ancestors of $v_{n}$.
-*** Descendant of Vertex [9.2.1]
+     - =&T= and =&mut T=
+     - =*const T= and =*mut T=
+*** Smart Pointer Types                                            :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574612
+    :ANKI_FAILURE_REASON: Note creation failed for unknown reason
     :END:
 **** Front
-     Definition of a vertex's descendants in tree $T$?
+     rust's smart pointer types?
 **** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
+     There are many, but the core smart pointers provided by =std= include:
+     - =Box<T>=
+     - =Rc<T>=
+     - =Ref<T>= and =RefMut<T>=
+       - accessed through =RefCell<T>=, do not conflate...
 
-     If $x$ is an ancestor of $y$, then $y$ is a *descendant* of $x$.
-*** Siblings of Vertex [9.2.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574662
-    :END:
-**** Front
-     Definition of a vertex's siblings?
-**** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
-
-     If $x$ and $y$ are children of $z$, then $x$ and $y$ are *siblings*.
-*** Terminal Vertex [9.2.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574710
-    :END:
-**** Front
-     Definition of terminal(leaf) vertex?
-**** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
-
-     If $x$ has no children then $x$ is a *terminal* vertex, aka *leaf*.
-*** Internal Vertex [9.2.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574761
-    :END:
-**** Front
-     Definition of an internal vertex?
-**** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
-
-     If $x$ has children, then $x$ is an *internal* vertex, aka *branch*.
-*** Subtree of a tree[9.2.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574811
-    :END:
-**** Front
-     Definition of a subtree?
-**** Back
-     Let $T$ be a tree with root $v_{0}$. Suppose that $x$, $y$, and $z$ are
-     vertices in $T$ and that $(v_{0}, v_{1}, ..., v_{n})$ is a simple path in
-     $T$. Then:
-
-     The *subtree* of $T$ rooted at $x$ is the graph with vertex set $V$ and edge set $E$,
-     where $V$ is $x$ together with the descendants of $x$ and $E = {e | e
-     \text{ is an edge on a simple path from } x \text{ to some vertex in } V}$
-*** Definitional Equivalents of trees [9.2.3]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828574861
-    :END:
-**** Front
-     Different definitions of a tree, $T$?
-**** Back
-     Let $T$ be a graph with $n$ vertices. The following are equivalent for $T$:
-     1. is a tree.
-     2. is *connected* and *acyclic*.
-     3. is *connected* and has $n - 1$ edges.
-     4. is *acyclic* and has $n - 1$ edges.
-*** Spanning Tree [9.3.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546828650511
-    :END:
-**** Front
-     Definition of spanning tree?
-**** Back
-     a tree $T$ is a *spanning tree* of a graph $G$ if $T$ is a subgraph of $G$
-     that contains all the vertices of $G$
-
-     In the image below, the black lines mark the edges included in the spanning
-     tree of $G$:
-
-     #+BEGIN_EXPORT html
-       <img src="https://user-images.githubusercontent.com/18218174/47662600-38746000-db69-11e8-9b74-c4b4d7ee452b.jpg"/>
-     #+END_EXPORT
-*** Spanning Tree <=> Connected [9.3.4]
+*** Rc<T> smart pointer                                            :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546828650561
     :END:
 **** Text
-     A graph $G$ has a spanning tree if and only if {{c1::$G$ is connected.}}
+***** Definition
+      =Rc<T>= is a {{c1::reference counted pointer}}. In other words, this lets
+      us have {{c1::multiple "owning" pointers to the same data}}, and the data
+      will be dropped (destructors will be run) when {{c1::all pointers are out
+      of scope}}.
+***** Guarantees
+      - main guarantee: {{c2::the data will not be destroyed}} until all references to it are out of scope.
+***** Cost
+      - first major smart pointer with {{c3::a run-time}} cost (=Box<T>=, =&T/&mut T=,
+        =*const/*mut T= don't)
+      - has is a {{c3::single allocation}}, though it will {{c3::allocate two extra
+        words ("strong" and "weak" ref counts)}}
+      - computation cost of {{c3::incrementing/decrementing the refcount}}
+        whenever it is {{c3::cloned}} or {{c3::goes out of scope}} respectively
+***** Usage
+      - When you wish to {{c4::dynamically allocate and share some data}} (read-only)
+        between various portions of your program and...
+        - it is not certain which portion {{c4::will finish using the pointer last}}.
+        - viable alternative to {{c4::&T when &T}} is either impossible to statically
+          check for correctness, {{c4::or creates extremely unergonomic code}}
 **** Extra
-*** Breadth-First Description 
+*** Box smart pointer                                              :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546828650611
     :END:
 **** Text
-     Breadth-First Search (BFS) is an algorithm for traversing {{c1::tree or graph data structures}}
-     by starting at some root and explores {{c1::all neighbor nodes at the present
-     depth}} before {{c1::moving to the next level}}.
+***** Definition
+      Box<T> is an {{c1::"owned"}} pointer, or {{c1::a "box"}}. While it can
+      hand out references to the contained data, it is {{c1::the only owner of
+      the data}}.
+
+      When a box (that hasn't been moved) goes out of scope, {{c1::destructors are
+      run}}.
+***** Cost
+      - {{c2::a zero-cost abstraction}} for dynamic allocation
+***** Usage
+      - want to {{c3::allocate some memory on the heap}} and {{c3::safely pass around a pointer}} to that memory
 **** Extra
-*** Depth-First Description
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546828650651
-    :END:
-**** Text
-     Depth-First Search (DFS) is an algorithm for traversing {{c1::tree or graph data
-     structures.}} It starts at some node and explores{{c1:: as far as possible along
-     each branch}} before {{c1::backtracking}}.
-**** Extra
-*** Minimal Spanning Tree [9.4.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546829177961
-    :END:
-**** Front
-     Definition of a Minimum Spanning Tree of graph $G$?
-**** Back
-     Let $G$ be a weighted graph. A *minimal spanning tree* of $G$ is a spanning tree
-     of *G* with minimum weight.
-*** Prim's Algo Description
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546829178012
-    :END:
-**** Text
-     Prim's algorithm is a greedy algorithm that {{c1::finds a minimum spanning tree
-     for a weighted undirected graph}} by starting {{c1::from an arbitrary vertex}} and
-     {{c1::incrementally adding the cheapest possible connection from the tree}} to
-     another vertex without {{c1::forming a complete cycle.}}
-**** Extra
-*** Kruskal's Algo Description
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546829178035
-    :END:
-**** Text
-     Kruskal's algorithm is a greedy algorithm that {{c1::finds a minimum spanning
-     tree $T$ for a weighted undirected graph $G$}} by starting {{c1::with all vertices of $G$}} and
-     no edges, incrementally adding {{c1::the lowest cost edge $e$ to $T$ without
-     forming a complete cycle}}.
-**** Extra
-*** Definition of Binary Tree [9.5.1]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546829178186
-    :END:
-**** Front
-     Definition of a Binary Tree?
-**** Back
-     A *Binary Tree* is a rooted tree in which each vertex has either no
-     children, one child, or two children.
-*** Full Binary Tree and # Leaves, Total Vertices [9.5.4]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546829214911
-    :END:
-**** Text
-     If $T$ is a *full* binary tree with $i$ internal vertices, then $T$ has {{c1::$i + 1$}}
-     terminal vertices (leaves) and {{c1::$2i + 1$}} total vertices.
-**** Extra
-*** Relation between height and leaves in Binary Tree [9.5.6]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546829214961
-    :END:
-**** Text
-     If a binary tree of height $h$ has $t$ terminal (leaf) vertices, then {{c1::$\lg
-     t \leq  h$.}}
-**** Extra
-*** Definition of Binary Search Tree [9.5.8]
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546829215112
-    :END:
-**** Front
-     Definition of a Binary Search Tree?
-**** Back
-     A binary search tree is a binary tree $T$ in which data are associated with
-     the vertices. The data are arranged so that, for each vertex $v$ in $T$,
-     each data item in the left subtree of $v$ is less than the data item in
-     $v$, and each data item in the right subtree of $v$ is greater than the
-     data item in $v$.
-* swe
-  :PROPERTIES:
-  :ANKI_DECK: swe
-  :END:
+
 * haskell book
   :PROPERTIES:
   :ANKI_DECK: haskell_book
@@ -433,7 +510,7 @@
 **** Text
      {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
      order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
-     lambdas first, evaluating terms {{c2::nested within}} after you’ve run out of arguments
+     lambdas first, evaluating terms {{c2::nested within}} after you've run out of arguments
      to apply.
 **** Extra
 *** Haskell and normal form evaluation
@@ -444,7 +521,7 @@
 **** Front
      Is Haskell code evaluated in normal order?
 **** Back
-     Normal order isn’t how Haskell code is evaluated - it’s call-by-need
+     Normal order isn't how Haskell code is evaluated - it's call-by-need
      instead.
 ** CH2
 *** parameter
@@ -463,7 +540,7 @@
     :ANKI_NOTE_ID: 1546882037550
     :END:
 **** Text
-     An {{c1::argument}} is an input value the function is applied to. A function’s
+     An {{c1::argument}} is an input value the function is applied to. A function's
      parameter is bound to an {{c1::argument}} when the function is applied to that
      argument.
 **** Extra
@@ -615,13 +692,6 @@
      alternate name, usually to {{c1::communicate something more specific or for
      brevity}}.
 **** Extra
-*** data declarations
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_FAILURE_REASON: Note creation failed for unknown reason
-    :END:
-**** Text
-**** Extra
 *** type constructor
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
@@ -740,11 +810,11 @@
        - [ ] ch5
          - [ ] Particle under net-force
            - if a mass, m, experiences a non-zero netforce, its acceleration is
-             related to the force via Newton’s 2nd
+             related to the force via Newton's 2nd
          - [ ] Particle in equilibrium
            - particle maintains constant velocity such that acceleration is zero
              - this includes a velocity of zero itself
-           - the forces of Newton’s Second balance and $\Sigma \vec{F} = 0$
+           - the forces of Newton's Second balance and $\Sigma \vec{F} = 0$
      - [ ] find common problems to provide numberless solutions to
 **** CH 1-3: Kinematics, 1D Vectors, motion
 ***** x_f kinematic eq, velocity                                         
@@ -983,7 +1053,7 @@
       :ANKI_NOTE_ID: 1535396791724
       :END:
 ****** Front
-       Newton’s First Law
+       Newton's First Law
 ****** Back
        In the absence of external forces and when viewed from an inertial
        reference frame, an object at rest remains at rest and an object in motion
@@ -999,7 +1069,7 @@
       :ANKI_NOTE_ID: 1535396791800
       :END:
 ****** Front
-       Newton’s Second Law
+       Newton's Second Law
 ****** Back
        When viewed from an inertial reference frame, the acceleration of an
        object is directly proportional to the net force acting on it and
@@ -1012,9 +1082,9 @@
 
        $\Sigma \vec{F} = m\vec{a}$
 
-       - Note, we are discussing the relation of /net force/ with an object’s
+       - Note, we are discussing the relation of /net force/ with an object's
          acceleration
-       - Newton’s 2nd is easily decomposed into component form:
+       - Newton's 2nd is easily decomposed into component form:
 
          $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
 ***** Newton's Third                                                     
@@ -1023,7 +1093,7 @@
       :ANKI_NOTE_ID: 1535396791949
       :END:
 ****** Front
-       Newton’s Third Law
+       Newton's Third Law
 ****** Back
        If two objects interact, the force $\vec{F_{12}}$ exerted by object 1 on
        object 2 is equal in magnitude and opposite in direction to the force
