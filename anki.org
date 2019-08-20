@@ -385,6 +385,53 @@
    :PROPERTIES:
    :ANKI_DECK: data structures and algorithms
    :END:
+*** Queue use cases
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566332219168
+    :END:
+**** Front
+     Example use cases for queues?
+**** Back
+     - asynchronous processes
+       - message queue (mail servers, sending tweets, uploading content)
+       - cpu scheduling
+     - breadth-first search
+     - literally anything where queuing theory may be applicable, (lines, first
+       come first serve situations)
+
+*** Def of FIFO                                                        :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566332219243
+    :END:
+**** Text
+     {{c1::*FIFO*}} is an acronym for {{c2::*First-In-First-Out*}}, a method for organizing and
+     manipulating data where the {{c2::oldest (first) entry is processed first}}.
+**** Extra
+*** Queue Insertion/Deletion                                           :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566332219293
+    :END:
+**** Front
+     time complexity of insert (enqueue) and delete (dequeue) for a queue?
+**** Back
+     both insert and deletion are $\Theta(1)$ for the standard definition of
+     the operations of a FIFO structure.
+*** Def of Queue ADT                                                   :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566332219343
+    :END:
+**** Text
+     A {{c1::queue}} is a {{c2::collection}} in which the entities are
+     {{c1::kept in order}} and the principal operations on the {{c2::collection}} are
+     the addition of entities to {{c2::the rear terminal position, known as
+     *enqueue*}}, and removal of entities from {{c2::the front terminal position, known
+     as *dequeue*}}. This makes the {{c1::queue}} a {{c2::*First-In-First-Out (FIFO)* data
+     structure}}.
+**** Extra
 ** rust
    :PROPERTIES:
    :ANKI_DECK: rust
@@ -402,7 +449,7 @@
 *** Smart Pointer Types                                            :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_FAILURE_REASON: Note creation failed for unknown reason
+    :ANKI_NOTE_ID: 1566234808230
     :END:
 **** Front
      rust's smart pointer types?
@@ -412,10 +459,10 @@
      - =Rc<T>=
      - =Ref<T>= and =RefMut<T>=
        - accessed through =RefCell<T>=, do not conflate...
-
 *** Rc<T> smart pointer                                            :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566234897086
     :END:
 **** Text
 ***** Definition
@@ -442,6 +489,7 @@
 *** Box smart pointer                                              :RustBook:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566332221744
     :END:
 **** Text
 ***** Definition
