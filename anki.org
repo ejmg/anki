@@ -432,6 +432,49 @@
      as *dequeue*}}. This makes the {{c1::queue}} a {{c2::*First-In-First-Out (FIFO)* data
      structure}}.
 **** Extra
+*** Singly Linked List Insertion Front
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509133926
+    :END:
+**** Front
+     What is the time-complexity of insertion at the front of a singly linked list?
+**** Back
+     - by definition of a singly linked list, have a reference to the head node...
+     - Insertion at front: $\Theta(1)$
+*** Singly Linked List Deletion Front
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134126
+    :END:
+**** Front
+     What is the time-complexity of deletion at the front of a singly linked list?
+**** Back
+     - by definition of a singly linked list, have a reference to the head node...
+     - Deletion at front: $\Theta(1)$
+*** Singly Linked List Arbitrary Insertion
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134176
+    :END:
+**** Front
+     What is the time-complexity of an arbitrary insertion for a singly linked list?
+**** Back
+     - time-complexity of finding the node: $\mathcal{O}(n)$
+     - insertion with a known reference to node: $\Theta(1)$
+     - thus: $\mathcal{O}(n)$
+
+*** Singly Linked List Append
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134225
+    :END:
+**** Front
+     What is the time-complexity of appending to a singly linked list?
+**** Back
+     - must iterate through all =next= node's till the end is found...
+     - Thus, appending: $\mathcal{O}(n)$
+
 ** rust
    :PROPERTIES:
    :ANKI_DECK: rust
@@ -469,13 +512,13 @@
       =Rc<T>= is a {{c1::reference counted pointer}}. In other words, this lets
       us have {{c1::multiple "owning" pointers to the same data}}, and the data
       will be dropped (destructors will be run) when {{c1::all pointers are out
-      of scope}}.
+      of scope}}. The pointers only have {{c1::immutable access}}, however.
 ***** Guarantees
       - main guarantee: {{c2::the data will not be destroyed}} until all references to it are out of scope.
 ***** Cost
       - first major smart pointer with {{c3::a run-time}} cost (=Box<T>=, =&T/&mut T=,
         =*const/*mut T= don't)
-      - has is a {{c3::single allocation}}, though it will {{c3::allocate two extra
+      - is a {{c3::single allocation}}, though it will {{c3::allocate two extra
         words ("strong" and "weak" ref counts)}}
       - computation cost of {{c3::incrementing/decrementing the refcount}}
         whenever it is {{c3::cloned}} or {{c3::goes out of scope}} respectively
@@ -505,6 +548,144 @@
       - want to {{c3::allocate some memory on the heap}} and {{c3::safely pass around a pointer}} to that memory
 **** Extra
 
+*** standard rules of ownership                                    :RustBook:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509136601
+    :END:
+**** Front
+     What are rust's basic rules of Ownership?
+**** Back
+     - the owner of a value is a variable.
+     - at any given moment, only a single owner is allowed.
+     - the value is lost the moment the owner goes out of scope?
+*** nested structures with uncertain size in rust                     :hodsa:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509137902
+    :END:
+**** Front
+     Why does the following not compile and what correction would allow it to?
+     #+BEGIN_SRC rust
+       struct Node {
+           value: i32,
+           next: Option<Node>,
+       }
+       struct LinkedList {
+           head: Option<Node>,
+           tail: Option<Node>,
+           pub length: usize,
+       }
+     #+END_SRC
+**** Back
+     The code does not compile because struct =Node= is recursive with a heap
+     allocated value, i.e. a value of uncertain and growable size. Technically,
+     we fit the entire linked list in the first Node reference. Adding some
+     indirection via a smart pointer, however, allows the compiler to relax and
+     compile. This will compile.
+
+     #+BEGIN_SRC rust
+       struct Node {
+           value: i32,
+           next: Option<Rc<RefCell<Node>>>,
+       }
+       struct LinkedList {
+           head: Option<Rc<RefCell<Node>>>,
+           tail: Option<Rc<RefCell<Node>>>,
+           pub length: usize,
+       }
+     #+END_SRC
+
+     Even better would be to make a type alias for a link and use in place, a la:
+
+     #+BEGIN_SRC rust
+       type Link = Option<Rc<RefCell<Node>>>;
+     #+END_SRC
+
+*** interior mutability pattern, top level definition/descriptive  :RustBook:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509137976
+    :END:
+**** Front
+     What is the interior mutability pattern (top level definition/description)?
+**** Back
+     Interior mutability is a design pattern in Rust that allows you to mutate
+     data even when there are immutable references to that data; normally, this
+     action is disallowed by the borrowing rules.
+
+     In Rust, such an action is enabled/encouraged via its safe API with types
+     such as =RefCell<T>=.
+*** interior mutability pattern, short def                   :RustBook:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509138026
+    :END:
+**** Front
+     What is the interior mutability pattern (short definition)?
+**** Back
+     Mutating the value inside an immutable value is the interior mutability
+     pattern.
+
+*** How does =RefCell= allow interior mutability?                  :RustBook:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509138100
+    :END:
+**** Front
+     How does =RefCell= enable interior mutability?
+**** Back
+     =RefCell<T>= allows us to wrap a value that, following the borrowing rules
+     of rust, would not be mutable otherwise. This occurs through its methods, =.borrow()= and
+     =.borrow_mut()=, which return the smart pointers =Ref<T>= and =RefMut<T>=,
+     respectively.
+
+     The =RefCell<T>= keeps track of how many =Ref<T>= and =RefMut<T>= smart pointers
+     are currently active, and if a violation of rust's borrow rules is detected,
+     will *panic* during run-time.
+   
+*** =self= vs =Self=                                          :StackExchange:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509138151
+    :END:
+**** Front
+     What is the difference between =self= vs =Self=?
+**** Back
+     =self= when used as the first argument to define a function of a type as a
+     /method/, abd is a shorthand for =self: Self=.
+
+     =Self= is the type of the current object and is often used as syntactic
+     sugar in =Trait= definitions for the receiving (implementing) type, which is
+     unknown to the author of the =Trait= being written.
+*** =self=                                                    :StackExchange:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566509138200
+    :END:
+**** Text
+     {{c1::=self=}} is the name used in a trait or an impl for the first argument
+     of a method.  There is no implicit =This= in Rust, and thus you must pass
+     {{c1::=self=}} as an argument (and declare {{c1::=self= as a parameter for
+     said argument}}) for a function to be a method of a type.
+**** Extra
+*** why use the interior mutability pattern?                       :RustBook:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509138250
+    :END:
+**** Front
+     Why is the interior mutability pattern used? Put differently, why does it
+     exist?
+**** Back
+     The advantage of checking the borrowing rules at runtime instead is that
+     certain memory-safe scenarios are then allowed, whereas they are disallowed
+     by the compile-time checks. 
+
+     Static analysis, like the Rust compiler, is inherently conservative. Some
+     properties of code are impossible to detect by analyzing the code. Interior
+     mutability gives us the ability to modify what we, as the programmer, know
+     is a value safe for mutation in a given situation.
 * haskell book
   :PROPERTIES:
   :ANKI_DECK: haskell_book
