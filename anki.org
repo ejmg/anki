@@ -385,96 +385,209 @@
    :PROPERTIES:
    :ANKI_DECK: data structures and algorithms
    :END:
-*** Queue use cases
+*** Linked Lists
+**** Singly Linked List Insertion Front
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566509133926
+     :END:
+***** Front
+      What is the time-complexity of insertion at the front of a singly linked list?
+***** Back
+      - by definition of a singly linked list, have a reference to the head node...
+      - Insertion at front: $\Theta(1)$
+**** Singly Linked List Deletion Front
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566509134126
+     :END:
+***** Front
+      What is the time-complexity of deletion at the front of a singly linked list?
+***** Back
+      - by definition of a singly linked list, have a reference to the head node...
+      - Deletion at front: $\Theta(1)$
+**** Singly Linked List Arbitrary Insertion
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566509134176
+     :END:
+***** Front
+      What is the time-complexity of an arbitrary insertion for a singly linked list?
+***** Back
+      - time-complexity of finding the node: $\mathcal{O}(n)$
+      - insertion with a known reference to node: $\Theta(1)$
+      - thus: $\mathcal{O}(n)$
+**** Singly Linked List Append
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566509134225
+     :END:
+***** Front
+      What is the time-complexity of appending to a singly linked list?
+***** Back
+      - must iterate through all =next= node's till the end is found...
+      - Thus, appending: $\mathcal{O}(n)$
+*** ADTs
+**** Def of FIFO                                                       :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1566332219243
+     :END:
+***** Text
+      {{c1:: *FIFO*}} is an acronym for {{c2:: *First-In-First-Out*}}, a method for organizing and
+      manipulating data where the {{c2::oldest (first) entry is processed first}}.
+***** Extra
+**** def of LIFO                                                       :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1566849695055
+     :END:
+***** Text
+      {{c1:: *LIFO* }} is an acronym for {{c2:: *Last-In-First-Out*,}} a method for
+      organizing and manipulating data where the {{c2::newest (last) entry is
+      processed first}}.
+***** Extra
+**** Average wait time of FIFO vs LIFO                               :Skiena:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566849695129
+     :END:
+***** Front
+      Average wait time of a LIFO based data structure vs FIFO?
+***** Back
+      the average wait time for an element in a FIFO data structure vs FIFO is
+      *the same*; however, LIFO *minimizes* the *maximum wait time*.
+**** Def of stack ADT                                                  :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1566849695180
+     :END:
+***** Text
+      a {{c1::stack}} is a collection of elements which are {{c2::added and
+      removed}} from {{c1::the "top" of}} the collection. The two principle
+      operations are {{c2::push, which adds an element to the collection,}} and
+      {{c2::pop, which removes the most recently added element.}}. This behavior
+      gives a {{c1::stack}} its other name, {{c1:: *LIFO*, Last-In-First-Out}}.
+***** Extra
+**** def of dictionary ADT                                             :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1566849695230
+     :END:
+***** Text
+      an {{c1::associative array (AKA map, symbol table, or dictionary)}} is an
+      abstract data type composed of a {{c2::collection of *(key, value) pairs*}}, such
+      that {{c1::each possible key appears at most once in the collection}}.
+***** Extra
+**** operations of a dictionary ADT                             :Skiena:Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566849695305
+     :END:
+***** Front
+      What are the operations for the dictionary ADT?
+***** Back
+      For dictionary =D=:
+      - =search(k)=: given a search key =k=, return a pointer to the element
+        whose key value is =k=.
+      - =insert(x)=: given a data item =x=, add it to the dictionary.
+      - =delete(k)=: given a key =k=, delete the value associated to it if it
+        exists.
+**** Def of Queue ADT                                                  :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1566332219343
+     :END:
+***** Text
+      A {{c1::queue}} is a {{c2::collection}} in which the entities are
+      {{c1::kept in order}} and the principal operations on the {{c2::collection}} are
+      the addition of entities to {{c2::the rear terminal position, known as
+      *enqueue*}}, and removal of entities from {{c2::the front terminal position, known
+      as *dequeue*}}. This makes the {{c1::queue}} a {{c2:: *First-In-First-Out (FIFO)* data
+      structure}}.
+***** Extra
+**** Queue use cases
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566332219168
+     :END:
+***** Front
+      Example use cases for queues?
+***** Back
+      - asynchronous processes
+        - message queue (mail servers, sending tweets, uploading content)
+        - cpu scheduling
+      - breadth-first search
+      - literally anything where queuing theory may be applicable, (lines, first
+        come first serve situations)
+        - i.e. generally where order matters, whether because of fairness or
+          technical...
+**** Queue Insertion/Deletion                                          :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566332219293
+     :END:
+***** Front
+      time complexity of insert (enqueue) and delete (dequeue) for a queue?
+***** Back
+      both insert and deletion are $\Theta(1)$ for the standard definition of
+      the operations of a FIFO structure.
+**** Stack use cases                                                   :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566849695631
+     :END:
+***** Front
+      Use cases for stack data structures?
+***** Back
+      - Expression evaluation, parsing
+        - postfix notation evaluator
+        - CFG based languages can run on stack machines
+      - Backtracking
+        - error trace
+        - depth-first search
+      - compile time memory management
+        - when we know the memory allocations at compile time, can maximize
+          data locality
+        - call stack for function and routines
+**** Stack Pop/Push                                                    :Wiki:
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1566849695681
+     :END:
+***** Front
+      time complexity of pop and push for the stack ADT?
+***** Back
+      both pop and push are $\Theta(1)$ for the standard definition of a Stack ADT.
+*** contiguous and linked data structures                            :Skiena:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566332219168
+    :ANKI_NOTE_ID: 1566849695730
     :END:
 **** Front
-     Example use cases for queues?
+     in terms of memory layout, what two categories can data structures be
+     classified into?
 **** Back
-     - asynchronous processes
-       - message queue (mail servers, sending tweets, uploading content)
-       - cpu scheduling
-     - breadth-first search
-     - literally anything where queuing theory may be applicable, (lines, first
-       come first serve situations)
-
-*** Def of FIFO                                                        :Wiki:
+     1. Contiguously-Allocated
+     2. Linked
+*** def contiguous data structure                                    :Skiena:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566332219243
+    :ANKI_NOTE_ID: 1566849695780
     :END:
 **** Text
-     {{c1::*FIFO*}} is an acronym for {{c2::*First-In-First-Out*}}, a method for organizing and
-     manipulating data where the {{c2::oldest (first) entry is processed first}}.
+     {{c1::Contiguously-allocated}} data structures are composed of {{c1::single slabs of
+     memory}}, and include {{c2::arrays, matrices, heaps, and hash-tables}}.
 **** Extra
-*** Queue Insertion/Deletion                                           :Wiki:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566332219293
-    :END:
-**** Front
-     time complexity of insert (enqueue) and delete (dequeue) for a queue?
-**** Back
-     both insert and deletion are $\Theta(1)$ for the standard definition of
-     the operations of a FIFO structure.
-*** Def of Queue ADT                                                   :Wiki:
+*** linked data structure                                            :Skiena:
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566332219343
+    :ANKI_NOTE_ID: 1566849695830
     :END:
 **** Text
-     A {{c1::queue}} is a {{c2::collection}} in which the entities are
-     {{c1::kept in order}} and the principal operations on the {{c2::collection}} are
-     the addition of entities to {{c2::the rear terminal position, known as
-     *enqueue*}}, and removal of entities from {{c2::the front terminal position, known
-     as *dequeue*}}. This makes the {{c1::queue}} a {{c2::*First-In-First-Out (FIFO)* data
-     structure}}.
+     {{c1::Linked}} data structures are composed of {{c1::distinct chunks of memory bound
+     together by pointers}}, and include {{c2::lists, trees, and graph adjacency lists}}.
 **** Extra
-*** Singly Linked List Insertion Front
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509133926
-    :END:
-**** Front
-     What is the time-complexity of insertion at the front of a singly linked list?
-**** Back
-     - by definition of a singly linked list, have a reference to the head node...
-     - Insertion at front: $\Theta(1)$
-*** Singly Linked List Deletion Front
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509134126
-    :END:
-**** Front
-     What is the time-complexity of deletion at the front of a singly linked list?
-**** Back
-     - by definition of a singly linked list, have a reference to the head node...
-     - Deletion at front: $\Theta(1)$
-*** Singly Linked List Arbitrary Insertion
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509134176
-    :END:
-**** Front
-     What is the time-complexity of an arbitrary insertion for a singly linked list?
-**** Back
-     - time-complexity of finding the node: $\mathcal{O}(n)$
-     - insertion with a known reference to node: $\Theta(1)$
-     - thus: $\mathcal{O}(n)$
-
-*** Singly Linked List Append
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509134225
-    :END:
-**** Front
-     What is the time-complexity of appending to a singly linked list?
-**** Back
-     - must iterate through all =next= node's till the end is found...
-     - Thus, appending: $\mathcal{O}(n)$
-
 ** rust
    :PROPERTIES:
    :ANKI_DECK: rust
@@ -2089,3 +2202,53 @@
 ****** Back
        $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
 **** CH31
+* TODO cards
+** def of iterators 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Front
+    Definition of iterators?
+*** Back
+** Trait vs Impl 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Front
+*** Back
+** =Trait= vs Types 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Front
+*** Back
+** skip list 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Text
+    A skip list...
+*** Extra
+** insertion sort (description) 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Front
+    Describe insertion sort
+*** Back
+** insertion sort (psuedocode) 
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_FAILURE_REASON: No deck specified
+   :END:
+*** Text
+    *Insertion Sort* pseudo code is as follows:
+   
+*** Extra
+
+
