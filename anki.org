@@ -799,318 +799,188 @@
      properties of code are impossible to detect by analyzing the code. Interior
      mutability gives us the ability to modify what we, as the programmer, know
      is a value safe for mutation in a given situation.
-* haskell book
-  :PROPERTIES:
-  :ANKI_DECK: haskell_book
-  :END:
-** CH1
-*** the lambda in the lambda calculus
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546835357160
-    :END:
-**** Text
-     The lambda in lambda calculus is the greek letter 𝜆 used to {{c1::introduce, or
-     abstract,}} arguments for {{c1::binding}} in an expression.
-**** Extra
-*** the lambda abstraction
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546835357234
-    :END:
-**** Text
-     A lambda abstraction is an {{c1::anonymous function or lambda term}}.  $(\lambda x.x + 1)$
-     The {{c1::head}} of the expression, $\lambda x$., abstracts out the {{c1::term}} $x + 1$. We can apply it
-     to any x and recompute different results for each x we applied the lambda to.
-**** Extra
-*** application
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546877373875
-    :END:
-**** Text
-     Application is how one {{c1::evaluates or reduces lambdas}}, which binds the
-     {{c1::parameter}} to the {{c1::concrete argument}}. The {{c1::argument}} is what specific term the
-     lambda was applied to. Computations are performed in lambda calculus by
-     applying {{c2::lambdas}} to arguments until you run out of {{c2::applications}} to perform.
-**** Extra
-*** lambda calculus
+** cs458 software testing and architecture
+   :PROPERTIES:
+   :ANKI_DECK: software testing and architecture
+   :END:
+** cs470: intro to dbs
+   :PROPERTIES:
+   :ANKI_DECK: intro to database systems
+   :END:
+*** def of db
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546878448425
+    :ANKI_NOTE_ID: 1581057696125
     :END:
 **** Front
-     Definition of the Lambda Calculus?
+     definition of database
 **** Back
-     Lambda calculus is a formal system for expressing programs in terms of
-     abstraction and application.
-*** Normal Order
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546878384275
-    :END:
-**** Text
-     {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
-     order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
-     lambdas first, evaluating terms {{c2::nested within}} after you've run out of arguments
-     to apply.
-**** Extra
-*** Haskell and normal form evaluation
+     a collection of related data
+*** def of data
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546878384328
+    :ANKI_NOTE_ID: 1581057696325
     :END:
 **** Front
-     Is Haskell code evaluated in normal order?
+     Definition of data (with respect to databases)
 **** Back
-     Normal order isn't how Haskell code is evaluated - it's call-by-need
-     instead.
-** CH2
-*** parameter
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546882037500
-    :END:
-**** Text
-     A {{c1::parameter, or formal parameter,}} represents a value that will be {{c2::passed
-     to the function when the function is called}}. Thus, {{c1::parameters}} are usually
-     {{c2::variables}}.
-**** Extra
-*** arguments
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546882037550
-    :END:
-**** Text
-     An {{c1::argument}} is an input value the function is applied to. A function's
-     parameter is bound to an {{c1::argument}} when the function is applied to that
-     argument.
-**** Extra
-*** expression
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1546882037675
-    :END:
-**** Text
-     An {{c1::expression}} is a combination of symbols that conforms to syn- tactic
-     rules and can be evaluated to some result.
-**** Extra
-*** components of Haskell expression?
+     known facts that can be recorded and have implicit meaning.
+*** implicit properties of a db
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546882037725
+    :ANKI_NOTE_ID: 1581057696400
     :END:
 **** Front
-     Components of Haskell expression?
+     implicit properties of a database
 **** Back
-     In Haskell, an expression is a well-structured combination of constants,
-     variables, and functions. While irreducible constants are technically
-     expressions, we usually refer to those as “values”, so we usually mean
-     “reducible expression” when we use the term expression
-*** value in Haskell
+     1. Universe of Discourse (AKA "miniworld")
+        - the db represents some aspect of "real" world
+     2. logically coherent collection of data with some inherent meaning
+     3. Design, built, and populated with data for specific purpose
+        - has intended users, some idea of applications that will use it.
+*** def of dbms
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546882037775
+    :ANKI_NOTE_ID: 1581057696500
     :END:
 **** Front
-     What is a /value/ in Haskell?
+     definition of database management system
 **** Back
-     A value is an expression that cannot be reduced or evaluated any
-     further. 2 * 2 is an expression, but not a value, whereas what it
-     evaluates to, 4, is a value.
-*** functions
+     general purpose software that facilitates the process of defining, constructing, manipulating,
+     and sharing database(s) among various users and applications
+*** def of dbs
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1546882037826
+    :ANKI_NOTE_ID: 1581057696600
     :END:
 **** Front
-     What is a function?
+     definition of database system
 **** Back
-     A function is a mathematical object whose capabilities are limited to
-     being applied to an argument and returning a result. Functions can be
-     described as a list of ordered pairs of their inputs and the resulting
-     outputs, like a mapping.
-** CH3
-*** Top Level Bindings
+     a database(s) and database management system, together.
+
+     [[file:img/dbs.jpg]]
+*** self describing nature
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547064272357
+    :ANKI_NOTE_ID: 1581061815875
     :END:
 **** Text
-     /Top Level Bindings/ (in Haskell) are bindings that {{c1::stand outside of any
-     other declaration}}. The main feature of /top level/ bindings is that they
-     can {{c1::be made available to other modules in or outside}} of your program.
+     the {{c1::self-describing nature of database systems}} means that {{c2::database system
+          contains the database itself but also a complete definition and description of the
+          database(s)'s structures, type/storage format of data items, and constraints as meta-data
+          in the database systems' catalog}}
+
+     4. sharing of data and multiuser transaction processing
 **** Extra
-*** Local Bindings
+*** insulation between program/data, and data abstraction
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547064272431
+    :ANKI_NOTE_ID: 1581061815975
     :END:
 **** Text
-     /Local Bindings/ are bindings {{c1::local to particular expressions}}. They cannot
-     be {{c1::imported by other programs or modules}}.
+     {{c1::insulation between programs and data}} is possible because of {{c2::program-data independence}}
+     and {{c2::program-operation independence}} which is only made possible by the {{c2::data abstraction}} provided
+     by the database approach.
 **** Extra
-*** Scope
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547063637657
-    :END:
-**** Text
-     /Scope/ is where a {{c1::variable referred to by name is valid}}.
-**** Extra
-*** Concatenation
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547063637706
-    :END:
-**** Text
-     /Concatenation/ is the {{c1::joining together of sequences}} of values. In Haskell,
-     this is typically meant with respect to {{c1::the /list/, [],}} datatype.
-**** Extra
-*** types in Haskell
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547063637731
-    :END:
-**** Text
-     Types (aka Datatypes) in Haskell determine {{c1::what values are members of the
-     type or that /inhabit/ the type}}. Unlike other languages, datatypes in
-     Haskell by default {{c1::do not delimit the operations that can be performed on
-     the data.}}
-**** Extra
-*** type (datatype)
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547063637756
-    :END:
-**** Text
-     A /type/ (or /datatype/) is a {{c1::classification of values or data}}.
-**** Extra
-*** Strings in Haskell
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547063637782
-    :END:
-**** Text
-     A /String/ is a {{c1::sequence of characters}}. In Haskell, =String= is represented
-     by a {{c1::linked-list of =Char=}} values, aka =[Char]=.
-**** Extra
-** CH4
-*** types of polymorphism in Haskell
+*** why support for different views
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1547089995068
+    :ANKI_NOTE_ID: 1581061881400
     :END:
 **** Front
-     Types of polymorphism in Haskell
+     what does the database approach require support for different views?
 **** Back
-     Polymorphism in Haskell is either /Parametric/ or /Constrained/.
-*** polymorphism
+     databases have different users with different needs and privileges with respect to data in the
+     database, so the ability to provide different subsets of the same database data to different
+     users is a critical function provided by databases.
+*** sharing data & multiuser processing
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547089995118
+    :ANKI_NOTE_ID: 1581061816076
     :END:
 **** Text
-     /Polymorphism/ in Haskell means being able to write code in terms of {{c1::values
-     which may be one of several, or any, type}}.
+     the database approach includes {{c1::sharing data and multiuser processing}} by providing its
+     own {{c2::concurrency controls}} to ensure {{c2::concurrent transactions over the same data}}
+     execute {{c1::efficiently and correctly}}.
 **** Extra
-*** arity
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547089995168
-    :END:
-**** Text
-     /Arity/ is the {{c1::number of arguments a function accepts}}. This notion
-     is a little slippery in Haskell {{c1::due to currying}}, as all functions are
-     {{c1::1-arity}}.
-**** Extra
-*** type alias in haskell
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547089995219
-    :END:
-**** Text
-     A /type alias/ is a way to refer to a {{c1::type constructor}} or {{c1::type constant}} by an
-     alternate name, usually to {{c1::communicate something more specific or for
-     brevity}}.
-**** Extra
-*** type constructor
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547926855600
-    :END:
-**** Text
-     /Type constructors/ in Haskell are {{c1::*not values* and can only be used in type
-     signatures}}. Type constructors are used to {{c1::denote the type being declared
-     by a data declaration}}.
-**** Extra
-*** Type Signature Example
+*** Characteristics of db approach
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1547066838858
+    :ANKI_NOTE_ID: 1581061816250
     :END:
 **** Front
-     In the snippet below:
-     #+BEGIN_SRC haskell
-       type Name = String  
-       data Pet = Cat | Dog Name
-     #+END_SRC
-     What are the type signatures of the data constructors?
+     main characteristics of database approach versus file-processing
 **** Back
-     #+BEGIN_SRC haskell
-       Cat :: Pet
-       Dog :: Name -> Pet
-     #+END_SRC
-*** Data & Type Constructors Example
+     1. self-describing nature of database system
+     2. insulation between programs and data, and data abstraction
+     3. support of multiple views
+     4. sharing of data and multiuser transaction processing
+*** db design phases
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1547066838858
+    :ANKI_NOTE_ID: 1581061816300
     :END:
 **** Front
-     In the snippet below:
-     #+BEGIN_SRC haskell
-       type Name = String  
-       data Pet = Cat | Dog Name
-     #+END_SRC
-     What is/are the type and data constructors?
+     phases of database design
 **** Back
-     =Pet= is the /type constructor/ and both =Cat= and =Dog Name= are /Data
-     Constructors/ for the type =Cat=.
-*** Data Constructors
+     1. Requirements Specification and Analysis
+     2. Conceptual Design
+     3. Logical Design
+     4. Physical Design
+*** ACID
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1581061890150
+    :END:
+**** Front
+     ACID stands for
+**** Back
+     1. Atomicity
+     2. Consistency
+     3. Isolation
+     4. Durability
+*** atomicity
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547066513606
+    :ANKI_NOTE_ID: 1581061816399
     :END:
 **** Text
-     {{c1::/Data constructors/}} in Haskell provide a means of {{c2::creating
-     values that inhabit a given type}}. {{c1::Data constructors}} in Haskell
-     have a {{c1::type}} and can either be {{c2::constant values (nullary)}} or
-     {{c2::take one or more arguments, like functions}}.
+     the transaction property of {{c1::Atomicity}} means a transaction is {{c2::an atomic unit of processing}}; it should either
+     {{c2::be performed in its entirety}} or {{c2::not performed at all}}.
+
 **** Extra
-*** Type Class
+*** consistency
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547066513631
+    :ANKI_NOTE_ID: 1581061816450
     :END:
 **** Text
-     a {{c1::/Type Class/}} is a set of {{c2::operations defined with respect to
-     a polymorphic type}}. When a type has an instance of a {{c1::type class}},
-     {{c2::values of that type can be used in the standard operations}} defined
-     for that {{c1::type class}}.
+     the transaction property of {{c1::Consistency (Preservation)}} means a {{c1::transaction should be
+     consistency preserving}}, meaning that if it {{c2::is completely executed from beginning to end without
+     interference}} from other transactions, it should take the database {{c2::from one consistent state to
+     another}}.
 **** Extra
-*** Tuple
+*** isolation
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1547066513656
+    :ANKI_NOTE_ID: 1581061816500
     :END:
 **** Text
-     a /Tuple/ is an {{c1::ordered group of values}}. In Haskell, you cannot
-     have a tuple with {{c1::only one element}}, but there is a zero tuple also
-     {{c1::called /unit/ or =()=}}.
+     the transaction property of {{c1::Isolation}} means a transaction should appear as though {{c2::it is
+     being executed in isolation from other transactions}}, even though {{c2::many transactions are
+     executing concurrently}}. That is, the execution of a transaction {{c2::should not be interfered with
+     by any other transactions executing concurrently}}.
 **** Extra
-** CH5
-** CH6
-** CH7
+*** durability
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1581061816850
+    :END:
+**** Text
+     the transaction property of {{c1::Durability (or Permanent)}} means the changes applied {{c2::to the database
+     by a committed transaction must persist in the database}}. These changes must {{c4::not be lost because
+     of any failure}}.
+**** Extra
 * Example Image note
 ** Front
    Foo!
@@ -2202,6 +2072,318 @@
 ****** Back
        $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
 **** CH31
+** haskell book
+   :PROPERTIES:
+   :ANKI_DECK: haskell_book
+   :END:
+*** CH1
+**** the lambda in the lambda calculus
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546835357160
+     :END:
+***** Text
+      The lambda in lambda calculus is the greek letter 𝜆 used to {{c1::introduce, or
+      abstract,}} arguments for {{c1::binding}} in an expression.
+***** Extra
+**** the lambda abstraction
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546835357234
+     :END:
+***** Text
+      A lambda abstraction is an {{c1::anonymous function or lambda term}}.  $(\lambda x.x + 1)$
+      The {{c1::head}} of the expression, $\lambda x$., abstracts out the {{c1::term}} $x + 1$. We can apply it
+      to any x and recompute different results for each x we applied the lambda to.
+***** Extra
+**** application
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546877373875
+     :END:
+***** Text
+      Application is how one {{c1::evaluates or reduces lambdas}}, which binds the
+      {{c1::parameter}} to the {{c1::concrete argument}}. The {{c1::argument}} is what specific term the
+      lambda was applied to. Computations are performed in lambda calculus by
+      applying {{c2::lambdas}} to arguments until you run out of {{c2::applications}} to perform.
+***** Extra
+**** lambda calculus
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546878448425
+     :END:
+***** Front
+      Definition of the Lambda Calculus?
+***** Back
+      Lambda calculus is a formal system for expressing programs in terms of
+      abstraction and application.
+**** Normal Order
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546878384275
+     :END:
+***** Text
+      {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
+      order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
+      lambdas first, evaluating terms {{c2::nested within}} after you've run out of arguments
+      to apply.
+***** Extra
+**** Haskell and normal form evaluation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546878384328
+     :END:
+***** Front
+      Is Haskell code evaluated in normal order?
+***** Back
+      Normal order isn't how Haskell code is evaluated - it's call-by-need
+      instead.
+*** CH2
+**** parameter
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037500
+     :END:
+***** Text
+      A {{c1::parameter, or formal parameter,}} represents a value that will be {{c2::passed
+      to the function when the function is called}}. Thus, {{c1::parameters}} are usually
+      {{c2::variables}}.
+***** Extra
+**** arguments
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037550
+     :END:
+***** Text
+      An {{c1::argument}} is an input value the function is applied to. A function's
+      parameter is bound to an {{c1::argument}} when the function is applied to that
+      argument.
+***** Extra
+**** expression
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037675
+     :END:
+***** Text
+      An {{c1::expression}} is a combination of symbols that conforms to syn- tactic
+      rules and can be evaluated to some result.
+***** Extra
+**** components of Haskell expression?
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037725
+     :END:
+***** Front
+      Components of Haskell expression?
+***** Back
+      In Haskell, an expression is a well-structured combination of constants,
+      variables, and functions. While irreducible constants are technically
+      expressions, we usually refer to those as “values”, so we usually mean
+      “reducible expression” when we use the term expression
+**** value in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037775
+     :END:
+***** Front
+      What is a /value/ in Haskell?
+***** Back
+      A value is an expression that cannot be reduced or evaluated any
+      further. 2 * 2 is an expression, but not a value, whereas what it
+      evaluates to, 4, is a value.
+**** functions
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037826
+     :END:
+***** Front
+      What is a function?
+***** Back
+      A function is a mathematical object whose capabilities are limited to
+      being applied to an argument and returning a result. Functions can be
+      described as a list of ordered pairs of their inputs and the resulting
+      outputs, like a mapping.
+*** CH3
+**** Top Level Bindings
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547064272357
+     :END:
+***** Text
+      /Top Level Bindings/ (in Haskell) are bindings that {{c1::stand outside of any
+      other declaration}}. The main feature of /top level/ bindings is that they
+      can {{c1::be made available to other modules in or outside}} of your program.
+***** Extra
+**** Local Bindings
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547064272431
+     :END:
+***** Text
+      /Local Bindings/ are bindings {{c1::local to particular expressions}}. They cannot
+      be {{c1::imported by other programs or modules}}.
+***** Extra
+**** Scope
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637657
+     :END:
+***** Text
+      /Scope/ is where a {{c1::variable referred to by name is valid}}.
+***** Extra
+**** Concatenation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637706
+     :END:
+***** Text
+      /Concatenation/ is the {{c1::joining together of sequences}} of values. In Haskell,
+      this is typically meant with respect to {{c1::the /list/, [],}} datatype.
+***** Extra
+**** types in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637731
+     :END:
+***** Text
+      Types (aka Datatypes) in Haskell determine {{c1::what values are members of the
+      type or that /inhabit/ the type}}. Unlike other languages, datatypes in
+      Haskell by default {{c1::do not delimit the operations that can be performed on
+      the data.}}
+***** Extra
+**** type (datatype)
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637756
+     :END:
+***** Text
+      A /type/ (or /datatype/) is a {{c1::classification of values or data}}.
+***** Extra
+**** Strings in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637782
+     :END:
+***** Text
+      A /String/ is a {{c1::sequence of characters}}. In Haskell, =String= is represented
+      by a {{c1::linked-list of =Char=}} values, aka =[Char]=.
+***** Extra
+*** CH4
+**** types of polymorphism in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547089995068
+     :END:
+***** Front
+      Types of polymorphism in Haskell
+***** Back
+      Polymorphism in Haskell is either /Parametric/ or /Constrained/.
+**** polymorphism
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995118
+     :END:
+***** Text
+      /Polymorphism/ in Haskell means being able to write code in terms of {{c1::values
+      which may be one of several, or any, type}}.
+***** Extra
+**** arity
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995168
+     :END:
+***** Text
+      /Arity/ is the {{c1::number of arguments a function accepts}}. This notion
+      is a little slippery in Haskell {{c1::due to currying}}, as all functions are
+      {{c1::1-arity}}.
+***** Extra
+**** type alias in haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995219
+     :END:
+***** Text
+      A /type alias/ is a way to refer to a {{c1::type constructor}} or {{c1::type constant}} by an
+      alternate name, usually to {{c1::communicate something more specific or for
+      brevity}}.
+***** Extra
+**** type constructor
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547926855600
+     :END:
+***** Text
+      /Type constructors/ in Haskell are {{c1::*not values* and can only be used in type
+      signatures}}. Type constructors are used to {{c1::denote the type being declared
+      by a data declaration}}.
+***** Extra
+**** Type Signature Example
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547066838858
+     :END:
+***** Front
+      In the snippet below:
+      #+BEGIN_SRC haskell
+        type Name = String  
+        data Pet = Cat | Dog Name
+      #+END_SRC
+      What are the type signatures of the data constructors?
+***** Back
+      #+BEGIN_SRC haskell
+        Cat :: Pet
+        Dog :: Name -> Pet
+      #+END_SRC
+**** Data & Type Constructors Example
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547066838858
+     :END:
+***** Front
+      In the snippet below:
+      #+BEGIN_SRC haskell
+        type Name = String  
+        data Pet = Cat | Dog Name
+      #+END_SRC
+      What is/are the type and data constructors?
+***** Back
+      =Pet= is the /type constructor/ and both =Cat= and =Dog Name= are /Data
+      Constructors/ for the type =Cat=.
+**** Data Constructors
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513606
+     :END:
+***** Text
+      {{c1::/Data constructors/}} in Haskell provide a means of {{c2::creating
+      values that inhabit a given type}}. {{c1::Data constructors}} in Haskell
+      have a {{c1::type}} and can either be {{c2::constant values (nullary)}} or
+      {{c2::take one or more arguments, like functions}}.
+***** Extra
+**** Type Class
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513631
+     :END:
+***** Text
+      a {{c1::/Type Class/}} is a set of {{c2::operations defined with respect to
+      a polymorphic type}}. When a type has an instance of a {{c1::type class}},
+      {{c2::values of that type can be used in the standard operations}} defined
+      for that {{c1::type class}}.
+***** Extra
+**** Tuple
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513656
+     :END:
+***** Text
+      a /Tuple/ is an {{c1::ordered group of values}}. In Haskell, you cannot
+      have a tuple with {{c1::only one element}}, but there is a zero tuple also
+      {{c1::called /unit/ or =()=}}.
+***** Extra
+*** CH5
+*** CH6
+*** CH7
 * TODO cards
 ** def of iterators 
    :PROPERTIES:
