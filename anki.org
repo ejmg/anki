@@ -2,7 +2,7 @@
   :PROPERTIES:
   :ANKI_DECK: swe
   :END:
-* data structures
+* data structures and algorithms
   :PROPERTIES:
   :ANKI_DECK: data structures and algorithms
   :END:
@@ -486,6 +486,11 @@
   :PROPERTIES:
   :ANKI_DECK: suspended
   :END:
+** why
+   some things become irrelevant. other times, i become dissatisfied with the quality of my
+   cards. sometimes i simply don't have the time to create the cards and similarly fall behind on my
+   practice. instead of throwing them away, though, i just suspend them in the app and move them
+   here for future reference/usage.
 ** How I suspend things.
    1. Create =suspended= deck in anki client.
    2. move pre-existing decks under it that I don't want to study/spam my
