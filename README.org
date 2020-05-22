@@ -1,0 +1,9 @@
+* Anki.org
+
+  This really is a work in progress.
+
+  This is a collection of anki cards I've written for myself to study. I use anki-connect and
+  anki-editor mode for emacs to write my cards using org-mode. I then export them to anki proper
+  where I can study them on desktop and on my phone.
+
+  The cards are in [[file:anki.org][anki.org]].
