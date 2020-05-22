@@ -1,59 +1,1152 @@
-* job prep
-** PL Theory and Design
+* swe
+  :PROPERTIES:
+  :ANKI_DECK: swe
+  :END:
+* data structures
+  :PROPERTIES:
+  :ANKI_DECK: data structures and algorithms
+  :END:
+** Linked Lists
+*** Singly Linked List Insertion Front
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509133926
+    :END:
+**** Front
+     What is the time-complexity of insertion at the front of a singly linked list?
+**** Back
+     - by definition of a singly linked list, have a reference to the head node...
+     - Insertion at front: $\Theta(1)$
+*** Singly Linked List Deletion Front
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134126
+    :END:
+**** Front
+     What is the time-complexity of deletion at the front of a singly linked list?
+**** Back
+     - by definition of a singly linked list, have a reference to the head node...
+     - Deletion at front: $\Theta(1)$
+*** Singly Linked List Arbitrary Insertion
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134176
+    :END:
+**** Front
+     What is the time-complexity of an arbitrary insertion for a singly linked list?
+**** Back
+     - time-complexity of finding the node: $\mathcal{O}(n)$
+     - insertion with a known reference to node: $\Theta(1)$
+     - thus: $\mathcal{O}(n)$
+*** Singly Linked List Append
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566509134225
+    :END:
+**** Front
+     What is the time-complexity of appending to a singly linked list?
+**** Back
+     - must iterate through all =next= node's till the end is found...
+     - Thus, appending: $\mathcal{O}(n)$
+** ADTs
+*** Def of FIFO                                                        :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566332219243
+    :END:
+**** Text
+     {{c1:: *FIFO*}} is an acronym for {{c2:: *First-In-First-Out*}}, a method for organizing and
+     manipulating data where the {{c2::oldest (first) entry is processed first}}.
+**** Extra
+*** def of LIFO                                                        :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566849695055
+    :END:
+**** Text
+     {{c1:: *LIFO* }} is an acronym for {{c2:: *Last-In-First-Out*,}} a method for
+     organizing and manipulating data where the {{c2::newest (last) entry is
+     processed first}}.
+**** Extra
+*** Average wait time of FIFO vs LIFO                                :Skiena:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566849695129
+    :END:
+**** Front
+     Average wait time of a LIFO based data structure vs FIFO?
+**** Back
+     the average wait time for an element in a FIFO data structure vs FIFO is
+     *the same*; however, LIFO *minimizes* the *maximum wait time*.
+*** Def of stack ADT                                                   :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566849695180
+    :END:
+**** Text
+     a {{c1::stack}} is a collection of elements which are {{c2::added and
+     removed}} from {{c1::the "top" of}} the collection. The two principle
+     operations are {{c2::push, which adds an element to the collection,}} and
+     {{c2::pop, which removes the most recently added element.}}. This behavior
+     gives a {{c1::stack}} its other name, {{c1:: *LIFO*, Last-In-First-Out}}.
+**** Extra
+*** def of dictionary ADT                                              :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566849695230
+    :END:
+**** Text
+     an {{c1::associative array (AKA map, symbol table, or dictionary)}} is an
+     abstract data type composed of a {{c2::collection of *(key, value) pairs*}}, such
+     that {{c1::each possible key appears at most once in the collection}}.
+**** Extra
+*** operations of a dictionary ADT                              :Skiena:Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566849695305
+    :END:
+**** Front
+     What are the operations for the dictionary ADT?
+**** Back
+     For dictionary =D=:
+     - =search(k)=: given a search key =k=, return a pointer to the element
+       whose key value is =k=.
+     - =insert(x)=: given a data item =x=, add it to the dictionary.
+     - =delete(k)=: given a key =k=, delete the value associated to it if it
+       exists.
+*** Def of Queue ADT                                                   :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1566332219343
+    :END:
+**** Text
+     A {{c1::queue}} is a {{c2::collection}} in which the entities are
+     {{c1::kept in order}} and the principal operations on the {{c2::collection}} are
+     the addition of entities to {{c2::the rear terminal position, known as
+     *enqueue*}}, and removal of entities from {{c2::the front terminal position, known
+     as *dequeue*}}. This makes the {{c1::queue}} a {{c2:: *First-In-First-Out (FIFO)* data
+     structure}}.
+**** Extra
+*** Queue use cases
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566332219168
+    :END:
+**** Front
+     Example use cases for queues?
+**** Back
+     - asynchronous processes
+       - message queue (mail servers, sending tweets, uploading content)
+       - cpu scheduling
+     - breadth-first search
+     - literally anything where queuing theory may be applicable, (lines, first
+       come first serve situations)
+       - i.e. generally where order matters, whether because of fairness or
+         technical...
+*** Queue Insertion/Deletion                                           :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566332219293
+    :END:
+**** Front
+     time complexity of insert (enqueue) and delete (dequeue) for a queue?
+**** Back
+     both insert and deletion are $\Theta(1)$ for the standard definition of
+     the operations of a FIFO structure.
+*** Stack use cases                                                    :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566849695631
+    :END:
+**** Front
+     Use cases for stack data structures?
+**** Back
+     - Expression evaluation, parsing
+       - postfix notation evaluator
+       - CFG based languages can run on stack machines
+     - Backtracking
+       - error trace
+       - depth-first search
+     - compile time memory management
+       - when we know the memory allocations at compile time, can maximize
+         data locality
+       - call stack for function and routines
+*** Stack Pop/Push                                                     :Wiki:
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1566849695681
+    :END:
+**** Front
+     time complexity of pop and push for the stack ADT?
+**** Back
+     both pop and push are $\Theta(1)$ for the standard definition of a Stack ADT.
+** contiguous and linked data structures                             :Skiena:
    :PROPERTIES:
-   :ANKI_DECK: pl
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566849695730
    :END:
-*** Declarative vs Imperative                                           
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788649
-    :END:
-**** Front
-     What is the difference between declarative and imperative languages?
-**** Back
-     Declarative vs Imperative is the topmost level of distinction between types
-     of PLs. 
+*** Front
+    in terms of memory layout, what two categories can data structures be
+    classified into?
+*** Back
+    1. Contiguously-Allocated
+    2. Linked
+** def contiguous data structure                                     :Skiena:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1566849695780
+   :END:
+*** Text
+    {{c1::Contiguously-allocated}} data structures are composed of {{c1::single slabs of
+    memory}}, and include {{c2::arrays, matrices, heaps, and hash-tables}}.
+*** Extra
+** linked data structure                                             :Skiena:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1566849695830
+   :END:
+*** Text
+    {{c1::Linked}} data structures are composed of {{c1::distinct chunks of memory bound
+    together by pointers}}, and include {{c2::lists, trees, and graph adjacency lists}}.
+*** Extra
+* rust
+  :PROPERTIES:
+  :ANKI_DECK: rust
+  :END:
+** Basic Pointer Types                                             :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566234808011
+   :END:
+*** Front
+    rust's basic pointer types?
+*** Back
+    - =&T= and =&mut T=
+    - =*const T= and =*mut T=
+** Smart Pointer Types                                             :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566234808230
+   :END:
+*** Front
+    rust's smart pointer types?
+*** Back
+    There are many, but the core smart pointers provided by =std= include:
+    - =Box<T>=
+    - =Rc<T>=
+    - =Ref<T>= and =RefMut<T>=
+      - accessed through =RefCell<T>=, do not conflate...
+** Rc<T> smart pointer                                             :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1566234897086
+   :END:
+*** Text
+**** Definition
+     =Rc<T>= is a {{c1::reference counted pointer}}. In other words, this lets
+     us have {{c1::multiple "owning" pointers to the same data}}, and the data
+     will be dropped (destructors will be run) when {{c1::all pointers are out
+     of scope}}. The pointers only have {{c1::immutable access}}, however.
+**** Guarantees
+     - main guarantee: {{c2::the data will not be destroyed}} until all references to it are out of scope.
+**** Cost
+     - first major smart pointer with {{c3::a run-time}} cost (=Box<T>=, =&T/&mut T=,
+       =*const/*mut T= don't)
+     - is a {{c3::single allocation}}, though it will {{c3::allocate two extra
+       words ("strong" and "weak" ref counts)}}
+     - computation cost of {{c3::incrementing/decrementing the refcount}}
+       whenever it is {{c3::cloned}} or {{c3::goes out of scope}} respectively
+**** Usage
+     - When you wish to {{c4::dynamically allocate and share some data}} (read-only)
+       between various portions of your program and...
+       - it is not certain which portion {{c4::will finish using the pointer last}}.
+       - viable alternative to {{c4::&T when &T}} is either impossible to statically
+         check for correctness, {{c4::or creates extremely unergonomic code}}
+*** Extra
+** Box smart pointer                                               :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1566332221744
+   :END:
+*** Text
+**** Definition
+     Box<T> is an {{c1::"owned"}} pointer, or {{c1::a "box"}}. While it can
+     hand out references to the contained data, it is {{c1::the only owner of
+     the data}}.
 
-      - Imperative languages focus on /how/ a computer goes about its instructed
-        task.
+     When a box (that hasn't been moved) goes out of scope, {{c1::destructors are
+     run}}.
+**** Cost
+     - {{c2::a zero-cost abstraction}} for dynamic allocation
+**** Usage
+     - want to {{c3::allocate some memory on the heap}} and {{c3::safely pass around a pointer}} to that memory
+*** Extra
 
-      - Declarative languages focus on /what/ the computer does.
-*** Types of Declarative PLs                                            
+** standard rules of ownership                                     :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509136601
+   :END:
+*** Front
+    What are rust's basic rules of Ownership?
+*** Back
+    - the owner of a value is a variable.
+    - at any given moment, only a single owner is allowed.
+    - the value is lost the moment the owner goes out of scope?
+** nested structures with uncertain size in rust                      :hodsa:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509137902
+   :END:
+*** Front
+    Why does the following not compile and what correction would allow it to?
+    #+BEGIN_SRC rust
+      struct Node {
+          value: i32,
+          next: Option<Node>,
+      }
+      struct LinkedList {
+          head: Option<Node>,
+          tail: Option<Node>,
+          pub length: usize,
+      }
+    #+END_SRC
+*** Back
+    The code does not compile because struct =Node= is recursive with a heap
+    allocated value, i.e. a value of uncertain and growable size. Technically,
+    we fit the entire linked list in the first Node reference. Adding some
+    indirection via a smart pointer, however, allows the compiler to relax and
+    compile. This will compile.
+
+    #+BEGIN_SRC rust
+      struct Node {
+          value: i32,
+          next: Option<Rc<RefCell<Node>>>,
+      }
+      struct LinkedList {
+          head: Option<Rc<RefCell<Node>>>,
+          tail: Option<Rc<RefCell<Node>>>,
+          pub length: usize,
+      }
+    #+END_SRC
+
+    Even better would be to make a type alias for a link and use in place, a la:
+
+    #+BEGIN_SRC rust
+      type Link = Option<Rc<RefCell<Node>>>;
+    #+END_SRC
+
+** interior mutability pattern, top level definition/descriptive   :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509137976
+   :END:
+*** Front
+    What is the interior mutability pattern (top level definition/description)?
+*** Back
+    Interior mutability is a design pattern in Rust that allows you to mutate
+    data even when there are immutable references to that data; normally, this
+    action is disallowed by the borrowing rules.
+
+    In Rust, such an action is enabled/encouraged via its safe API with types
+    such as =RefCell<T>=.
+** interior mutability pattern, short def                          :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509138026
+   :END:
+*** Front
+    What is the interior mutability pattern (short definition)?
+*** Back
+    Mutating the value inside an immutable value is the interior mutability
+    pattern.
+
+** How does =RefCell= allow interior mutability?                   :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509138100
+   :END:
+*** Front
+    How does =RefCell= enable interior mutability?
+*** Back
+    =RefCell<T>= allows us to wrap a value that, following the borrowing rules
+    of rust, would not be mutable otherwise. This occurs through its methods, =.borrow()= and
+    =.borrow_mut()=, which return the smart pointers =Ref<T>= and =RefMut<T>=,
+    respectively.
+
+    The =RefCell<T>= keeps track of how many =Ref<T>= and =RefMut<T>= smart pointers
+    are currently active, and if a violation of rust's borrow rules is detected,
+    will *panic* during run-time.
+   
+** =self= vs =Self=                                           :StackExchange:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509138151
+   :END:
+*** Front
+    What is the difference between =self= vs =Self=?
+*** Back
+    =self= when used as the first argument to define a function of a type as a
+    /method/, abd is a shorthand for =self: Self=.
+
+    =Self= is the type of the current object and is often used as syntactic
+    sugar in =Trait= definitions for the receiving (implementing) type, which is
+    unknown to the author of the =Trait= being written.
+** =self=                                                     :StackExchange:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1566509138200
+   :END:
+*** Text
+    {{c1::=self=}} is the name used in a trait or an impl for the first argument
+    of a method.  There is no implicit =This= in Rust, and thus you must pass
+    {{c1::=self=}} as an argument (and declare {{c1::=self= as a parameter for
+    said argument}}) for a function to be a method of a type.
+*** Extra
+** why use the interior mutability pattern?                        :RustBook:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Basic
+   :ANKI_NOTE_ID: 1566509138250
+   :END:
+*** Front
+    Why is the interior mutability pattern used? Put differently, why does it
+    exist?
+*** Back
+    The advantage of checking the borrowing rules at runtime instead is that
+    certain memory-safe scenarios are then allowed, whereas they are disallowed
+    by the compile-time checks. 
+
+    Static analysis, like the Rust compiler, is inherently conservative. Some
+    properties of code are impossible to detect by analyzing the code. Interior
+    mutability gives us the ability to modify what we, as the programmer, know
+    is a value safe for mutation in a given situation.
+* TODO cards/topics
+** rust
+*** def of iterators 
     :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788699
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_FAILURE_REASON: No deck specified
     :END:
 **** Front
-     What are the types of Declarative PLs?
+     Definition of iterators?
 **** Back
-     1. Functional -> Lisp, ML, Haskell
-     2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
-     3. Dataflow -> Id, Val
-*** Types of Imperative PLs                                             
+*** Trait vs Impl 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788724
+    :ANKI_FAILURE_REASON: No deck specified
     :END:
 **** Front
-     What are the types of Imperative PLs?
 **** Back
-     1. von Neumann -> C, Ada, Fortran
-     2. OOP -> Smalltalk, Eiffel, Java
-     3. Scripting -> Perl, Python, PHP
-*** General Compilation Process                                         
+*** =Trait= vs Types 
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1535396788874
+    :ANKI_FAILURE_REASON: No deck specified
     :END:
 **** Front
-     What are the steps of the compilation process?
 **** Back
-     1. scanner (lexical analysis)
-     2. parser (syntax analysis)
-     3. semantic analysis & intermediate code generation
-     4. machine independent code improvement (*optional*)
-     5. target code generation (assembler)
-     6. machine-specific code improvement (*optional*) 
+** DSA
+*** skip list 
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_FAILURE_REASON: No deck specified
+    :END:
+**** Text
+     A skip list...
+**** Extra
+*** insertion sort (description) 
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_FAILURE_REASON: No deck specified
+    :END:
+**** Front
+     Describe insertion sort
+**** Back
+*** insertion sort (psuedocode) 
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_FAILURE_REASON: No deck specified
+    :END:
+**** Text
+     *Insertion Sort* pseudo code is as follows:
+   
+**** Extra
+** TODO db
+   - need to go through textbook and find stuff worth writing cards about, etc
+   - go to [[cs470: intro to dbs]] deck in suspended for some material
+* Example Image note
+** Front
+   Foo!
+** Back
+   Here's a demo image, but first, let's ensure it's composable with latex,
+   $F = \frac{\vec{A}}{x^{2 \dot \cup C}}$
+   #+BEGIN_EXPORT html
+   <img src="https://i.imgur.com/YheHQPT.jpg"/>
+   #+END_EXPORT
+* no longer studying (suspended)
+  :PROPERTIES:
+  :ANKI_DECK: suspended
+  :END:
+** How I suspend things.
+   1. Create =suspended= deck in anki client.
+   2. move pre-existing decks under it that I don't want to study/spam my
+      review count.
+   3. Open card/deck browser, =b=
+   4. view side bar, =Ctrl-Shft-R=
+   5. Go to =suspended= deck, select all cards, =Ctrl-a=
+   6. toggle suspend, =Ctrl-j=
+      - =Due= column entries should now all have =()= surrounding the value,
+        indicating suspended.
+      - when viewing main menu on desktop/phone client, should show 0 cards to
+        review.
+** cs470: intro to dbs
+   :PROPERTIES:
+   :ANKI_DECK: intro to database systems
+   :END:
+*** ch1
+**** def of db
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581057696125
+     :END:
+***** Front
+      definition of database
+***** Back
+      a collection of related data
+**** def of data
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581057696325
+     :END:
+***** Front
+      Definition of data (with respect to databases)
+***** Back
+      known facts that can be recorded and have implicit meaning.
+**** implicit properties of a db
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581057696400
+     :END:
+***** Front
+      implicit properties of a database
+***** Back
+      1. Universe of Discourse (AKA "miniworld")
+         - the db represents some aspect of "real" world
+      2. logically coherent collection of data with some inherent meaning
+      3. Design, built, and populated with data for specific purpose
+         - has intended users, some idea of applications that will use it.
+**** def of dbms
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581057696500
+     :END:
+***** Front
+      definition of database management system
+***** Back
+      general purpose software that facilitates the process of defining, constructing, manipulating,
+      and sharing database(s) among various users and applications
+**** def of dbs
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581057696600
+     :END:
+***** Front
+      definition of database system
+***** Back
+      a database(s) and database management system, together.
+
+      [[file:img/dbs.jpg]]
+**** Characteristics of db approach
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581061816250
+     :END:
+***** Front
+      main characteristics of database approach versus file-processing
+***** Back
+      1. self-describing nature of database system
+      2. insulation between programs and data, and data abstraction
+      3. support of multiple views
+      4. sharing of data and multiuser transaction processing
+**** self describing nature
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061815875
+     :END:
+***** Text
+      the {{c1::self-describing nature of database systems}} means that {{c2::database system
+           contains the database itself but also a complete definition and description of the
+           database(s)'s structures, type/storage format of data items, and constraints as meta-data
+           in the database systems' catalog}}
+
+      4. sharing of data and multiuser transaction processing
+***** Extra
+**** insulation between program/data, and data abstraction
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061815975
+     :END:
+***** Text
+      {{c1::insulation between programs and data}} is possible because of {{c2::program-data independence}}
+      and {{c2::program-operation independence}} which is only made possible by the {{c2::data abstraction}} provided
+      by the database approach.
+***** Extra
+**** why support for different views
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581061881400
+     :END:
+***** Front
+      what does the database approach require support for different views?
+***** Back
+      databases have different users with different needs and privileges with respect to data in the
+      database, so the ability to provide different subsets of the same database data to different
+      users is a critical function provided by databases.
+**** sharing data & multiuser processing
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061816076
+     :END:
+***** Text
+      the database approach includes {{c1::sharing data and multiuser processing}} by providing its
+      own {{c2::concurrency controls}} to ensure {{c2::concurrent transactions over the same data}}
+      execute {{c1::efficiently and correctly}}.
+***** Extra
+**** db design phases
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581061816300
+     :END:
+***** Front
+      phases of database design
+***** Back
+      1. Requirements Specification and Analysis
+      2. Conceptual Design
+      3. Logical Design
+      4. Physical Design
+**** prog data indep
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581616358307
+     :END:
+***** Text
+      {{c1::Program Data Independence}} means the {{c2::structure of data files is stored in DBMS catalog}}
+      separately from {{c2::access programs}}
+***** Extra
+**** prog operation indep
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581616533932
+     :END:
+***** Text
+      {{c1::Program-Operation Independence}} is means that because the {{c2::operation interface
+      includes the operation name and data types of its arguments}} so that the {{c2::implementation can
+      be changed without affecting the interface}}.
+***** Extra
+**** data abstr
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581617435282
+     :END:
+***** Text
+      In databases, {{c1::Data Abstraction}} allows for {{c2::program-data independence}} and
+      {{c2::program-operation independence}} by using a {{c1::conceptual representation of
+      data}}. This means the {{c3::suppression of details}} of data organization and storage while {{c3::highlighting of the
+      essential features}} for an improved understanding of data.
+
+***** Extra
+**** conceptual representation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581617435452
+     :END:
+***** Text
+      {{c1::Conceptual Representation of Data}} means that {{c2::not all details of how data is stored or how
+      operations are implemented is shown}} when {{c1::modeling and representing data}}.
+***** Extra
+**** data model
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581617435531
+     :END:
+***** Text
+      {{c1::Data Models}} are the type of {{c2::data abstraction}} used to {{c1::provide conceptual representation}} 
+***** Extra
+**** 4 props of a transaction
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :END:
+***** Front
+      What are the four properties of a database transaction?
+***** Back
+      1. Atomicity
+      2. Consistency
+      3. Isolation
+      4. Durability
+*** ch2
+**** data model ch2
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581624762881
+     :END:
+***** Front
+      What are Data Models and what do they facilitate?
+***** Back
+      - a collection of concepts that describe the structure of a database, which:
+        + Provides means to achieve data abstraction, such as defining...
+        + Basic operations, such as specifying retrievals and updates, and describing...
+        + Dynamic aspect or behavior of a database application, which allows db designing to specify
+          a set of valid operations allowed on db objects.
+**** data model categories
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581624762982
+     :END:
+***** Front
+      What are the three primary data model categories?
+***** Back
+      1. High Level (Conceptual)
+      2. Representational
+      3. Low Level (Physical)
+**** HL data model
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581624763181
+     :END:
+***** Text
+      {{c1::High-Level}}, aka {{c1::Conceptual}}, Data Models {{c2::closely model the way many users perceive data and
+      interact with it}}.
+***** Extra
+**** Repr. data model
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581624763230
+     :END:
+***** Text
+      {{c1::Representational}} Data Models are an intermediate data model that are {{c2::easily understood by end
+      users}} but also {{c2::concern how data is organized in computer storage}}.
+***** Extra
+**** LL data model
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581624763281
+     :END:
+***** Text
+      {{c1::Low-Level}}, aka {{c1::Physical}}, Data Models {{c2::describe the details of how data is
+      essential features}} for an improved understanding of datastored on computer storage media}}.
+***** Extra
+**** components of conceptual data model
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581624763355
+     :END:
+***** Front
+      Conceptual data models use...
+***** Back
+      1. Entities
+      2. Attributes
+      3. Relationships
+**** entity def
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581624763410
+     :END:
+***** Text
+      {{c1::Entities}} in the conceptual data model represent {{c2::real-world objects or concepts}}.
+***** Extra
+**** attrib def
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581624763480
+     :END:
+***** Text
+      {{c1::Attributes}} in the conceptual data model {{c2::further describe an entity by noting a property
+      of interest that describes the entity}}.
+***** Extra
+**** conceptual relationship def
+     {{c1::Relationships}} in the conceptual data model represent {{c2::an association among entities}}.
+*** ch3
+**** requirements & analysis phase
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581100195984
+     :END:
+***** Text
+      the {{c1::first phase}} of database design process is {{c2::Requirements Collection and
+      Analysis}}, which {{c1::involves database designers interviewing prospective database users to
+      understand and document data requirements​}}.
+      - the results of this phase include {{c3::data requirements}} and {{c3::functional requirements}}
+***** Extra
+**** TODO conceptual design
+**** TODO logical design
+**** TODO physical design
+*** ch5
+*** ch20
+**** ACID
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1581061890150
+     :END:
+***** Front
+      ACID stands for
+***** Back
+      1. Atomicity
+      2. Consistency
+      3. Isolation
+         1) Durability
+**** atomicity
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061816399
+     :END:
+***** Text
+      the transaction property of {{c1::Atomicity}} means a transaction is {{c2::an atomic unit of processing}}; it should either
+      {{c2::be performed in its entirety}} or {{c2::not performed at all}}.
+***** Extra
+**** consistency
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061816450
+     :END:
+***** Text
+      the transaction property of {{c1::Consistency (Preservation)}} means a {{c1::transaction should be
+      consistency preserving}}, meaning that if it {{c2::is completely executed from beginning to end without
+      interference}} from other transactions, it should take the database {{c2::from one consistent state to
+      another}}.
+***** Extra
+**** isolation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061816500
+     :END:
+***** Text
+      the transaction property of {{c1::Isolation}} means a transaction should appear as though {{c2::it is
+      being executed in isolation from other transactions}}, even though {{c2::many transactions are
+      executing concurrently}}. That is, the execution of a transaction {{c2::should not be interfered with
+      by any other transactions executing concurrently}}.
+***** Extra
+**** durability
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1581061816850
+     :END:
+***** Text
+      the transaction property of {{c1::Durability (or Permanent)}} means the changes applied {{c2::to the database
+      by a committed transaction must persist in the database}}. These changes must {{c4::not be lost because
+      of any failure}}.
+***** Extra
+
+** haskell book
+   :PROPERTIES:
+   :ANKI_DECK: haskell_book
+   :END:
+*** CH1
+**** the lambda in the lambda calculus
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546835357160
+     :END:
+***** Text
+      The lambda in lambda calculus is the greek letter 𝜆 used to {{c1::introduce, or
+      abstract,}} arguments for {{c1::binding}} in an expression.
+***** Extra
+**** the lambda abstraction
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546835357234
+     :END:
+***** Text
+      A lambda abstraction is an {{c1::anonymous function or lambda term}}.  $(\lambda x.x + 1)$
+      The {{c1::head}} of the expression, $\lambda x$., abstracts out the {{c1::term}} $x + 1$. We can apply it
+      to any x and recompute different results for each x we applied the lambda to.
+***** Extra
+**** application
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546877373875
+     :END:
+***** Text
+      Application is how one {{c1::evaluates or reduces lambdas}}, which binds the
+      {{c1::parameter}} to the {{c1::concrete argument}}. The {{c1::argument}} is what specific term the
+      lambda was applied to. Computations are performed in lambda calculus by
+      applying {{c2::lambdas}} to arguments until you run out of {{c2::applications}} to perform.
+***** Extra
+**** lambda calculus
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546878448425
+     :END:
+***** Front
+      Definition of the Lambda Calculus?
+***** Back
+      Lambda calculus is a formal system for expressing programs in terms of
+      abstraction and application.
+**** Normal Order
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546878384275
+     :END:
+***** Text
+      {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
+      order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
+      lambdas first, evaluating terms {{c2::nested within}} after you've run out of arguments
+      to apply.
+***** Extra
+**** Haskell and normal form evaluation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546878384328
+     :END:
+***** Front
+      Is Haskell code evaluated in normal order?
+***** Back
+      Normal order isn't how Haskell code is evaluated - it's call-by-need
+      instead.
+*** CH2
+**** parameter
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037500
+     :END:
+***** Text
+      A {{c1::parameter, or formal parameter,}} represents a value that will be {{c2::passed
+      to the function when the function is called}}. Thus, {{c1::parameters}} are usually
+      {{c2::variables}}.
+***** Extra
+**** arguments
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037550
+     :END:
+***** Text
+      An {{c1::argument}} is an input value the function is applied to. A function's
+      parameter is bound to an {{c1::argument}} when the function is applied to that
+      argument.
+***** Extra
+**** expression
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1546882037675
+     :END:
+***** Text
+      An {{c1::expression}} is a combination of symbols that conforms to syn- tactic
+      rules and can be evaluated to some result.
+***** Extra
+**** components of Haskell expression?
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037725
+     :END:
+***** Front
+      Components of Haskell expression?
+***** Back
+      In Haskell, an expression is a well-structured combination of constants,
+      variables, and functions. While irreducible constants are technically
+      expressions, we usually refer to those as “values”, so we usually mean
+      “reducible expression” when we use the term expression
+**** value in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037775
+     :END:
+***** Front
+      What is a /value/ in Haskell?
+***** Back
+      A value is an expression that cannot be reduced or evaluated any
+      further. 2 * 2 is an expression, but not a value, whereas what it
+      evaluates to, 4, is a value.
+**** functions
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1546882037826
+     :END:
+***** Front
+      What is a function?
+***** Back
+      A function is a mathematical object whose capabilities are limited to
+      being applied to an argument and returning a result. Functions can be
+      described as a list of ordered pairs of their inputs and the resulting
+      outputs, like a mapping.
+*** CH3
+**** Top Level Bindings
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547064272357
+     :END:
+***** Text
+      /Top Level Bindings/ (in Haskell) are bindings that {{c1::stand outside of any
+      other declaration}}. The main feature of /top level/ bindings is that they
+      can {{c1::be made available to other modules in or outside}} of your program.
+***** Extra
+**** Local Bindings
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547064272431
+     :END:
+***** Text
+      /Local Bindings/ are bindings {{c1::local to particular expressions}}. They cannot
+      be {{c1::imported by other programs or modules}}.
+***** Extra
+**** Scope
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637657
+     :END:
+***** Text
+      /Scope/ is where a {{c1::variable referred to by name is valid}}.
+***** Extra
+**** Concatenation
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637706
+     :END:
+***** Text
+      /Concatenation/ is the {{c1::joining together of sequences}} of values. In Haskell,
+      this is typically meant with respect to {{c1::the /list/, [],}} datatype.
+***** Extra
+**** types in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637731
+     :END:
+***** Text
+      Types (aka Datatypes) in Haskell determine {{c1::what values are members of the
+      type or that /inhabit/ the type}}. Unlike other languages, datatypes in
+      Haskell by default {{c1::do not delimit the operations that can be performed on
+      the data.}}
+***** Extra
+**** type (datatype)
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637756
+     :END:
+***** Text
+      A /type/ (or /datatype/) is a {{c1::classification of values or data}}.
+***** Extra
+**** Strings in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547063637782
+     :END:
+***** Text
+      A /String/ is a {{c1::sequence of characters}}. In Haskell, =String= is represented
+      by a {{c1::linked-list of =Char=}} values, aka =[Char]=.
+***** Extra
+*** CH4
+**** types of polymorphism in Haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547089995068
+     :END:
+***** Front
+      Types of polymorphism in Haskell
+***** Back
+      Polymorphism in Haskell is either /Parametric/ or /Constrained/.
+**** polymorphism
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995118
+     :END:
+***** Text
+      /Polymorphism/ in Haskell means being able to write code in terms of {{c1::values
+      which may be one of several, or any, type}}.
+***** Extra
+**** arity
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995168
+     :END:
+***** Text
+      /Arity/ is the {{c1::number of arguments a function accepts}}. This notion
+      is a little slippery in Haskell {{c1::due to currying}}, as all functions are
+      {{c1::1-arity}}.
+***** Extra
+**** type alias in haskell
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547089995219
+     :END:
+***** Text
+      A /type alias/ is a way to refer to a {{c1::type constructor}} or {{c1::type constant}} by an
+      alternate name, usually to {{c1::communicate something more specific or for
+      brevity}}.
+***** Extra
+**** type constructor
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547926855600
+     :END:
+***** Text
+      /Type constructors/ in Haskell are {{c1::*not values* and can only be used in type
+      signatures}}. Type constructors are used to {{c1::denote the type being declared
+      by a data declaration}}.
+***** Extra
+**** Type Signature Example
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547066838858
+     :END:
+***** Front
+      In the snippet below:
+      #+BEGIN_SRC haskell
+        type Name = String  
+        data Pet = Cat | Dog Name
+      #+END_SRC
+      What are the type signatures of the data constructors?
+***** Back
+      #+BEGIN_SRC haskell
+        Cat :: Pet
+        Dog :: Name -> Pet
+      #+END_SRC
+**** Data & Type Constructors Example
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Basic
+     :ANKI_NOTE_ID: 1547066838858
+     :END:
+***** Front
+      In the snippet below:
+      #+BEGIN_SRC haskell
+        type Name = String  
+        data Pet = Cat | Dog Name
+      #+END_SRC
+      What is/are the type and data constructors?
+***** Back
+      =Pet= is the /type constructor/ and both =Cat= and =Dog Name= are /Data
+      Constructors/ for the type =Cat=.
+**** Data Constructors
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513606
+     :END:
+***** Text
+      {{c1::/Data constructors/}} in Haskell provide a means of {{c2::creating
+      values that inhabit a given type}}. {{c1::Data constructors}} in Haskell
+      have a {{c1::type}} and can either be {{c2::constant values (nullary)}} or
+      {{c2::take one or more arguments, like functions}}.
+***** Extra
+**** Type Class
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513631
+     :END:
+***** Text
+      a {{c1::/Type Class/}} is a set of {{c2::operations defined with respect to
+      a polymorphic type}}. When a type has an instance of a {{c1::type class}},
+      {{c2::values of that type can be used in the standard operations}} defined
+      for that {{c1::type class}}.
+***** Extra
+**** Tuple
+     :PROPERTIES:
+     :ANKI_NOTE_TYPE: Cloze
+     :ANKI_NOTE_ID: 1547066513656
+     :END:
+***** Text
+      a /Tuple/ is an {{c1::ordered group of values}}. In Haskell, you cannot
+      have a tuple with {{c1::only one element}}, but there is a zero tuple also
+      {{c1::called /unit/ or =()=}}.
+***** Extra
+*** CH5
+*** CH6
+*** CH7
 ** discrete
    :PROPERTIES:
    :ANKI_DECK: discrete
@@ -377,2060 +1470,58 @@
       each data item in the left subtree of $v$ is less than the data item in
       $v$, and each data item in the right subtree of $v$ is greater than the
       data item in $v$.
-** swe
+** PL Theory and Design
    :PROPERTIES:
-   :ANKI_DECK: swe
+   :ANKI_DECK: pl
    :END:
-** data structures
-   :PROPERTIES:
-   :ANKI_DECK: data structures and algorithms
-   :END:
-*** Linked Lists
-**** Singly Linked List Insertion Front
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566509133926
-     :END:
-***** Front
-      What is the time-complexity of insertion at the front of a singly linked list?
-***** Back
-      - by definition of a singly linked list, have a reference to the head node...
-      - Insertion at front: $\Theta(1)$
-**** Singly Linked List Deletion Front
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566509134126
-     :END:
-***** Front
-      What is the time-complexity of deletion at the front of a singly linked list?
-***** Back
-      - by definition of a singly linked list, have a reference to the head node...
-      - Deletion at front: $\Theta(1)$
-**** Singly Linked List Arbitrary Insertion
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566509134176
-     :END:
-***** Front
-      What is the time-complexity of an arbitrary insertion for a singly linked list?
-***** Back
-      - time-complexity of finding the node: $\mathcal{O}(n)$
-      - insertion with a known reference to node: $\Theta(1)$
-      - thus: $\mathcal{O}(n)$
-**** Singly Linked List Append
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566509134225
-     :END:
-***** Front
-      What is the time-complexity of appending to a singly linked list?
-***** Back
-      - must iterate through all =next= node's till the end is found...
-      - Thus, appending: $\mathcal{O}(n)$
-*** ADTs
-**** Def of FIFO                                                       :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1566332219243
-     :END:
-***** Text
-      {{c1:: *FIFO*}} is an acronym for {{c2:: *First-In-First-Out*}}, a method for organizing and
-      manipulating data where the {{c2::oldest (first) entry is processed first}}.
-***** Extra
-**** def of LIFO                                                       :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1566849695055
-     :END:
-***** Text
-      {{c1:: *LIFO* }} is an acronym for {{c2:: *Last-In-First-Out*,}} a method for
-      organizing and manipulating data where the {{c2::newest (last) entry is
-      processed first}}.
-***** Extra
-**** Average wait time of FIFO vs LIFO                               :Skiena:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566849695129
-     :END:
-***** Front
-      Average wait time of a LIFO based data structure vs FIFO?
-***** Back
-      the average wait time for an element in a FIFO data structure vs FIFO is
-      *the same*; however, LIFO *minimizes* the *maximum wait time*.
-**** Def of stack ADT                                                  :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1566849695180
-     :END:
-***** Text
-      a {{c1::stack}} is a collection of elements which are {{c2::added and
-      removed}} from {{c1::the "top" of}} the collection. The two principle
-      operations are {{c2::push, which adds an element to the collection,}} and
-      {{c2::pop, which removes the most recently added element.}}. This behavior
-      gives a {{c1::stack}} its other name, {{c1:: *LIFO*, Last-In-First-Out}}.
-***** Extra
-**** def of dictionary ADT                                             :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1566849695230
-     :END:
-***** Text
-      an {{c1::associative array (AKA map, symbol table, or dictionary)}} is an
-      abstract data type composed of a {{c2::collection of *(key, value) pairs*}}, such
-      that {{c1::each possible key appears at most once in the collection}}.
-***** Extra
-**** operations of a dictionary ADT                             :Skiena:Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566849695305
-     :END:
-***** Front
-      What are the operations for the dictionary ADT?
-***** Back
-      For dictionary =D=:
-      - =search(k)=: given a search key =k=, return a pointer to the element
-        whose key value is =k=.
-      - =insert(x)=: given a data item =x=, add it to the dictionary.
-      - =delete(k)=: given a key =k=, delete the value associated to it if it
-        exists.
-**** Def of Queue ADT                                                  :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1566332219343
-     :END:
-***** Text
-      A {{c1::queue}} is a {{c2::collection}} in which the entities are
-      {{c1::kept in order}} and the principal operations on the {{c2::collection}} are
-      the addition of entities to {{c2::the rear terminal position, known as
-      *enqueue*}}, and removal of entities from {{c2::the front terminal position, known
-      as *dequeue*}}. This makes the {{c1::queue}} a {{c2:: *First-In-First-Out (FIFO)* data
-      structure}}.
-***** Extra
-**** Queue use cases
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566332219168
-     :END:
-***** Front
-      Example use cases for queues?
-***** Back
-      - asynchronous processes
-        - message queue (mail servers, sending tweets, uploading content)
-        - cpu scheduling
-      - breadth-first search
-      - literally anything where queuing theory may be applicable, (lines, first
-        come first serve situations)
-        - i.e. generally where order matters, whether because of fairness or
-          technical...
-**** Queue Insertion/Deletion                                          :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566332219293
-     :END:
-***** Front
-      time complexity of insert (enqueue) and delete (dequeue) for a queue?
-***** Back
-      both insert and deletion are $\Theta(1)$ for the standard definition of
-      the operations of a FIFO structure.
-**** Stack use cases                                                   :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566849695631
-     :END:
-***** Front
-      Use cases for stack data structures?
-***** Back
-      - Expression evaluation, parsing
-        - postfix notation evaluator
-        - CFG based languages can run on stack machines
-      - Backtracking
-        - error trace
-        - depth-first search
-      - compile time memory management
-        - when we know the memory allocations at compile time, can maximize
-          data locality
-        - call stack for function and routines
-**** Stack Pop/Push                                                    :Wiki:
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1566849695681
-     :END:
-***** Front
-      time complexity of pop and push for the stack ADT?
-***** Back
-      both pop and push are $\Theta(1)$ for the standard definition of a Stack ADT.
-*** contiguous and linked data structures                            :Skiena:
+*** Declarative vs Imperative                                           
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566849695730
+    :ANKI_NOTE_ID: 1535396788649
     :END:
 **** Front
-     in terms of memory layout, what two categories can data structures be
-     classified into?
+     What is the difference between declarative and imperative languages?
 **** Back
-     1. Contiguously-Allocated
-     2. Linked
-*** def contiguous data structure                                    :Skiena:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566849695780
-    :END:
-**** Text
-     {{c1::Contiguously-allocated}} data structures are composed of {{c1::single slabs of
-     memory}}, and include {{c2::arrays, matrices, heaps, and hash-tables}}.
-**** Extra
-*** linked data structure                                            :Skiena:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566849695830
-    :END:
-**** Text
-     {{c1::Linked}} data structures are composed of {{c1::distinct chunks of memory bound
-     together by pointers}}, and include {{c2::lists, trees, and graph adjacency lists}}.
-**** Extra
-** rust
-   :PROPERTIES:
-   :ANKI_DECK: rust
-   :END:
-*** Basic Pointer Types                                            :RustBook:
+     Declarative vs Imperative is the topmost level of distinction between types
+     of PLs. 
+
+      - Imperative languages focus on /how/ a computer goes about its instructed
+        task.
+
+      - Declarative languages focus on /what/ the computer does.
+*** Types of Declarative PLs                                            
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566234808011
+    :ANKI_NOTE_ID: 1535396788699
     :END:
 **** Front
-     rust's basic pointer types?
+     What are the types of Declarative PLs?
 **** Back
-     - =&T= and =&mut T=
-     - =*const T= and =*mut T=
-*** Smart Pointer Types                                            :RustBook:
+     1. Functional -> Lisp, ML, Haskell
+     2. Logic, Constraint Based -> Prolog, Spreadsheets, SQL
+     3. Dataflow -> Id, Val
+*** Types of Imperative PLs                                             
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566234808230
+    :ANKI_NOTE_ID: 1535396788724
     :END:
 **** Front
-     rust's smart pointer types?
+     What are the types of Imperative PLs?
 **** Back
-     There are many, but the core smart pointers provided by =std= include:
-     - =Box<T>=
-     - =Rc<T>=
-     - =Ref<T>= and =RefMut<T>=
-       - accessed through =RefCell<T>=, do not conflate...
-*** Rc<T> smart pointer                                            :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566234897086
-    :END:
-**** Text
-***** Definition
-      =Rc<T>= is a {{c1::reference counted pointer}}. In other words, this lets
-      us have {{c1::multiple "owning" pointers to the same data}}, and the data
-      will be dropped (destructors will be run) when {{c1::all pointers are out
-      of scope}}. The pointers only have {{c1::immutable access}}, however.
-***** Guarantees
-      - main guarantee: {{c2::the data will not be destroyed}} until all references to it are out of scope.
-***** Cost
-      - first major smart pointer with {{c3::a run-time}} cost (=Box<T>=, =&T/&mut T=,
-        =*const/*mut T= don't)
-      - is a {{c3::single allocation}}, though it will {{c3::allocate two extra
-        words ("strong" and "weak" ref counts)}}
-      - computation cost of {{c3::incrementing/decrementing the refcount}}
-        whenever it is {{c3::cloned}} or {{c3::goes out of scope}} respectively
-***** Usage
-      - When you wish to {{c4::dynamically allocate and share some data}} (read-only)
-        between various portions of your program and...
-        - it is not certain which portion {{c4::will finish using the pointer last}}.
-        - viable alternative to {{c4::&T when &T}} is either impossible to statically
-          check for correctness, {{c4::or creates extremely unergonomic code}}
-**** Extra
-*** Box smart pointer                                              :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566332221744
-    :END:
-**** Text
-***** Definition
-      Box<T> is an {{c1::"owned"}} pointer, or {{c1::a "box"}}. While it can
-      hand out references to the contained data, it is {{c1::the only owner of
-      the data}}.
-
-      When a box (that hasn't been moved) goes out of scope, {{c1::destructors are
-      run}}.
-***** Cost
-      - {{c2::a zero-cost abstraction}} for dynamic allocation
-***** Usage
-      - want to {{c3::allocate some memory on the heap}} and {{c3::safely pass around a pointer}} to that memory
-**** Extra
-
-*** standard rules of ownership                                    :RustBook:
+     1. von Neumann -> C, Ada, Fortran
+     2. OOP -> Smalltalk, Eiffel, Java
+     3. Scripting -> Perl, Python, PHP
+*** General Compilation Process                                         
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509136601
+    :ANKI_NOTE_ID: 1535396788874
     :END:
 **** Front
-     What are rust's basic rules of Ownership?
+     What are the steps of the compilation process?
 **** Back
-     - the owner of a value is a variable.
-     - at any given moment, only a single owner is allowed.
-     - the value is lost the moment the owner goes out of scope?
-*** nested structures with uncertain size in rust                     :hodsa:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509137902
-    :END:
-**** Front
-     Why does the following not compile and what correction would allow it to?
-     #+BEGIN_SRC rust
-       struct Node {
-           value: i32,
-           next: Option<Node>,
-       }
-       struct LinkedList {
-           head: Option<Node>,
-           tail: Option<Node>,
-           pub length: usize,
-       }
-     #+END_SRC
-**** Back
-     The code does not compile because struct =Node= is recursive with a heap
-     allocated value, i.e. a value of uncertain and growable size. Technically,
-     we fit the entire linked list in the first Node reference. Adding some
-     indirection via a smart pointer, however, allows the compiler to relax and
-     compile. This will compile.
-
-     #+BEGIN_SRC rust
-       struct Node {
-           value: i32,
-           next: Option<Rc<RefCell<Node>>>,
-       }
-       struct LinkedList {
-           head: Option<Rc<RefCell<Node>>>,
-           tail: Option<Rc<RefCell<Node>>>,
-           pub length: usize,
-       }
-     #+END_SRC
-
-     Even better would be to make a type alias for a link and use in place, a la:
-
-     #+BEGIN_SRC rust
-       type Link = Option<Rc<RefCell<Node>>>;
-     #+END_SRC
-
-*** interior mutability pattern, top level definition/descriptive  :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509137976
-    :END:
-**** Front
-     What is the interior mutability pattern (top level definition/description)?
-**** Back
-     Interior mutability is a design pattern in Rust that allows you to mutate
-     data even when there are immutable references to that data; normally, this
-     action is disallowed by the borrowing rules.
-
-     In Rust, such an action is enabled/encouraged via its safe API with types
-     such as =RefCell<T>=.
-*** interior mutability pattern, short def                   :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509138026
-    :END:
-**** Front
-     What is the interior mutability pattern (short definition)?
-**** Back
-     Mutating the value inside an immutable value is the interior mutability
-     pattern.
-
-*** How does =RefCell= allow interior mutability?                  :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509138100
-    :END:
-**** Front
-     How does =RefCell= enable interior mutability?
-**** Back
-     =RefCell<T>= allows us to wrap a value that, following the borrowing rules
-     of rust, would not be mutable otherwise. This occurs through its methods, =.borrow()= and
-     =.borrow_mut()=, which return the smart pointers =Ref<T>= and =RefMut<T>=,
-     respectively.
-
-     The =RefCell<T>= keeps track of how many =Ref<T>= and =RefMut<T>= smart pointers
-     are currently active, and if a violation of rust's borrow rules is detected,
-     will *panic* during run-time.
-   
-*** =self= vs =Self=                                          :StackExchange:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509138151
-    :END:
-**** Front
-     What is the difference between =self= vs =Self=?
-**** Back
-     =self= when used as the first argument to define a function of a type as a
-     /method/, abd is a shorthand for =self: Self=.
-
-     =Self= is the type of the current object and is often used as syntactic
-     sugar in =Trait= definitions for the receiving (implementing) type, which is
-     unknown to the author of the =Trait= being written.
-*** =self=                                                    :StackExchange:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1566509138200
-    :END:
-**** Text
-     {{c1::=self=}} is the name used in a trait or an impl for the first argument
-     of a method.  There is no implicit =This= in Rust, and thus you must pass
-     {{c1::=self=}} as an argument (and declare {{c1::=self= as a parameter for
-     said argument}}) for a function to be a method of a type.
-**** Extra
-*** why use the interior mutability pattern?                       :RustBook:
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1566509138250
-    :END:
-**** Front
-     Why is the interior mutability pattern used? Put differently, why does it
-     exist?
-**** Back
-     The advantage of checking the borrowing rules at runtime instead is that
-     certain memory-safe scenarios are then allowed, whereas they are disallowed
-     by the compile-time checks. 
-
-     Static analysis, like the Rust compiler, is inherently conservative. Some
-     properties of code are impossible to detect by analyzing the code. Interior
-     mutability gives us the ability to modify what we, as the programmer, know
-     is a value safe for mutation in a given situation.
-** cs458 software testing and architecture
-   :PROPERTIES:
-   :ANKI_DECK: software testing and architecture
-   :END:
-** cs470: intro to dbs
-   :PROPERTIES:
-   :ANKI_DECK: intro to database systems
-   :END:
-*** def of db
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581057696125
-    :END:
-**** Front
-     definition of database
-**** Back
-     a collection of related data
-*** def of data
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581057696325
-    :END:
-**** Front
-     Definition of data (with respect to databases)
-**** Back
-     known facts that can be recorded and have implicit meaning.
-*** implicit properties of a db
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581057696400
-    :END:
-**** Front
-     implicit properties of a database
-**** Back
-     1. Universe of Discourse (AKA "miniworld")
-        - the db represents some aspect of "real" world
-     2. logically coherent collection of data with some inherent meaning
-     3. Design, built, and populated with data for specific purpose
-        - has intended users, some idea of applications that will use it.
-*** def of dbms
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581057696500
-    :END:
-**** Front
-     definition of database management system
-**** Back
-     general purpose software that facilitates the process of defining, constructing, manipulating,
-     and sharing database(s) among various users and applications
-*** def of dbs
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581057696600
-    :END:
-**** Front
-     definition of database system
-**** Back
-     a database(s) and database management system, together.
-
-     [[file:img/dbs.jpg]]
-*** self describing nature
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061815875
-    :END:
-**** Text
-     the {{c1::self-describing nature of database systems}} means that {{c2::database system
-          contains the database itself but also a complete definition and description of the
-          database(s)'s structures, type/storage format of data items, and constraints as meta-data
-          in the database systems' catalog}}
-
-     4. sharing of data and multiuser transaction processing
-**** Extra
-*** insulation between program/data, and data abstraction
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061815975
-    :END:
-**** Text
-     {{c1::insulation between programs and data}} is possible because of {{c2::program-data independence}}
-     and {{c2::program-operation independence}} which is only made possible by the {{c2::data abstraction}} provided
-     by the database approach.
-**** Extra
-*** why support for different views
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581061881400
-    :END:
-**** Front
-     what does the database approach require support for different views?
-**** Back
-     databases have different users with different needs and privileges with respect to data in the
-     database, so the ability to provide different subsets of the same database data to different
-     users is a critical function provided by databases.
-*** sharing data & multiuser processing
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061816076
-    :END:
-**** Text
-     the database approach includes {{c1::sharing data and multiuser processing}} by providing its
-     own {{c2::concurrency controls}} to ensure {{c2::concurrent transactions over the same data}}
-     execute {{c1::efficiently and correctly}}.
-**** Extra
-*** Characteristics of db approach
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581061816250
-    :END:
-**** Front
-     main characteristics of database approach versus file-processing
-**** Back
-     1. self-describing nature of database system
-     2. insulation between programs and data, and data abstraction
-     3. support of multiple views
-     4. sharing of data and multiuser transaction processing
-*** db design phases
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581061816300
-    :END:
-**** Front
-     phases of database design
-**** Back
-     1. Requirements Specification and Analysis
-     2. Conceptual Design
-     3. Logical Design
-     4. Physical Design
-*** ACID
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1581061890150
-    :END:
-**** Front
-     ACID stands for
-**** Back
-     1. Atomicity
-     2. Consistency
-     3. Isolation
-     4. Durability
-*** atomicity
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061816399
-    :END:
-**** Text
-     the transaction property of {{c1::Atomicity}} means a transaction is {{c2::an atomic unit of processing}}; it should either
-     {{c2::be performed in its entirety}} or {{c2::not performed at all}}.
-
-**** Extra
-*** consistency
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061816450
-    :END:
-**** Text
-     the transaction property of {{c1::Consistency (Preservation)}} means a {{c1::transaction should be
-     consistency preserving}}, meaning that if it {{c2::is completely executed from beginning to end without
-     interference}} from other transactions, it should take the database {{c2::from one consistent state to
-     another}}.
-**** Extra
-*** isolation
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061816500
-    :END:
-**** Text
-     the transaction property of {{c1::Isolation}} means a transaction should appear as though {{c2::it is
-     being executed in isolation from other transactions}}, even though {{c2::many transactions are
-     executing concurrently}}. That is, the execution of a transaction {{c2::should not be interfered with
-     by any other transactions executing concurrently}}.
-**** Extra
-*** durability
-    :PROPERTIES:
-    :ANKI_NOTE_TYPE: Cloze
-    :ANKI_NOTE_ID: 1581061816850
-    :END:
-**** Text
-     the transaction property of {{c1::Durability (or Permanent)}} means the changes applied {{c2::to the database
-     by a committed transaction must persist in the database}}. These changes must {{c4::not be lost because
-     of any failure}}.
-**** Extra
-* Example Image note
-** Front
-   Foo!
-** Back
-   Here's a demo image, but first, let's ensure it's composable with latex,
-   $F = \frac{\vec{A}}{x^{2 \dot \cup C}}$
-   #+BEGIN_EXPORT html
-   <img src="https://i.imgur.com/YheHQPT.jpg"/>
-   #+END_EXPORT
-* no longer studying (suspended)
-  :PROPERTIES:
-  :ANKI_DECK: suspended
-  :END:
-** How I suspend things.
-   1. Create =suspended= deck in anki client.
-   2. move pre-existing decks under it that I don't want to study/spam my
-      review count.
-   3. Open card/deck browser, =b=
-   4. view side bar, =Ctrl-Shft-R=
-   5. Go to =suspended= deck, select all cards, =Ctrl-a=
-   6. toggle suspend, =Ctrl-j=
-      - =Due= column entries should now all have =()= surrounding the value,
-        indicating suspended.
-      - when viewing main menu on desktop/phone client, should show 0 cards to
-        review.
-** school
-*** physics_240
-    :PROPERTIES:
-    :ANKI_DECK: physics_240
-    :END:
-**** TODO
-     - [0/2] find all analysis models and include them:
-       - [ ] ch4
-         - [ ] projectile motion
-           - particle under constant velocity for x-dimension
-           - particle under constant accel for y-dimension
-         - [ ] particle in uniform circular motion
-           - circular path with radius r, constant speed v, magnitude is a_c
-       - [ ] ch5
-         - [ ] Particle under net-force
-           - if a mass, m, experiences a non-zero netforce, its acceleration is
-             related to the force via Newton's 2nd
-         - [ ] Particle in equilibrium
-           - particle maintains constant velocity such that acceleration is zero
-             - this includes a velocity of zero itself
-           - the forces of Newton's Second balance and $\Sigma \vec{F} = 0$
-     - [ ] find common problems to provide numberless solutions to
-**** CH 1-3: Kinematics, 1D Vectors, motion
-***** x_f kinematic eq, velocity                                         
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396788924
-      :END:
-****** Front
-       $x_f$ in terms of initial and final $v$, constant $a$
-****** Back
-       $x_f= x(t) = x_i + \frac{1}{2}(v_{xi} + v_{xf})t$
-***** x_f kinematic eq, time                                             
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396788975
-      :END:
-****** Front
-       $x_f$ in terms of time, constant $a$
-****** Back
-       $x_f = x(t) = x_i + v_{xi}t + \frac{1}{2}a_xt^2$
-***** x_f kinematic eq, const velocity                                   
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789023
-      :END:
-****** Front
-       $x_f$ in terms of constant $v(x)$
-****** Back
-       $x_f = x(t) = x_i + v_xt$
-***** y_f kinematic eq, time                                             
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789074
-      :END:
-****** Front
-       $y_f$ in terms of $t$
-****** Back
-       $y(t) = y_f = y_i + v_{yi}t - \frac{1}{2}gt^2$
-       - constant acceleration
-       - final position
-***** y_f kinematic eq, velocity                                         
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789199
-      :END:
-****** Front
-       $y_f$ in terms of $v_y$
-****** Back
-       $y_f = y_i + \frac{1}{2}(v_{yf} + y_{yi})t$
-       - no $a_{y}$ component!
-***** v_f kinematic eq, constant acc                                     
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789249
-      :END:
-****** Front
-       $v_{xf}$, constant $a_{x}$?
-****** Back
-       $v_{xf} = v_{xi} + a_{x}t$
-***** v_avg (Avg Speed)                                                  
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789299
-      :END:
-****** Front
-       $v_{avg}$, average speed (not $v_{x,avg}$)?
-****** Back
-       $v_{avg}=\frac{d}{\Delta t}$
-***** v_x,avg kinematic eq, constant acc                                 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789349
-      :END:
-****** Front
-       $v_{x,avg}$, where $a_{x}$ is constant?
-****** Back
-       $v_{x,avg} = \frac{v_{xi} + v_{xf}}{2} = \frac{\Delta x}{\Delta t}=\frac{x_f - x_i}{t_f - t_i}$
-***** v^2 kinematics eq                                                  
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789399
-      :END:
-****** Front
-       $v(x)^2$, constant accel
-****** Back
-       $[v(x)]^2=2a_x(x_f-x_i)+v^2_i$
-***** a_x,avg kinematic eq                                               
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789524
-      :END:
-****** Front
-       Average Acceleration
-****** Back
-       $a_{x, avg}=\frac{\Delta v_x}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_f - t_i}$
-***** A_y component                                                      
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789573
-      :END:
-****** Front
-       $A_y$ component
-****** Back
-       $A\sin(\theta)$
-***** A_x component                                                      
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789624
-      :END:
-****** Front
-       $A_x$ component
-****** Back
-       $A\cos\theta$
-***** cartesian to polar                                                 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789674
-      :END:
-****** Front
-       cartesian $(x,y)$ to polar coordinates $(r, \theta)$
-****** Back
-       $\tan(\theta) = \frac{y}{x} \Rightarrow \tan^{-1}(\frac{y}{x})$
-    
-       $r = \sqrt{x^2 + y^2}$
-
-       Note:
-       - if (x,y) values are in QII or QIII, must add 180 to result of
-         $\theta^{-1}$
-       - if (x,y) values are in QIV, must add 360.
-***** magnitude of a vector                                              
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789724
-      :END:
-****** Front
-       magnitude of a vector, $\vec{A}$
-****** Back
-       $A = \sqrt{A_{x}^{2} + A_y^2}$
-***** polar to cartesian                                                 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789775
-      :END:
-****** Front
-       convert polar $(r, \theta)$ to cartesian $(x,y)$
-****** Back
-       $x = r\cos(\theta)$
-
-       $y = r\sin(\theta)$
-***** direction of a vector                                              
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789924
-      :END:
-****** Front
-       direction of some vector, $\vec{A}$
-****** Back
-       $\theta = tan^{-1}(\frac{A_y}{A_x})$
-***** instant velocity                                                   
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396789974
-      :END:
-****** Front
-       instantaneous velocity
-****** Back
-       $v_x = \frac{dx}{dt}$
-***** result vector                                                      
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396790026
-      :END:
-****** Front
-       result vector $\vec{\mathbf{R}}$ for $\vec{A} + \vec{B}$
-****** Back
-       $\vec{\mathbf{R}} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}$
-**** CH4: 2D Motion, Vectors
-***** position vector                                                    
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791374
-      :END:
-****** Front
-       position vector, $\vec{r}$
-****** Back
-       $\vec{r} = x\hat{i} + y\hat{j}$
-***** a_c                                                                
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791424
-      :END:
-****** Front
-       centripetal acceleration, $a_{c}$?
-****** Back
-       the acceleration of a particle in uniform circular motion:
-       $a_{c} = \frac{v^{2}}{r}$
-       - is called centripetal because:
-         - $\vec{a_{c}}$ is directed towards the center of the circle$
-         - $\vec{a_{c}}$ is always perpendicular to $\vec{v}$
-         - if it wasn't, there would be a component of acceleration parallel to
-           velocity, and thus speed would be changing, motion non-uniform
-***** max height, h                                                      
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791574
-      :END:
-****** Front
-       equation for maximum height, $h$?
-****** Back
-       $h = \frac{v^{2}_{i}sin^{2}(\theta_{i})}{2g}$
-***** horizontal distance R                                              
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791625
-      :END:
-****** Front
-       Equation for horizontal distance, $R$
-****** Back
-       $R = \frac{v^{2}_{i}sin(2\theta_{i})}{g}$
-***** max horizontal distance R                                          
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791674
-      :END:
-****** Front
-       What is the equation and condition for $R_{max}$
-****** Back
-       $R_{max} = \frac{v^{2}_{i}}{g}$
-       - this occurs when $\theta = 45$ because the maximum value of
-         $sin(2\theta)$ is $1$, which occurs when $\theta = 45$ in our equation
-         since $sin(2 \theta) = sin(90^{\circ}) = 1$
-**** CH5: Newton's Laws
-***** Newton's First                                                     
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791724
-      :END:
-****** Front
-       Newton's First Law
-****** Back
-       In the absence of external forces and when viewed from an inertial
-       reference frame, an object at rest remains at rest and an object in motion
-       continues in motion with a constant velocity (that is, with a constant
-       speed in a straight line).
-       - In other words, when no force acts on an object, the acceleration of the
-         object is zero.
-       - The tendency of an object to resist any attempt to change its velocity
-         is called inertia.
-***** Newton's Second                                                    
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791800
-      :END:
-****** Front
-       Newton's Second Law
-****** Back
-       When viewed from an inertial reference frame, the acceleration of an
-       object is directly proportional to the net force acting on it and
-       inversely proportional to its mass:
-
-       $\vec{a} \propto \frac{\Sigma \vec{F}}{m}$
-
-       When a proportionality constant of 1 is chosen, mass, acceleration, and
-       force are related via:
-
-       $\Sigma \vec{F} = m\vec{a}$
-
-       - Note, we are discussing the relation of /net force/ with an object's
-         acceleration
-       - Newton's 2nd is easily decomposed into component form:
-
-         $\begin{array}{rcl} \Sigma \vec{F_{x}} & = & ma_{x} \\  \Sigma \vec{F_{y}} & = & ma_{y} \\ \Sigma \vec{F_{z}} & = & ma_{z} \end{array}$
-***** Newton's Third                                                     
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791949
-      :END:
-****** Front
-       Newton's Third Law
-****** Back
-       If two objects interact, the force $\vec{F_{12}}$ exerted by object 1 on
-       object 2 is equal in magnitude and opposite in direction to the force
-       $\vec{F_{21}}$ exerted by object 2 on object 1:
-
-       $\vec{F_{12}}=\vec{F_{21}}$
-***** definition of mass                                                 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396791999
-      :END:
-****** Front
-       Definition of mass
-****** Back
-       Mass is that property of an object that specifies how much resistance an
-       object exhibits to changes in its velocity
-        - larger the mass, the greater the resistance to acceleration with the same amount of force
-***** ratio of two masses                                                
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396792049
-      :END:
-****** Front
-       ratio of two masses?
-****** Back
-       The inverse ratio of the magnitudes of acceleration produced by the same force
-       on the two masses:
-       $\frac{m_{1}}{m_{2}} \equiv \frac{a_{2}}{a_{1}}$
-***** modeling F_x, F_y on inclined planes                               
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396793649
-      :END:
-****** Front
-       How do you model $F_{x}$ and $F_{y}$ on inclined planes?
-****** Back
-       You swap their geometric identities. Assuming we are modeling the effect
-       of an object on a plane inclined downwards, right under the net-force of
-       $F_{g} = m\vec{g}$:
-       - $F_{x} = mgsin(\theta) = ma_{x}$
-       - $F_{y} = F_{n} - mgcos(\theta) = 0$
-       - $a_{x} = gsin(\theta)$
-**** CH6: Circular Motion
-***** centripetal force                                                  
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797700
-      :END:
-****** Front
-       Centripetal force, $F_{c}?$
-****** Back
-       $\Sigma F = ma_{c} = m\frac{v^{2}}{r}$
-***** Period, T                                                          
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797774
-      :END:
-****** Front
-       Period, $T$, of an object in UCM?
-****** Back
-       $T=\frac{2 \pi r}{v}$
-***** rotation rate
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797824
-      :END:
-****** Front
-       Rotation rate of a particle in UCM?
-****** Back
-       Inverse of period, $T$:
-     
-       $\frac{v}{2 \pi r}$
-***** angular speed, w                                                   
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797874
-      :END:
-****** Front
-       Angular speed, $\omega$, of an object in UCM?
-****** Back
-       $\omega = \frac{2 \pi}{T}$
-**** CH7: Energy of a System
-***** definition of constant work                                        
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797924
-      :END:
-****** Front
-       Definition of work (constant $\vec{F}$)
-****** Back
-       $\mathbf{W} \equiv F \Delta r cos(\theta)$
-       - where $\vec{F}$ is the force on the system
-       - $\Delta \vec{r}$ is the resultant displacement vector of the object
-       - $F$ and $\Delta r$ are the respective magnitudes
-       - $\theta$ is the angel between $\vec{F} and \Delta \vec{r}$
-***** def of work by varying force                                       
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396797975
-      :END:
-****** Front
-       Definition of work with varying force
-****** Back
-       $\mathbf{W} = \int_{x_{i}}^{x_{f}} F_{x}dx$
-***** spring force                                                       
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798124
-      :END:
-****** Front
-       Definition of Spring Force, aka Hooke's Law
-****** Back
-       $F_{s} = -kx$
-       - note, spring force is *always* directed opposite of the displacement from
-         equilibrium, ergo negative sign
-***** work done by a spring                                              
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798174
-      :END:
-****** Front
-       Work done by a spring
-****** Back
-           $\mathbf{W_{s}} = \int_{x_{i}}^{x_{f}} (-kx)dx = \frac{1}{2}kx_{i}^{2} -
-           \frac{1}{2}kx_{f}^{2}$
-***** work done by external force                                        
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798224
-      :END:
-****** Front
-       Work done by external force on a system
-****** Back
-       $\mathbf{W_{ext}} = \int_{x_{i}}^{x_{f}} (kx)dx = \frac{1}{2}kx_{f}^{2} -
-       \frac{1}{2}kx_{i}^{2}$
-***** kinetic energy                                                     
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798275
-      :END:
-****** Front
-       Kinetic energy of a particle of mass $m$, velocity $v$
-****** Back
-       $K \equiv \frac{1}{2}mv^{2}}$
-***** work by external force in terms of velocity                        
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798326
-      :END:
-****** Front
-       Work of external force on system in terms of velocity
-****** Back
-       $\mathbf{W$_{ext}$} = \frac{1}{2}mv_{f}^{2} - \frac{1}{2}mv_{i}^{2}$
-***** Work of external force in terms of kinetic                         
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798475
-      :END:
-****** Front
-       Work of external force on system in terms of kinetic energy
-****** Back
-       $\mathbf{W_{ext}} = K_{f} - K_{i} = \Delta K$
-***** Work-Kinetic Energy Theorem                                        
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798524
-      :END:
-****** Front
-       Work-Kinetic Energy Theorem
-****** Back
-       When work is done on a system and the only change in the system is in its
-       speed, the net work done on the system equals the change in kinetic energy
-       of the system.
-
-       - furthermore
-
-         The work–kinetic energy theorem indicates that the speed of a system
-         increases if the net work done on it is positive because the final
-         kinetic energy is greater than the initial kinetic energy. The speed
-         decreases if the net work is negative because the final kinetic energy is
-         less than the initial kinetic energy.
-
-***** Relationship between Work done inside a system and potential energy 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798578
-      :END:
-****** Front
-       Potential energy of work done inside a system
-****** Back
-       $\mathbf{W_{int}} = \int_{x_{i}}^{x_{f}} F_{x}dx = -\Delta U$
-***** Def of Conservative Force                                          
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798625
-      :END:
-****** Front
-       Definition of Conservative Force
-****** Back
-       A force is conservative if the work it does on a particle that is a member
-       of the system as the particle moves between two points is independent of
-       the path the particle takes between the two points. Furthermore, a force is
-       conservative if the work it does on a particle is zero when the particle
-       moves through an arbitrary closed path and returns to its initial position.
-       A force that does not meet these criteria is said to be nonconservative.
-***** relation between potential energy and direction of F, dr           
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798674
-      :END:
-****** Front
-       relationship between $\Delta U$ and the directions of $F_{x}$ and $dx$
-****** Back
-       $\Delta U$ is negative when  $F_{x}$ and $dx$ are in the same direction
-***** potential energy function of a conservative system                 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798724
-      :END:
-****** Front
-       Potential energy function of a conservative system
-****** Back
-       $U_{f}(x) = - \int_{x_{i}}^{x_{f}} F_{x} dx + U_{i}$
-
-       - alternatively
-
-       $U_{f}(x) - U_{i} = - \int_{x_{i}}^{x_{f}} F_{x} dx$
-
-***** relation of force between members of a system and potential energy 
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798874
-      :END:
-****** Front
-       relation of force between members of a system to the potential energy of
-       the system
-****** Back
-       $F_{x} = - \frack{dU}{dx}$
-**** CH8: Conservation of Energy
-***** gravitational potential energy                                     
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798924
-      :END:
-****** Front
-       Gravitational potential energy of a particle of mass $m$, distance $y$
-       above earth's surface
-****** Back
-       $U_{g} \equiv mgy$
-***** Earth-Object system of potential energy                            
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396798974
-      :END:
-****** Front
-       Earth-Object system of potential energy (object falling)
-****** Back
-       $mg_{i} - mgy_{f} = -\Delta U$
-       - where $mg_{i}$ is the start (distance) of the fall to the surface.
-***** elastic potential energy of a spring                               
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396799026
-      :END:
-****** Front
-       elastic potential energy of a spring with a force of constant $k$
-****** Back
-       $U_{s} \equiv \frac{1}{2}kx^{2}}$
-***** conservation of energy                                             
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396799074
-      :END:
-****** Front
-       conservation of energy equation
-****** Back
-       $\Delta E_{system} = \Sigma T$
-***** relationship of kinetic and potential energy in isolated system    
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396799226
-      :END:
-****** Front
-       How are Kinetic and Potential energy related in an isolated system?
-****** Back
-       $\Delta K + \Delta U = 0$
-***** mechanical energy of a system                                      
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396799299
-      :END:
-****** Front
-       Mechanical Energy of a System
-****** Back
-       $E_{mech} \equiv K + U$
-***** conservation of mech energy                                        
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1535396799351
-      :END:
-****** Front
-       conservation of mechanical energy/total energy of isolated system
-****** Back
-       $\Delta E_{mech} = 0$ when in an isolated system with no non-concurrent
-       forces.
-       - total energy in an isolated system
-*** physics_250
-    :PROPERTIES:
-    :ANKI_DECK: physics_250
-    :END:
-**** CH27
-***** average current [27.1]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281448894
-      :END:
-****** Front
-       Average Current, $I_{avg}$
-****** Back
-       $I_{avg} = \frac{\Delta Q}{\Delta t}$
-***** Electric Current [27.2]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281448968
-      :END:
-****** Front
-       Instantaneous (Electric) Current $I$
-****** Back
-       $I \equiv \frac{dQ}{dt}$, where:
-       - SI unit is $1 A = 1 \frac{Coulomb}{second}$
-***** Average Current wrt "Charged Carriers" [27.4]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449018
-      :END:
-****** Front
-       Average Current $I_{avg}$ with respect to the motion of the charge
-****** Back
-       $I_{avg} = nqv_{d}A$, where:
-       - $n$ is the density of the charge carriers
-       - $q$ is the charge on each carrier
-       - $v_{d}$ is the drift speed
-       - $A$ is the cross sectional area of the conductor
-***** Current Density [27.5]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449069
-      :END:
-****** Front
-       Current Density $J$ of a conductor
-****** Back
-       $J = \frac{I}{A}$
-***** Current Density (Proportional to E) [27.6]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449194
-      :END:
-****** Front
-       Current Density (proportional to $\vec{E}$)
-****** Back
-       $J = \sigma E$, where $\sigma$ is the proportional constant of
-       *conductivity*
-       - Materials that obey this equation follow *Ohm's Law*
-***** Resistance [27.7]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449244
-      :END:
-****** Front
-       Resistance of a conductor $R$
-****** Back
-       $R = \frac{\Delta V}{I}$ where:
-       - $\Delta V$ is the potential difference across the conductor
-       - $I$ is the current it carries
-       - SI unit is *Ohm*, $1 \Omega = 1 \frac{V}{A}$
-***** Resistivity [27.9]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449293
-      :END:
-****** Front
-       Resistivity of a conductor, $\rho$
-****** Back
-       $\rho = \frac{1}{\sigma}$
-***** Resistance of a uniform material along l [27.10]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449318
-      :END:
-****** Front
-       Resistance of a uniform material along $\ell$
-****** Back
-       $R = \rho \frac{\ell}{A}$
-***** Ohm's Law
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449368
-      :END:
-****** Front
-       Ohm's Law?
-****** Back
-       For many materials (including most metals), the ratio of the current
-       density to the electric field is a constant $\sigma$ that is independent of the
-       electric field producing the current.
-***** Drift Velocity [27.13]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449494
-      :END:
-****** Front
-       Drift velocity of a free electron $v_{d}$
-****** Back
-       $\vec{v_{d}} = \frac{q \vec{E}}{m_{e}}\tau$
-***** Conductivity in terms of microscopic quantities [27.15]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449543
-      :END:
-****** Front
-       Conductivity $\sigma$ in terms of microscopic quantities?
-****** Back
-       $\sigma = \frac{nq^{2}E}{m_{e}}\tau$
-***** Resistivity in terms of microscopic quantities[27.16]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449593
-      :END:
-****** Front
-       Resistivity $\rho$ in terms of microscopic quantities
-****** Back
-       $\rho = \frac{m_{e}}{nq^{2}\tau}$
-***** Resistivity wrt Temperature [27.18]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449643
-      :END:
-****** Front
-       Resistivity $\rho$ of a conductor wrt temperature?
-****** Back
-       $\rho = \rho_{0}[1 + \alpha(T - T_{0})]$ where:
-       - $\rho$ is the resistivity at some temperature $T$ in Celsius
-       - $\rho_{0}$ is the resistivity at some reference temperature $T_{0}$
-         (often taken at 20 Celsius)
-       - $\alpha$ is the *temperature coefficient of resistivity*
-***** Temperature Coefficient [27.19]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449694
-      :END:
-****** Front
-       Temperature Coefficient of Resistivity $\alpha$
-****** Back
-       $\alpha = \frac{1}{\rho_{0}}\frac{\Delta \rho}{\Delta T}$ where:
-       - $\Delta \rho = \rho - \rho_{0}$
-       - $\Delta T = T - T_{0}$
-***** Power to a Resistor [27.22]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449819
-      :END:
-****** Front
-       Rate of energy being delivered to a resistor?
-****** Back
-       $P = I^{2}R = \frac{(\Delta V)^{2}}{R}$
-
-***** Power [27.21]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539281449869
-      :END:
-****** Front
-       Power
-****** Back
-       $P = I \Delta V$
-       - SI unit is Watts, $1 W = 1 \frac{Joule}{second}$
-       - AKA Joule Heating
-**** CH28
-***** Terminal Voltage of a Battery [28.1]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539452849782
-      :END:
-****** Front
-       Terminal Voltage of a Battery?
-****** Back
-       $\Delta V = \mathcal{E} - Ir$ where:
-       - $\mathcal{E}$ is equivalent to open-circuit voltage
-***** Current of Resistors in Series
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539452849833
-      :END:
-****** Front
-       Current of Resistors in Series?
-****** Back
-       $I = I_{1} = I_{2} = \dotsi$ where:
-       - $I$ is the current leaving the battery
-       - $I_{i}$ is the current in $i^{th}$ Resistor, $R_{i}$
-***** Electric Potential Difference Across Resistors in Series
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539452849882
-      :END:
-****** Front
-       Electric Potential Difference Across Resistors in Series
-****** Back
-       \[
-       \Delta V = \Delta V_{1} + \Delta V_{2} + \dotsi
-                = I_{1}R_{1} + I_{2}R_{2} + \dotsi
-       \]
-***** Equivalent Resistance of Resistors Connected in Series [28.6]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539452849983
-      :END:
-****** Front
-       Equivalent Resistance of Resistors Connected in Series
-****** Back
-       $R_{eq} = R_{1} + R_{2} + \dotsi$
-***** Electric Potential Difference Across Resistors in Parallel
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741491
-      :END:
-****** Front
-       Electric Potential Difference Across Resistors in Parallel
-****** Back
-       $\Delta V = \Delta V_{1} = \Delta V_{2} = \dotsi$
-***** Current of Resistors in Parallel
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741591
-      :END:
-****** Front
-       Current of Resistors in Parallel
-****** Back
-       \[
-       I = I_{1} + I_{2} + \dotsi 
-         = \frac{\Delta V_{1}}{R_{1}} + \frac{\Delta V_{2}}{R_{2}} + \dotsi
-       \]
-***** Equivalent Resistance of Resistors in Parallel [28.8]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741716
-      :END:
-****** Front
-       Equivalent Resistance of Resistors in Parallel
-****** Back
-       $frac{1}{R_{eq}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dotsi$
-***** Kirchhoff's Rules [28.9 - 28.10]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741766
-      :END:
-****** Front
-       Kirchhoff's Rules
-****** Back
-       1. *Junction Rule.* At any junction, the sum of currents must equal zero:
-          $\sum_{junction}^{} I = 0$
-       2. *Loop Rule.* The sum of the potential differences across all elements
-          around any closed circuit loop must be zero:
-          $\sum_{closed loop}^{} \Delta V = 0$
-***** Potential Diff of a resistor traveled in direction of the current
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741816
-      :END:
-****** Front
-       Potential Difference of a resistor traveled in direction of the current
-****** Back
-       $\Delta V = -IR$
-***** Potential Diff of a resistor traveled in opposite direction of the current
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741866
-      :END:
-****** Front
-       Potential Difference of a resistor traveled in opposite direction of the current
-****** Back
-       $\Delta V = +IR$
-***** Potential Difference of an EMF traveled in direction of EMF
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552741991
-      :END:
-****** Front
-       Potential Difference of an EMF traveled in direction of EMF
-****** Back
-       $\Delta V = +\mathcal{E}$
-***** Potential Difference of an EMF traveled in direction opposite of EMF
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742043
-      :END:
-****** Front
-       Potential Difference of an EMF traveled in direction opposite of EMF
-****** Back
-       $\Delta V = -\mathcal{E}$
-***** Charge as a function of time for a capacitor being charged [28.14]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742092
-      :END:
-****** Front
-       Charge as a function of time for a capacitor being charged
-****** Back
-       $q(t) = C\mathcal{E}(1 - e^{\frac{-t}{RC}} = Q_{max}(1 -
-       e^{\frac{-t}{RC}}$ where:
-       - $e$ is the base of the natural logarithm
-       - $RC$ is the time constant of the circuit, aka $\tau$
-***** Current as a function of time for a capacitor being charged [28.15]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742141
-      :END:
-****** Front
-       Current as a function of time for a capacitor being charged
-****** Back
-       $i(t) = \frac{\mathcal{E}}{R}e^{\frac{-t}{RC}}$ where:
-       - $e$ is the base of the natural logarithm
-       - $RC$ is the time constant of the circuit, aka $\tau$
-***** Charge as a function of time for discharging capacitor [28.18]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742266
-      :END:
-****** Front
-       Charge as a function of time for discharging capacitor
-****** Back
-       $q(t) = Q_{i}e^{\frac{-t}{RC}}$
-***** Current as a function of time for a discharging capacitor [28.19]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742319
-      :END:
-****** Front
-       Current as a function of time for a discharging capacitor
-****** Back
-       $i(t) = -\frac{Q_{i}}{RC}e^{\frac{-t}{RC}}$
-**** CH29
-***** Vector expression for magnetic force on a charged particle in MF [29.1]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742366
-      :END:
-****** Front
-       Vector expression for magnetic force on a charged particle in MF
-****** Back
-       $\vec{F}_{B} = q\vec{v} \times \vec{B}$ where:
-       - by definition of cross product, is perpendicular to both $\vec{v}$ and
-         $\vec{B}$
-       - This is the magnetic version of the *particle in a field model*
-***** Similarities between electric and magnetic forces
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552742416
-      :END:
-****** Front
-       What are similarities that magnetic force $\vec{F_{B}}$ shares with
-       electric force $\vec{F_{e}}$?
-       and $\vec{F_{B}}$
-****** Back
-       Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
-       show the magnetic force is:
-       - proportional to the charge $q$.
-       - proportional to the magnitude of the magnetic field akin to $\vec{E}$.
-       - directed opposite to the equivalent magnetic force on a positive charge
-         that moves in the same direction.
-***** Difference between electric and magnetic forces
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552743566
-      :END:
-****** Front
-       What are differences that magnetic force $\vec{F_{B}}$ has compared with
-       electric force $\vec{F_{e}}$?
-****** Back
-       Experiments with a particle of charge $q$ in a magnetic field $\vec{B}
-       show the magnetic force is:
-       - proportional to the speed of the particle, $\vec{v}$ where $F_{e}$ is
-         unaffected.
-       - if $\vec{v}$ makes an angle $\theta$ with $\vec{B}$, then the magnitude
-         of the magnetic force is proportional to $\sin \theta$. No such behavior
-         with electric force.
-       - When the charged particle moves parallel with $\vec{B}$, then the
-         magnetic force is zero.
-       - When the charged particle moves in any direction *not parallel*, the
-         magnetic force is *perpendicular* with *both* $\vec{v}$ and $\vec{B}$.
-***** Right hand rules for the direction of magnetic force
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539552743691
-      :END:
-****** Front
-       What are the two right hand rules for determining the direction of $\vec{F}_{B}$?
-****** Back
-       Where $\vec{F}_{B}$ is assumed positive:
-       #+BEGIN_EXPORT html
-       <img src="https://gist.githubusercontent.com/ejmg/8bdfa07ccff5f0d190cb1a800981523a/raw/9e697bb2b3d80e4eddfc21da25e097af4280d4c0/right-hand-rule.png"/>
-       #+END_EXPORT
-
-       When $\vec{F}_{B}$ is negative, then it is opposite of what the right hand
-       rule would suggest.
-**** CH30
-***** Biot-Savart Law [30.1]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1539566463392
-      :END:
-****** Front
-       Definition of Biot-Savart Law, $d\vec{B}$?
-****** Back
-       $d\vec{B} = \frac{\mu_{0}}{4\pi} \frac{Id\vec{s} \times \hat{r}}{r^{2}}$
-       where:
-       - $d\vec{B}$ is at a point $P$ associated with a length element $d\vec{s}$
-         of a wire carrying $I$.
-       - $d\vec{s}$ points in the direction of the current $I$
-       - the unit vector $\hat{r}$ is directed from $d\vec{s}$ toward $P$
-       - $d\vec{B}$ is $\perp$ with both $d\vec{s}$ and $\hat{r}$
-       - $\mu_{0}$ is the *permeability of free space*:
-         $\mu_{0} = 4\pi \times 10^{-7} T\cdot m / A$
-       - $d\vec{B}$ is the field created at a point by the current in only a
-         small length element, $d\vec{s}$, of the conductor.
-***** 
-***** Magnetic Field of Conductor (with radius R, current I) at distance r, R \leq r [30.14]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1545621803209
-      :END:
-****** Front
-       Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance
-       $r$, $R \leq r$
-****** Back
-       $B = \frac{\mu_{0}I}{2\pi r$
-***** Magnetic Field of Conductor (with radius R, current I) at distance r, r < R [30.15]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1545621803410
-      :END:
-****** Front
-       Magnetic Field $B$ of Conductor (with radius $R$, current $I$) at distance $r$, $r < R$
-****** Back
-       $B = (\frac{\mu_{0}I}{2\pi R^{2}})r$
-     
-***** Ampere's Law [30.13]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1545621803459
-      :END:
-****** Front
-       Ampere's Law
-****** Back
-       The line integral of $\vec{B} \centerdot d\vec{s}$ around any closed path
-       equals $\mu_{0}I$ where $I$ is the total steady current passing through
-       any surface bounded by the closed path:
-       $\oint \vec{B} \centerdot d\vec{s} = \mu_{0}I$
-***** Magnetic Force between two parallel conductors [30.12]
-      :PROPERTIES:
-      :ANKI_NOTE_TYPE: Basic
-      :ANKI_NOTE_ID: 1545621803511
-      :END:
-****** Front
-       Magnetic Force between two parallel conductors?
-****** Back
-       $\frac{F_{B}}{\el} = \frac{\mu_{0}I_{1}I_{2}}{2\pi a}$
-**** CH31
-** haskell book
-   :PROPERTIES:
-   :ANKI_DECK: haskell_book
-   :END:
-*** CH1
-**** the lambda in the lambda calculus
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546835357160
-     :END:
-***** Text
-      The lambda in lambda calculus is the greek letter 𝜆 used to {{c1::introduce, or
-      abstract,}} arguments for {{c1::binding}} in an expression.
-***** Extra
-**** the lambda abstraction
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546835357234
-     :END:
-***** Text
-      A lambda abstraction is an {{c1::anonymous function or lambda term}}.  $(\lambda x.x + 1)$
-      The {{c1::head}} of the expression, $\lambda x$., abstracts out the {{c1::term}} $x + 1$. We can apply it
-      to any x and recompute different results for each x we applied the lambda to.
-***** Extra
-**** application
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546877373875
-     :END:
-***** Text
-      Application is how one {{c1::evaluates or reduces lambdas}}, which binds the
-      {{c1::parameter}} to the {{c1::concrete argument}}. The {{c1::argument}} is what specific term the
-      lambda was applied to. Computations are performed in lambda calculus by
-      applying {{c2::lambdas}} to arguments until you run out of {{c2::applications}} to perform.
-***** Extra
-**** lambda calculus
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1546878448425
-     :END:
-***** Front
-      Definition of the Lambda Calculus?
-***** Back
-      Lambda calculus is a formal system for expressing programs in terms of
-      abstraction and application.
-**** Normal Order
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546878384275
-     :END:
-***** Text
-      {{c1::Normal order}} is a common evaluation strategy in lambda calculi.  {{c1::Normal
-      order}} means evaluating (ie, applying or beta reducing) the {{c2::leftmost outermost}}
-      lambdas first, evaluating terms {{c2::nested within}} after you've run out of arguments
-      to apply.
-***** Extra
-**** Haskell and normal form evaluation
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1546878384328
-     :END:
-***** Front
-      Is Haskell code evaluated in normal order?
-***** Back
-      Normal order isn't how Haskell code is evaluated - it's call-by-need
-      instead.
-*** CH2
-**** parameter
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546882037500
-     :END:
-***** Text
-      A {{c1::parameter, or formal parameter,}} represents a value that will be {{c2::passed
-      to the function when the function is called}}. Thus, {{c1::parameters}} are usually
-      {{c2::variables}}.
-***** Extra
-**** arguments
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546882037550
-     :END:
-***** Text
-      An {{c1::argument}} is an input value the function is applied to. A function's
-      parameter is bound to an {{c1::argument}} when the function is applied to that
-      argument.
-***** Extra
-**** expression
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1546882037675
-     :END:
-***** Text
-      An {{c1::expression}} is a combination of symbols that conforms to syn- tactic
-      rules and can be evaluated to some result.
-***** Extra
-**** components of Haskell expression?
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1546882037725
-     :END:
-***** Front
-      Components of Haskell expression?
-***** Back
-      In Haskell, an expression is a well-structured combination of constants,
-      variables, and functions. While irreducible constants are technically
-      expressions, we usually refer to those as “values”, so we usually mean
-      “reducible expression” when we use the term expression
-**** value in Haskell
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1546882037775
-     :END:
-***** Front
-      What is a /value/ in Haskell?
-***** Back
-      A value is an expression that cannot be reduced or evaluated any
-      further. 2 * 2 is an expression, but not a value, whereas what it
-      evaluates to, 4, is a value.
-**** functions
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1546882037826
-     :END:
-***** Front
-      What is a function?
-***** Back
-      A function is a mathematical object whose capabilities are limited to
-      being applied to an argument and returning a result. Functions can be
-      described as a list of ordered pairs of their inputs and the resulting
-      outputs, like a mapping.
-*** CH3
-**** Top Level Bindings
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547064272357
-     :END:
-***** Text
-      /Top Level Bindings/ (in Haskell) are bindings that {{c1::stand outside of any
-      other declaration}}. The main feature of /top level/ bindings is that they
-      can {{c1::be made available to other modules in or outside}} of your program.
-***** Extra
-**** Local Bindings
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547064272431
-     :END:
-***** Text
-      /Local Bindings/ are bindings {{c1::local to particular expressions}}. They cannot
-      be {{c1::imported by other programs or modules}}.
-***** Extra
-**** Scope
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547063637657
-     :END:
-***** Text
-      /Scope/ is where a {{c1::variable referred to by name is valid}}.
-***** Extra
-**** Concatenation
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547063637706
-     :END:
-***** Text
-      /Concatenation/ is the {{c1::joining together of sequences}} of values. In Haskell,
-      this is typically meant with respect to {{c1::the /list/, [],}} datatype.
-***** Extra
-**** types in Haskell
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547063637731
-     :END:
-***** Text
-      Types (aka Datatypes) in Haskell determine {{c1::what values are members of the
-      type or that /inhabit/ the type}}. Unlike other languages, datatypes in
-      Haskell by default {{c1::do not delimit the operations that can be performed on
-      the data.}}
-***** Extra
-**** type (datatype)
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547063637756
-     :END:
-***** Text
-      A /type/ (or /datatype/) is a {{c1::classification of values or data}}.
-***** Extra
-**** Strings in Haskell
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547063637782
-     :END:
-***** Text
-      A /String/ is a {{c1::sequence of characters}}. In Haskell, =String= is represented
-      by a {{c1::linked-list of =Char=}} values, aka =[Char]=.
-***** Extra
-*** CH4
-**** types of polymorphism in Haskell
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1547089995068
-     :END:
-***** Front
-      Types of polymorphism in Haskell
-***** Back
-      Polymorphism in Haskell is either /Parametric/ or /Constrained/.
-**** polymorphism
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547089995118
-     :END:
-***** Text
-      /Polymorphism/ in Haskell means being able to write code in terms of {{c1::values
-      which may be one of several, or any, type}}.
-***** Extra
-**** arity
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547089995168
-     :END:
-***** Text
-      /Arity/ is the {{c1::number of arguments a function accepts}}. This notion
-      is a little slippery in Haskell {{c1::due to currying}}, as all functions are
-      {{c1::1-arity}}.
-***** Extra
-**** type alias in haskell
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547089995219
-     :END:
-***** Text
-      A /type alias/ is a way to refer to a {{c1::type constructor}} or {{c1::type constant}} by an
-      alternate name, usually to {{c1::communicate something more specific or for
-      brevity}}.
-***** Extra
-**** type constructor
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547926855600
-     :END:
-***** Text
-      /Type constructors/ in Haskell are {{c1::*not values* and can only be used in type
-      signatures}}. Type constructors are used to {{c1::denote the type being declared
-      by a data declaration}}.
-***** Extra
-**** Type Signature Example
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1547066838858
-     :END:
-***** Front
-      In the snippet below:
-      #+BEGIN_SRC haskell
-        type Name = String  
-        data Pet = Cat | Dog Name
-      #+END_SRC
-      What are the type signatures of the data constructors?
-***** Back
-      #+BEGIN_SRC haskell
-        Cat :: Pet
-        Dog :: Name -> Pet
-      #+END_SRC
-**** Data & Type Constructors Example
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Basic
-     :ANKI_NOTE_ID: 1547066838858
-     :END:
-***** Front
-      In the snippet below:
-      #+BEGIN_SRC haskell
-        type Name = String  
-        data Pet = Cat | Dog Name
-      #+END_SRC
-      What is/are the type and data constructors?
-***** Back
-      =Pet= is the /type constructor/ and both =Cat= and =Dog Name= are /Data
-      Constructors/ for the type =Cat=.
-**** Data Constructors
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547066513606
-     :END:
-***** Text
-      {{c1::/Data constructors/}} in Haskell provide a means of {{c2::creating
-      values that inhabit a given type}}. {{c1::Data constructors}} in Haskell
-      have a {{c1::type}} and can either be {{c2::constant values (nullary)}} or
-      {{c2::take one or more arguments, like functions}}.
-***** Extra
-**** Type Class
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547066513631
-     :END:
-***** Text
-      a {{c1::/Type Class/}} is a set of {{c2::operations defined with respect to
-      a polymorphic type}}. When a type has an instance of a {{c1::type class}},
-      {{c2::values of that type can be used in the standard operations}} defined
-      for that {{c1::type class}}.
-***** Extra
-**** Tuple
-     :PROPERTIES:
-     :ANKI_NOTE_TYPE: Cloze
-     :ANKI_NOTE_ID: 1547066513656
-     :END:
-***** Text
-      a /Tuple/ is an {{c1::ordered group of values}}. In Haskell, you cannot
-      have a tuple with {{c1::only one element}}, but there is a zero tuple also
-      {{c1::called /unit/ or =()=}}.
-***** Extra
-*** CH5
-*** CH6
-*** CH7
-* TODO cards
-** def of iterators 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Front
-    Definition of iterators?
-*** Back
-** Trait vs Impl 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Front
-*** Back
-** =Trait= vs Types 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Front
-*** Back
-** skip list 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Text
-    A skip list...
-*** Extra
-** insertion sort (description) 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Basic
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Front
-    Describe insertion sort
-*** Back
-** insertion sort (psuedocode) 
-   :PROPERTIES:
-   :ANKI_NOTE_TYPE: Cloze
-   :ANKI_FAILURE_REASON: No deck specified
-   :END:
-*** Text
-    *Insertion Sort* pseudo code is as follows:
-   
-*** Extra
-
-
+     1. scanner (lexical analysis)
+     2. parser (syntax analysis)
+     3. semantic analysis & intermediate code generation
+     4. machine independent code improvement (*optional*)
+     5. target code generation (assembler)
+     6. machine-specific code improvement (*optional*) 
