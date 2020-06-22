@@ -420,6 +420,227 @@
     properties of code are impossible to detect by analyzing the code. Interior
     mutability gives us the ability to modify what we, as the programmer, know
     is a value safe for mutation in a given situation.
+* javascript
+  :PROPERTIES:
+  :ANKI_DECK: javascript
+  :END:
+** modern js
+*** scope in js
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793777380
+    :END:
+**** Front
+     What are the two scopes in JS?
+**** Back
+     There are two types of scope in JS:
+     1. *Function*: if a variable statement occurs inside a function declaration, the variables are
+        defined with function-level scope in that function, otherwise...
+     2. *Global*: variables are created as members of the *global object*, that is, they are given global
+        scope, when they are not declared inside a function
+
+     #+begin_src js
+       function getDate() {
+         // date is only accessible here within function scope
+         var date = new Date();
+         return date;
+       }
+       // works just fine
+       console.log(getDate());
+
+       // will return reference error
+       console.log(date);
+     #+end_src
+*** hoist def
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793777630
+    :END:
+**** Front
+     What is Hoisting in JS?
+**** Back
+     *Hoisting*: when the Javascript interpreter evals your code, it moves all functions and variable
+     declarations at the "top" of the current scope.
+
+     #+begin_src js
+      console.log(foo); // output: undefined
+      var foo;
+     #+end_src
+    
+     ...before execution becomes this:
+    
+     #+begin_src js
+       var foo;
+       console.log(foo) // output: undefined
+     #+end_src
+*** hoisting exercise
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793777954
+    :END:
+**** Front
+     What does hoisting transform the following code into?
+     #+begin_src js
+       function discount_prices(prices, discount) {
+         var discounted = [];
+         for (var i = 0; i < prices.length; i++) {
+           var discounted_price = prices[i] * (1 - discount);
+           var final_price = Math.round(discounted_price * 100) / 100;
+           discounted.push(final_price);
+         }
+         return discounted;
+       }
+     #+end_src
+**** Back
+     #+begin_src js
+       function discount_prices(prices, discount) {
+         var discounted;
+         var i;
+         var discount_prices;
+         var final_price;
+         var discounted = [];
+         for (var i = 0; i < prices.length; i++) {
+           var discounted_price = prices[i] * (1 - discount);
+           var final_price = Math.round(discounted_price * 100) / 100;
+           discounted.push(final_price);
+         }
+         return discounted;
+       }
+     #+end_src
+*** var scope
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793778455
+    :END:
+**** Front
+     what is the scope of =var=?
+**** Back
+     *function scoped*. available throughout the entire function it is declared within.
+*** 
+*** let scope
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793778536
+    :END:
+**** Front
+     what is the scope of =let=?
+**** Back
+     *block scoped*. it is available within the set of statements between the ={}='s you declared it
+     within. think rust.
+*** const scope
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793778632
+    :END:
+**** Front
+     what is the scope of =const=?
+**** Back
+     *block scope.* it is available within the set of statements between the ={}='s you declared
+     it. think rust.
+*** var vs let
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793778805
+    :END:
+**** Front
+     differences between =var= and =let=
+**** Back
+     - =var=:
+       + *function scope*
+       + =undefined= when accessed after declaration but without initialization
+     - =let=:
+       + *block scope*
+       + =ReferenceError= when accessed after declaration but without initialization
+*** let vs const
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793778905
+    :END:
+**** Front
+     differences between =let= and =const=
+**** Back
+     Both are *block scope* and will throw *ReferenceError* when used without initialization.
+
+     - =let=:
+       + can declare without initialization
+       + can re-assign a value
+     - =const=:
+       + cannot declare without initialization
+       + *immutable*
+*** dot notation
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793779029
+    :END:
+**** Front
+     add the field =name= with the value =ejmg= to the object =user= using *dot notation*
+**** Back
+     #+begin_src js
+     user.name = "ejmg";
+     #+end_src
+*** obj literal notation
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793779158
+    :END:
+**** Front
+     using *object literal notation*, assign =ejmg= and =kcmo= to the fields =name= and =local= to new object =user=
+**** Back
+     #+begin_src js
+       const user = {
+         name: "ejmg",
+         local: "kcmo",
+       };
+     #+end_src
+*** obj destructuring
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793779555
+    :END:
+**** Front
+     destructure the following object:
+     #+begin_src js
+       const user = {
+         name: "elias",
+         local: "kcmo",
+         handle: "ejmg",
+       };     
+     #+end_src
+**** Back
+     #+begin_src js
+       const { name, local, handle } = user;
+     #+end_src
+*** arr destructuring
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793779806
+    :END:
+**** Front
+     use *destructuring* on the following array:
+     #+begin_src js
+       const arr = ["elias", "kcmo", "ejmg"];
+     #+end_src
+**** Back
+     #+begin_src js
+       const [ name, local, handle ] = arr;
+     #+end_src
+*** renamed destructuring
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592793780082
+    :END:
+**** Front
+     rename the fields in the object below to =name= and =local= while destructuring:
+     #+begin_src js
+       const user = {
+         n: "elias",
+         l: "kcmo",
+       };
+     #+end_src
+**** Back
+     #+begin_src js
+       const {n: name, l: local } = user;
+     #+end_src
 * TODO cards/topics
 ** rust
 *** def of iterators 
@@ -679,6 +900,7 @@
 **** 4 props of a transaction
      :PROPERTIES:
      :ANKI_NOTE_TYPE: Basic
+     :ANKI_FAILURE_REASON: deck was not found: intro to database systems
      :END:
 ***** Front
       What are the four properties of a database transaction?
