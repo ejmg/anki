@@ -507,6 +507,41 @@
          return discounted;
        }
      #+end_src
+*** let hoisting
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862871171
+    :END:
+**** Front
+     Are =let= variables hoisted?
+**** Back
+     *Yes, all declarations in JS are hoisted*. However, accessing a variable that was declared with
+     =let= /before the engine evaluates it's value at its location of declaration/ will return a
+     =ReferenceError=, i.e. =let= variables only get initialized when *their lexical binding (assignment)
+     is evaluated* by the JS engine.
+*** const hoisting
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862871497
+    :END:
+**** Front
+     Are =const= variables hoisted?
+**** Back
+     *Yes, all declarations in JS are hoisted*. However, accessing a variable that was declared with
+     =const= /before the engine evaluates it's value at its location of declaration/ will return a
+     =ReferenceError=, i.e. =const= variables only get initialized when *their lexical binding
+     (assignment) is evaluated* by the JS engine.
+*** temporal deadzone def
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Cloze
+    :ANKI_NOTE_ID: 1592862871572
+    :END:
+**** Text
+     the {{c1::*Temporal Deadzone*}} is the {{c2::time between variable declaration and
+     initialization where they cannot be accessed}}. This especially concerns objects declared with
+     {{c3::=const= and =let}}=, as accessing either {{c3::*before* their declaration}} will return a
+     =ReferenceError=.
+**** Extra
 *** var scope
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -516,7 +551,22 @@
      what is the scope of =var=?
 **** Back
      *function scoped*. available throughout the entire function it is declared within.
-*** 
+*** var temporal dead zone ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862871746
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       console.log(a);
+       var a;
+     #+end_src
+**** Back
+     it will log =undefined=. 
+
+     =var= declared variables are hoisted, as are all declarations, but, unlike =const= and =let=, =var= is
+     initialized with =undefined= before its evaluation by the JS engine.
 *** let scope
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -527,6 +577,63 @@
 **** Back
      *block scoped*. it is available within the set of statements between the ={}='s you declared it
      within. think rust.
+*** let temporal dead zone ex 1
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862871922
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       console.log(a);
+       let a = 5;
+     #+end_src
+**** Back
+     it will yield a =ReferenceError= because you *cannot access =let= declared objects before their
+     lexical binding*, i.e. their declaration. thus, the call to =console.log(a)= occurs during the
+     *temporal deadzone* of the variable =a=.
+*** let temporal dead zone ex 2
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872026
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       let a;
+       console.log(a);
+       a = 5;
+     #+end_src
+**** Back
+     it will log =undefined=
+*** let reassignment ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872122
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       let a = 5;
+       a = 6;
+       console.log(a);
+     #+end_src
+**** Back
+     it will log =6=. =let= variables can be reassigned and *are not* immutable.
+*** let re-declaration ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872422
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       let a = 5;
+       let a = 6;
+       console.log(a);
+     #+end_src
+**** Back
+     =SyntaxError=, =let= variables *cannot be re-declared*.
 *** const scope
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -537,6 +644,81 @@
 **** Back
      *block scope.* it is available within the set of statements between the ={}='s you declared
      it. think rust.
+*** const temporal dead zone ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872597
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       console.log(a);
+       const a = 5;
+     #+end_src
+**** Back
+     it will yield a =ReferenceError= because you *cannot access =const= declared objects before their
+     lexical binding and evaluation*, i.e. their initialization. thus, the call to =console.log(a)=
+     occurs during the *temporal deadzone* of the variable =a=.
+*** const decl w/o init ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872697
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       const a;
+       console.log(a);
+     #+end_src
+**** Back
+     the snippet will yield a =SyntaxError= because you cannot declare a =const= variable without
+     initialization.
+*** const re-assignment ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872799
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       const a = 5;
+       a = 6;
+       console.log(a);
+     #+end_src
+**** Back
+     =TypeError= as =const= assignments are *immutable*.
+*** const re-declaration ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862872923
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+       const a = 5;
+       const a = 6;
+       console.log(a);
+     #+end_src
+**** Back
+     =SyntaxError= as =const= variables cannot be re-declared.
+*** const immutability ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862873247
+    :END:
+**** Front
+     what will be the result of the following snippet?
+     #+begin_src js
+      const person = {
+        name: 'Kim Kardashian'
+      }
+
+      person.name = 'Kim Kardashian West'
+     #+end_src
+**** Back
+     =person.name= will become ='Kim Kardashian West'.= This is totally legal because the =cont=
+     /declaration is on the object/ and *does not apply to an object's fields*. Thus the action does not
+     count as reassignment, but assigning =person= to ={}= would.
 *** var vs let
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -545,12 +727,17 @@
 **** Front
      differences between =var= and =let=
 **** Back
+     Both allow variables to be referenced before /initialization/ and both allow for /re-assignment/.
+
+     Their differences include:
      - =var=:
        + *function scope*
        + =undefined= when accessed after declaration but without initialization
      - =let=:
        + *block scope*
-       + =ReferenceError= when accessed after declaration but without initialization
+       + =ReferenceError= when accessed before declaration;
+       + *cannot be re-declared*. once a variable name is declared with =let=, it cannot be re-declared
+         in that scope.
 *** let vs const
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
@@ -559,7 +746,8 @@
 **** Front
      differences between =let= and =const=
 **** Back
-     Both are *block scope* and will throw *ReferenceError* when used without initialization.
+     Both are *block scope* and will throw *ReferenceError* when referenced before evaluation by the JS
+     engine. Both cannot be *re-declared*.
 
      - =let=:
        + can declare without initialization
@@ -641,6 +829,339 @@
      #+begin_src js
        const {n: name, l: local } = user;
      #+end_src
+*** obj destructure and default arguments
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862874425
+    :END:
+**** Front
+     improve the following function signature using *object destructuring* and *default arguments*:
+     #+begin_src js
+       function fetchRepos (language, minStars, maxStars, createdBefore, createAfter) {
+           // api logic
+       }
+     #+end_src
+**** Back
+     #+begin_src js
+       // what are considered good default args is obv subjective
+       function fetchRepos({ language='All', 
+                             minStars=0, 
+                             maxStars='', 
+                             createdBefore='', 
+                             createdAfter='' }) {
+       }
+     #+end_src
+*** array destruct and function params
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862874699
+    :END:
+**** Front
+     using *array destructuring* to improve the handling of the following promise:
+     #+begin_src js
+       function getUserData (player) {
+         // note that we wrap our function calls in an array here
+         return Promise.all([
+           getProfile(player),
+           getRepos(player)
+         ]).then(function (data) {
+           // extract array vals
+           const profile = data[0];
+           const repos = data[1];
+
+           return {
+             profile: profile,
+             repos: repos
+           }
+         })
+       }
+     #+end_src
+**** Back
+     There are multiple improvements here:
+     1. we could destruct the fields out of =data=:
+        #+begin_src js
+          // ...
+          .then(function (data) {
+           const [ profile, repos ] = data
+           // ...
+        #+end_src
+     2. better yet, why not destruct the array *inside the parameters* using an arrow function:
+        #+begin_src js
+         // ...
+         then(([ profile, repos ]) => {
+         // ...
+        #+end_src
+
+        thus yielding:
+        #+begin_src js
+          function getUserData (player) {
+            return Promise.all([
+              getProfile(player),
+              getRepos(player)
+              // yeet, clean code
+            ]).then(([ profile, repos ]) => {
+              return {
+                profile: profile,
+                repos: repos
+              }
+            })
+          }
+        #+end_src
+*** shorthand properties def
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862874892
+    :END:
+**** Front
+     what are *shorthand properties*?
+**** Back
+     whenever you have a variable that matches the name of a property on an
+     object, you can omit the property name when constructing an instance of that object.
+*** shorthand properties ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875246
+    :END:
+**** Front
+     what is the shorthand property equivalent to the object returned by =formatMessage=?
+     #+begin_src js
+      function formatMessage (name, id, avatar) {
+          return {
+              name: name,
+              id: id,    
+              avatar: avatar,    
+              timestamp: Date.now()
+          }
+      }     
+     #+end_src
+**** Back
+     #+begin_src js
+      function formatMessage (name, id, avatar) {
+          return {
+              name,    
+              id,    
+              avatar,    
+              timestamp: Date.now()
+          }
+      }     
+     #+end_src
+*** shorthand methods def
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875322
+    :END:
+**** Front
+     what are *shorthand method names*?
+**** Back
+     when a function is a property on an object, that makes it a *method*. As
+     of ES6, when constructing an object that has a function as a field you can now omit the
+     =function= keyword entirely.
+*** shorthand methods ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875496
+    :END:
+**** Front
+     what is the shorthand equivalent to the object returned by =formatMessage=?
+     #+begin_src js
+       function formatMessage (name, id, avatar) {
+           return {
+               name,
+               id,
+               avatar,
+               timestamp: Date.now(),
+               save: function () {
+                   // save message    
+               }  
+           }     
+     #+end_src
+**** Back
+     #+begin_src js
+       function formatMessage (name, id, avatar) {
+           return {
+               name,
+               id,
+               avatar,
+               timestamp: Date.now(),
+               // wow i saved like 8 whole keystrokes wow lol
+               save () {
+                   // save message    
+               }  
+           }
+       }     
+     #+end_src
+*** computed properties def
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875622
+    :END:
+**** Front
+     What are *computed properties*?
+**** Back
+     as of ES6, you can have expressions that get evaluated as properties on an object when
+     surrounded by =[]='s. this means that the =key=, i.e. property name, of an object can be evaluated,
+     with the result being the actual name of the field:
+     #+begin_src js
+       const forever = "wu";
+       const tang = "forever";
+       const truth = {
+         [forever]: "tang",
+         is: tang,
+       };
+       console.log(truth) 
+       // { wu: "tang", is: "forever" }
+     #+end_src
+*** computed properties ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875772
+    :END:
+**** Front
+     What object is returned by the following function?
+     #+begin_src js
+       function confusing_var_names(bar, buz, foo, baz) {
+         return {
+           [bar]: buz,
+           baz: foo,
+         }
+       }
+       const obj = confusing_var_names("buz", "foo", "bar", "baz");
+     #+end_src
+**** Back
+     #+begin_src js
+       {
+         buz: "foo",
+         baz: "bar"
+       }
+     #+end_src
+*** template literals ex
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862875926
+    :END:
+**** Front
+     refactor the following function to use template literals:
+     #+begin_src js
+       function hello (name, email) {
+         return "<h1>hello, " + name + "</h1>" +
+           "<p>please check your email " + email + " to continue.</p>";
+       }
+     #+end_src
+**** Back
+     #+begin_src js
+       function hello (name, email) {
+         return `
+           <h1>hello, ${name}</h1>
+           <p>please check your email ${email} to continue.</p>
+         `
+       }
+     #+end_src
+*** function expression
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862876249
+    :END:
+**** Front
+     what is the function expression declaration equivalent for the following function?
+     #+begin_src js
+      function add (x,y) {
+          return x + y;
+      }     
+     #+end_src
+**** Back
+     #+begin_src js
+      const add = function (x,y) {
+          return x + y;
+      }     
+     #+end_src
+*** arrow functions
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862876448
+    :END:
+**** Front
+     What is the arrow function expression declaration equivalent for the following function?
+     #+begin_src js
+       function add (x,y) {
+           return x + y;
+       }
+     #+end_src
+**** Back
+     #+begin_src js
+       const add = (x,y) => {
+           return x + y;
+       }
+     #+end_src
+*** difference between function expr and declar
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :ANKI_NOTE_ID: 1592862876674
+    :END:
+**** Front
+     What is the difference between a function expression, i.e. a function defined inside an
+     expression, ex:
+     #+begin_src js
+       const getRectArea = function (w, h) {
+         return w * h;
+       }
+     #+end_src
+     and a normal function declaration? ex:
+     #+begin_src js
+       function getRectArea (w, h) {
+         return w * h;
+       }
+     #+end_src
+**** Back
+     - function expressions are *not hoisted*:
+       #+begin_src js
+         console.log(notHoisted); // undefined
+         notHoisted(); // TypeError
+         var notHoisted = function () {
+           console.log('foo');
+         }
+       #+end_src
+     - function expressions allow the *omission of function name*
+       + this allows the creation of *anonymous functions*
+         * when bound to a variable, the variable becomes the *implicit name*:
+           #+begin_src js
+             var add = function (x, y) = {
+               return x + y;
+             }
+             console.log(add.name) // "add"
+           #+end_src
+         * critical to understand the above function declaration is technically an anonymous
+           function still, however.
+       + this allows function expressions to be used as *Immediately Invoked Function Expressions
+         (IIFE)*'s
+         #+begin_src js
+           (function () {
+             console.log("I'm an IIFE");
+           })(); // "I'm an IIFE"
+         #+end_src
+*** implicit returns (single & mult params)
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** arrow functions and context
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** differentiating arrow function bodies and implicit returns
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
+*** 
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+**** Back
 * TODO cards/topics
 ** rust
 *** def of iterators 
