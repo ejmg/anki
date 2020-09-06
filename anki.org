@@ -209,6 +209,118 @@
     {{c1::Linked}} data structures are composed of {{c1::distinct chunks of memory bound
     together by pointers}}, and include {{c2::lists, trees, and graph adjacency lists}}.
 *** Extra
+* theory of computation
+  :PROPERTIES:
+  :ANKI_DECK: theory of computation
+  :END:
+** Formal Langs & Automata
+*** Alphabet                                                 :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599371874869
+   :END:
+**** Text
+     An {{c1::alphabet}}, commonly denoted with a {{c1::$\Sigma$}} is {{c2::any finite set of symbols}}.
+**** Extra
+*** Strings                                                  :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :END:
+**** Text
+     A {{c1::string}} is a {{c2::finite sequences}} of zero or more {{c2::symbols}}.
+**** Extra
+
+*** String concatenation                                     :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599371948569
+   :END:
+**** Text
+     The {{c1::concatenation}} of two strings $x$ and $y$ is the string containing {{c2::all the
+     symbols, in order, of x}}, followed by the {{c2::symbols of y in order}}.
+**** Extra
+*** language                                                 :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599372056296
+   :END:
+**** Text
+     A {{c1::language}}, commonly described with a {{c2::set former}}, is a set of {{c3::strings}}
+     over some {{c3::fixed alphabet}}.
+**** Extra
+*** Kleene Closure                                           :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599371963695
+   :END:
+**** Text
+     the {{c1::Kleene Closure}} of an {{c2::alphabet $\Sigma$}}, {{c1::denoted $\Sigma^{\ast}$}}, is the set of {{c2::all strings}}
+     over {{c2::$\Sigma$}}.
+**** Extra
+*** Deterministic Finite Automata (DFA)                           :Wikipedia:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599372068571
+   :END:
+**** Text
+     In theory of computation, a {{c1::Deterministic Finite Automata (DFA)}}, AKA
+     {{c1::Deterministic Finite State Machine (DFSM)}}, is a {{c2::finite-state machine}} that
+     accepts or rejects a {{c2::given string of symbols}} by running through a {{c2::state sequence
+     uniquely}} determined by the {{c2::string}}.
+**** Extra
+*** 5-tuple (Formal Def of DFA)                              :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599372566795
+   :END:
+**** Text
+     A DFA has {{c1::five key parts}}, so we describe it mathematically as {{c1::a 5-tuple}}.
+
+     A DFA /M/ is a {{c1::5-tuple}} {{c2::$M = (Q,\Sigma,\delta, q_{0}, F)$}} where:
+     - {{c2::$Q$}} is the {{c3::finite set of states}}.
+     - {{c2::$\Sigma$}} is the {{c4::alphabet, a finite set of symbols}}.
+     - {{c2::$\delta \in (Q\times \Sigma \mapsto Q)$}} is the {{c5::transition function}}.
+     - {{c2::$q_{0} \in Q$}} is the {{c6::start state}}.
+     - {{c2::$F \subseteq Q$}} is the set of {{c7::accepting states}}.
+**** Extra
+*** Regular Language                                         :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599372091619
+   :END:
+**** Text
+     A {{c1::regular language}}, denoted {{c1::$L$}} is one that is {{c2::$L(M)$}}, i.e. {{c2::accepted}}, for some DFA
+     $M$.
+**** Extra
+*** Extended transition function                             :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :ANKI_NOTE_ID: 1599375315170
+   :END:
+**** Text
+     Where {{c1::$\delta \in (Q \times \Sigma \mapsto Q)$}} is the {{c1::transition function}} for some DFA
+     $M = (Q, \Sigma, \delta, q_{0}, F)$, the {{c2::extended transition function $\delta^{\ast}$}} can be
+     defined as:
+
+     \begin{align*}
+     {{c3::\delta^{\ast}(q, \epsilon) &= q}} \\
+     {{c3::\delta^{\ast}(q, xa) &= \delta(\delta^{\ast}(q, x), a)}}
+     \end{align*}
+
+     where $x$ is any string in $\Sigma^{\ast}$ and $a$ is the last symbol.
+
+     The {{c2::extended transition function}} is a recursive function that tells which{{c1:: state $q$ that the
+     DFA results in}}, starting from {{c3::$q$}} and making the sequence of {{c3::$\delta$ transitions on the
+     symbols in $x$}}.
+**** Extra
+*** Language Accepted by DFA                                 :WebberAdam2008:
+   :PROPERTIES:
+   :ANKI_NOTE_TYPE: Cloze
+   :END:
+**** Text
+     {{c1::$L(M)$}} denotes that a {{c2::language is accepted by some DFA, $M$,}} which is {{c1::$L(M) = {x \in \Sigma^{\ast} \mid
+     \delta^{\ast}(q_{0}, x) \in F}$}}.
+**** Extra
 * rust
   :PROPERTIES:
   :ANKI_DECK: rust
@@ -428,7 +540,7 @@
 *** scope in js
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1592793777380
+    :ANKI_NOTE_ID: 1592866577297
     :END:
 **** Front
      What are the two scopes in JS?
@@ -454,7 +566,7 @@
 *** hoist def
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
-    :ANKI_NOTE_ID: 1592793777630
+    :ANKI_NOTE_ID: 1592865278372
     :END:
 **** Front
      What is Hoisting in JS?
@@ -1138,18 +1250,52 @@
              console.log("I'm an IIFE");
            })(); // "I'm an IIFE"
          #+end_src
-*** implicit returns (single & mult params)
+*** implicit returns (multi param)
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     Write the equivalent arrow function using implicit returns:
+     #+begin_src jsx
+       function add(x,y) {
+           return x + y;
+       }     
+     #+end_src
 **** Back
+     #+begin_src jsx
+       const add = (x, y) = x + y;
+     #+end_src
+*** implicit returns (single param)
+    :PROPERTIES:
+    :ANKI_NOTE_TYPE: Basic
+    :END:
+**** Front
+     refactor the chaining using implicit returns:
+     #+begin_src js
+       // stuff
+       return fetch('https://github.com/user_foo')
+         .then((response) => {
+           response.data
+         });
+     #+end_src
+**** Back
+     #+begin_src js
+       // stuff
+       return fetch('https://github.com/user_foo')
+         .then(response => response.data);
+     #+end_src
+     note:
+     - arrow functions like those above can drop the =()= around the parameters when there is only
+       parameter
 *** arrow functions and context
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
     :END:
 **** Front
+     how do arrow functions effect context and scope?
 **** Back
+     *they don't*, which is why they are so useful. arrow functions are *lexically scoped*, which means
+     they take on their /surrounding scope/ rather than introducing their own new lexical scope.
 *** differentiating arrow function bodies and implicit returns
     :PROPERTIES:
     :ANKI_NOTE_TYPE: Basic
